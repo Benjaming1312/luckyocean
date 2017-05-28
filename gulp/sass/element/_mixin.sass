@@ -1,0 +1,46 @@
+/*RWD*/
+$mobile: "screen and (max-width:767px)"
+$pad: "(min-width:768px) and (max-width:991px)"
+$mini-pc: "(min-width: 992px) and (max-width: 1199px)"
+$pad-pc: "(min-width:768px)"
+a
+    &:hover,&:focus,&:focus
+        text-decoration: none
+        outline: none
+// 整體頁面設定
+.sky
+    width: 100%
+    height: 100%
+    background: #00b9ef
+    padding: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+    @media #{$pad}
+        min-height: 100vh
+    @media #{$mobile}
+        position: relative
+        z-index: 0
+    >.row
+        width: 100vw
+        height: 100vh
+        position: relative
+        @media #{$mobile}
+            height: auto
+        >.col-xs-12
+            height: 100vh
+            @media #{$mobile}
+                height: auto
+                z-index: -1
+        ul
+            width: 100%
+            height: 100%
+            margin: 0
+    header.row
+        position: absolute
+        top: 0
+        @media #{$mobile}
+            position: static
+.sky.formpage
+    overflow: hidden
