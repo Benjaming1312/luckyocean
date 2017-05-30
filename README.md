@@ -32,6 +32,7 @@ npm run build
 |- gulp //原始編輯用的路徑
     |- html //pug的原始檔案
     |- img //切好的圖
+       |-compress //要做壓縮的圖片放在這裡
     |- js
        |- concat //依照功能去放不同的js檔案
        |- userjs.js //會先合併到這裡做產出

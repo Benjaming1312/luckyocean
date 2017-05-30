@@ -1,11 +1,18 @@
-doctype html
-html(lang="zh-Hant")
-  head
-    title aboutus
-    script(type='text/javascript').
-  body
-    h1 只有在局部使用vue
-    p.
-      livereload失敗的樣子
-    div#aboutus
-    script(src="dist/build.js")
+extends index.pug
+
+block content
+  h1 這裡不同
+  .sidebar
+    block sidebar
+      p 這裡是左側
+      ul
+        li 1
+        li 2
+        li 3
+        li 4
+        li 5
+        li 6
+        li 7
+        li 8
+        li 9
+        li 10

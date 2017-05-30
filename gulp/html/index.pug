@@ -2,9 +2,31 @@ doctype html
 html(lang="zh-Hant")
   head
     title PugToVue
-    script(type='text/javascript').
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.css")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js")
+    script(type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.js")
+    script(src="")
   body
-    h1 connectreload
-    p 太好了！！終於有了！！
-    div#app
+    nav(class="navbar navbar-toggleable-md navbar-light bg-faded")
+      button(class="navbar-toggler navbar-toggler-right")
+        span(class="navbar-toggler-icon")
+      a(class="navbar-brand" href="#") Navbar
+      div(class="collapse navbar-collapse" id="navbarSupportedContent")
+        ul(class="navbar-nav mr-auto")
+        li.nav-item
+          a.nav-link(href="#") Home
+        li.nav-item
+          a.nav-link(href="#") Home
+        li.nav-item
+          a.nav-link(href="#") Home
+    block content
+      .slidebar
+        block sidebar
+          ul
+            li 1
+            li 2
+            li 3
+            li 4
+      .primart
+        block primary
     script(src="dist/build.js")
