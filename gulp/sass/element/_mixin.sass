@@ -1,46 +1,69 @@
+// 主色系設定
+$color-1: #66ccff
+$color-2: #f39800
+$color-3: #00913a
+$color-4: #ffb600
+$color-5: #ea5514
+$color-n: transparent
+$color-b: #3e3a39
+$color-menu: #f1efea
+
 /*RWD*/
 $mobile: "screen and (max-width:767px)"
 $pad: "(min-width:768px) and (max-width:991px)"
 $mini-pc: "(min-width: 992px) and (max-width: 1199px)"
 $pad-pc: "(min-width:768px)"
+
+// 字體
+// -宋體組
+$fm-1: "FangSong","LiSong Pro Light","STFangsong","sans-serif"
+$fm-kai: "DFKai-sb","標楷體","sans-serif"
+$fm-google: "Noto Sans TC","微軟正黑體","sans-serif"
+$fm-cn: "Microsoft YaHei","SimHei","LiHei Pro Medium","SimHei","sans-serif"
+
+// 三角形（上·右·下·左）
+@mixin tr3($color_1,$color_2,$color_3,$color_4) 
+	border-width: .5em
+	border-style: solid solid solid solid
+	border-color: $color_1 $color_2 $color_3 $color_4
+
+// 圓型 (寬·高·顏色)
+@mixin circle($wh,$color) 
+	width: $wh
+	height: $wh
+	border-radius: 50%
+	background: $color
+
+// 斜線（寬度·主色·副色）
+@mixin slash($linewidth,$color_1,$color_1_2) 
+	background-color: $color_1
+	background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, $color_1_2), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, $color_1_2),color-stop(.75, $color_1_2), color-stop(.75, transparent),to(transparent))
+	-webkit-background-size: $linewidth
+
+// 橫線（高度·主色·副色）
+@mixin hline($linewidth,$color_1,$color_1_2) 
+	background-color: $color_1
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, $color_1_2), color-stop(.5, transparent), to(transparent))
+	-webkit-background-size: $linewidth
+
+// 直線（寬度·主色·副色）
+@mixin sline($linewidth,$color_1,$color_1_2)
+	background-color: $color_1
+	background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, $color_1_2), color-stop(.5, transparent), to(transparent))
+	-webkit-background-size: $linewidth
+
+// 點點背景（點的大小·點的顏色·背景顏色）
+@mixin pline($linewidth,$color_1,$color_1_2) 
+	background-color: $color_1
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, transparent), color-stop(.5, $color_1_2), to($color_1_2)),-webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, transparent), color-stop(.5, $color_1_2), to($color_1_2))
+	-webkit-background-size: $linewidth
+
+
 a
     &:hover,&:focus,&:focus
         text-decoration: none
         outline: none
-// 整體頁面設定
-.sky
-    width: 100%
-    height: 100%
-    background: #00b9ef
-    padding: 0
-    display: flex
-    align-items: center
-    justify-content: center
-    flex-wrap: wrap
-    @media #{$pad}
-        min-height: 100vh
-    @media #{$mobile}
-        position: relative
-        z-index: 0
-    >.row
-        width: 100vw
-        height: 100vh
-        position: relative
-        @media #{$mobile}
-            height: auto
-        >.col-xs-12
-            height: 100vh
-            @media #{$mobile}
-                height: auto
-                z-index: -1
-        ul
-            width: 100%
-            height: 100%
-            margin: 0
-    header.row
-        position: absolute
-        top: 0
-        @media #{$mobile}
-            position: static
-.sky.formpage
-    overflow: hidden
+*
+    font-size: $fm-google
+    font-size: 16px
+    letter-spacing: .1em

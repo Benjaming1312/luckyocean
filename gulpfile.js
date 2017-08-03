@@ -12,7 +12,7 @@ var gulp = require('gulp'), //gulp主程式
 
 // 監看JS
 gulp.task('watch',function(){
-    gulp.watch('gulp/**/**',['scripts','styles','image','views']) //(‘原始路徑’,['執行的名稱']) **代表路徑的所有檔案轉換
+    gulp.watch('gulp/**/**',['scripts','styles','views']) //(‘原始路徑’,['執行的名稱']) **代表路徑的所有檔案轉換
 })
 
 //connect hotreload
