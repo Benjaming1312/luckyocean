@@ -30,7 +30,7 @@ gulp.task('default',['watch','connect']) //gulp 直接執行
 
 // 執行轉換JS
 gulp.task('scripts',function(){
-    gulp.src('gulp/js/concat/**') //輸入路徑 **代表路徑的所有檔案轉換
+    gulp.src('gulp/js/**') //輸入路徑 **代表路徑的所有檔案轉換
         .pipe(concat('userjs.js')) //合併所有JS
         .pipe(gulpUglify()) //最小化JS
         .pipe(gulp.dest('dist/js')) //輸出路徑
