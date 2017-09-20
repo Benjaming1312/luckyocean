@@ -61,7 +61,7 @@ gulp.task('image',function(){
 
 //pug 轉html
 gulp.task('views',function(){
-    gulp.src('gulp/html/**')
+    gulp.src('gulp/html/page/**.pug')
         .pipe(pug({pretty: true}))
         .pipe(gulp.dest('./'))
         .pipe(connect.reload())

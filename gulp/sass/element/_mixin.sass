@@ -19,8 +19,13 @@ $pad-pc: "(min-width:768px)"
 $fm-1: "FangSong","LiSong Pro Light","STFangsong","sans-serif"
 // 標楷體
 $fm-kai: "DFKai-sb","標楷體","sans-serif"
-// google
-$fm-google: "Noto Sans TC","微軟正黑體","sans-serif"
+
+$fm-google: "Noto Sans TC","微軟正黑體","sans-serif" // google
+$fm-google-FS: 'cwTeXFangSong', serif // 仿宋
+$fm-gogole-Kai: 'cwTeXKai', serif // 楷體
+$fm-gogole-Ming: 'cwTeXMing', serif // 明體
+$fm-gogole-Ming: 'cwTeXYen', sans-serif // 園體
+
 // 雅黑
 $fm-cn: "Microsoft YaHei","SimHei","LiHei Pro Medium","SimHei","sans-serif"
 
@@ -61,7 +66,14 @@ $fm-cn: "Microsoft YaHei","SimHei","LiHei Pro Medium","SimHei","sans-serif"
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, transparent), color-stop(.5, $color_1_2), to($color_1_2)),-webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, transparent), color-stop(.5, $color_1_2), to($color_1_2))
 	-webkit-background-size: $linewidth
 
-
+// 漸層上下左右方向
+// 變數$linear的地方填寫 to right || to bottom
+@mixin linear-gradient($linear, $fromColor, $toColor)
+	background: linear-gradient($linear, $fromColor, $toColor)
+// 漸層從中央擴散
+// 變數$radial的地方填寫 ellipse || circle
+@mixin radial-gradient($radial, $fromColor, $toColor)
+	background: radial-gradient($radial, $fromColor, $toColor)
 a
     &:hover,&:focus,&:focus
         text-decoration: none
