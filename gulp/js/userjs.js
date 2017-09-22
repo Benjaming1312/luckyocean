@@ -1,3 +1,3 @@
 $(function () {
-    owlcarouselfn('.banner .row .col-xs-12', false, true)
+    // owlcarouselfn('.banner .row .col-xs-12', false, true)
 })
