@@ -1,3 +1,4 @@
+include ../custom_module/title.pug
 <!DOCTYPE html>
 html(lang="zh-hant")
     head
@@ -11,58 +12,45 @@ html(lang="zh-hant")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js")
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js"></script>
         script(src="https://unpkg.com/vue")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js")
         script(src="/dist/js/userjs.js")
         title Document
     body
-        include ../custom_module/navbar.pug
+        include ../custom_module/navbar3.pug
         include ../custom_module/owlcarousel.pug
 
         section.idx.section_1.container-fluid
             .row
+                +header-title('歡迎來到', 'LSP Taiwan 樂高認真玩')
+            .row
                 .container
                     .row
-                        .col-sm-3
-                            a.card(href="#")
-                                span.pic
-                                    img.img-responsive(src="/ezfiles/524/1524/img/4487/section-1-pic1.png", alt="")
-                                p.text-center ELISA Reader 
-                        .col-sm-3
-                            a.card(href="#")
-                                span.pic
-                                    img.img-responsive(src="/ezfiles/524/1524/img/4487/section-1-pic2.png", alt="")
-                                p.text-center Waher 
-                        .col-sm-3
-                            a.card(href="#")
-                                span.pic
-                                    img.img-responsive(src="/ezfiles/524/1524/img/4487/section-1-pic3.png", alt="")
-                                p.text-center 自動化工作平台 
-                        .col-sm-3
-                            a.card(href="#")
-                                span.pic
-                                    img.img-responsive(src="/ezfiles/524/1524/img/4487/section-1-pic4.png", alt="")
-                                p.text-center 自動化設備 
+                        article.col-sm-12
+                            img.img-responsive(src="", alt="")
+                            p.title 什麼是樂高認真玩
+                            br
+                            p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, obcaecati alias dolorum aut ipsam ad temporibus nihil iste voluptate neque cum totam cumque harum est quis quisquam facere ipsa excepturi.
+                        article.col-sm-12
+                            img.img-responsive(src="", alt="")
+                            p.title 什麼是樂高認真玩
+                            br
+                            p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, obcaecati alias dolorum aut ipsam ad temporibus nihil iste voluptate neque cum totam cumque harum est quis quisquam facere ipsa excepturi.
+                        article.col-sm-12
+                            img.img-responsive(src="", alt="")
+                            p.title 什麼是樂高認真玩
+                            br
+                            p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, obcaecati alias dolorum aut ipsam ad temporibus nihil iste voluptate neque cum totam cumque harum est quis quisquam facere ipsa excepturi.
+                        footer.col-xs-12
+                            a.pull-right(href="") read more
         section.idx.section_2.container-fluid
             .row
                 .container
+                    article.row
+                        header.col-xs-12
+                            h3.title 認識 樂高認真玩
+                            h5.sub_title 部落格文章
                     .row
-                        .col-sm-6.col-xs-12
-                            img.img-responsive(src="/ezfiles/524/1524/img/4487/section-2-pic-1.png", alt="")
-                        .col-sm-6.col-xs-12
-                            h3.title.text-center ABOUT US
-                            h3.sub_title.text-center 公司簡介
-                            span.circle
-                            p.text-center 尖端生物科技股份有限公司，成立於1988年，秉持最專業的技術與最熱誠的服務態度，為台灣的生命科學研究領域提供最佳的儀器設備。本公司獨家代理及經銷知名品牌之儀器相關產品，產品線含括微盤偵測系統、微盤清洗儀、酵素免疫分析儀、全自動液體處理工作平台、微盤溶液滴定儀、微量吸管及耗材、自動化處理設備、自動化菌株篩選系統、自動化塗盤系統等，為客戶提供全方位及優質的服務。並以客戶為第一與努力學習精神打造出滿足客戶 21 世紀的服務標準。多年的耕耘，且在『專業與服務，我們不變的堅持』的核心價值信念下服務客戶，短短數年間廣為客戶喜愛與認同，並在生物科技界獲得口碑與肯定。
-        section.idx.section_3.container-fluid
-            .row
-                .container
-                    .row
-                        .col-sm-6.col-sm-push-6.col-xs-12
-                            .flex-pic
-                                img.img-responsive(src="/ezfiles/524/1524/img/4487/section-3-pic-1.png", alt="")
-                        .col-sm-6.col-sm-pull-6.col-xs-12 
-                            h3.title NEWS
-                            h3.sub_title 最新消息
-                            | ===MODULE===
+                        include ../custom_module/tab.pug
         include ../custom_module/footer.pug
