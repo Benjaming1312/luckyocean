@@ -11,15 +11,9 @@
   },
   "dependencies": {
     "cssnano": "^3.10.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
     "gulp-compass": "^2.1.0",
-    "gulp-imagemin": "^3.2.0",
     "gulp-postcss": "^7.0.0",
     "gulp-pug": "^3.3.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-uglify": "^3.0.0",
     "vue": "^2.3.3"
   },
   "devDependencies": {
@@ -31,6 +25,7 @@
     "file-loader": "^0.9.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",
     "gulp-imagemin": "^3.2.0",

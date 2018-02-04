@@ -1,4 +1,5 @@
 var gulp = require('gulp'), //gulp主程式
+    babel = require('gulp-babel') // es6
     gulpUglify = require('gulp-uglify'), //最小化JS
     sass = require('gulp-sass') //sass
     autoprefixer = require('gulp-autoprefixer') //autoprefixer
@@ -31,7 +32,10 @@ gulp.task('default',['watch','connect']) //gulp 直接執行
 // 執行轉換JS
 gulp.task('scripts',function(){
     gulp.src('gulp/js/**') //輸入路徑 **代表路徑的所有檔案轉換
-        .pipe(concat('userjs.js')) //合併所有JS
+        .pipe(babel({
+            presets: ['env']
+        }))
+        .pipe(concat('userjs.js')) //合併所有JS產出為userjs.js
         .pipe(gulpUglify()) //最小化JS
         .pipe(gulp.dest('dist/js')) //輸出路徑
         .pipe(connect.reload())
