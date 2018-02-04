@@ -1,0 +1,135 @@
+-
+  var product = [
+    {
+      name: '粉類系列',
+      nameEn: 'POWDERS',
+      href: '/m/2000-1541-15311.php?Lang=zh-tw',
+      children: [
+        { 
+          name: '奶茶粉系列',
+          nameEn: 'Milk Tea',
+          href: '/m/2000-1541-15312.php?Lang=zh-tw'
+        },
+        { 
+          name: '冰沙粉系列',
+          nameEn: 'Smoothie Powder',
+          href: '/m/2000-1541-15313.php?Lang=zh-tw'
+        },
+        { 
+          name: '即溶咖啡系列',
+          nameEn: 'Coffee Powder',
+          href: '/m/2000-1541-15314.php?Lang=zh-tw'
+        },
+        { 
+          name: '果粉系列',
+          nameEn: 'Juice Powder',
+          href: '/m/2000-1541-15315.php?Lang=zh-tw'
+        }
+      ]
+    },
+    {
+      name: '各大連鎖品牌客製化系列',
+      nameEn: 'The major chain brands customization',
+      href: '/m/2000-1541-15316.php?Lang=zh-tw',
+      children: [
+        {
+          name: '甜品系列',
+          nameEn: 'Dessert',
+          href: '/m/2000-1541-15318.php?Lang=zh-tw'
+        },
+        {
+          name: '調味粉系列',
+          nameEn: 'Seasoning Powder',
+          href: '/m/2000-1541-15319.php?Lang=zh-tw'
+        }
+      ]
+    },
+    {
+      name: '濃縮果汁系列',
+      nameEn: 'CONCENTRATED FRUIT JUICE',
+      href: '/m/2000-1541-15320.php?Lang=zh-tw'
+    },
+    {
+      name: '配料系列',
+      nameEn: 'TOPPINGS',
+      href: '/m/2000-1541-15321.php?Lang=zh-tw',
+      chlidren: [
+        {
+          name: '布丁豆花系列',
+          nameEn: 'Pudding Powder',
+          href: '/m/2000-1541-15322.php?Lang=zh-tw'
+        },
+        {
+          name: '刨冰醬料系列',
+          nameEn: 'Ice Shaving Jam',
+          href: '/m/2000-1541-15323.php?Lang=zh-tw'
+        },
+        {
+          name: '果凍粉',
+          nameEn: 'Jelly Powder',
+          href: '/m/2000-1541-15324.php?Lang=zh-tw'
+        }
+      ]
+    },
+    {
+      name: '設備包材系列',
+      nameEn: 'EQUIPMENT  UTENSILS  PACKAGING',
+      href: '/m/2000-1541-15325.php?Lang=zh-tw'
+    },
+    {
+      name: '雪花冰系列',
+      nameEn: 'SNOW ICE POWDER',
+      href: '/m/2000-1541-15326.php?Lang=zh-tw'
+    },
+    {
+      name: '珍珠奶茶系列',
+      nameEn: 'BUBBLE MILK TEA',
+      href: '/m/2000-1541-15327.php?Lang=zh-tw',
+      children: [
+        {
+          name: '奶精系列',
+          nameEn: 'Cream Powder',
+          href: '/m/2000-1541-15328.php?Lang=zh-tw'
+        },
+        {
+          name: '珍珠_啵啵球系列',
+          nameEn: 'Tapioca_Popping Boba',
+          href: '/m/2000-1541-15329.php?Lang=zh-tw'
+        },
+        {
+          name: '傳統茶系列',
+          nameEn: 'Classic Tea',
+          href: '/m/2000-1541-15330.php?Lang=zh-tw'
+        },
+        {
+          name: '調味糖系列',
+          nameEn: 'Sugar',
+          href: '/m/2000-1541-15331.php?Lang=zh-tw'
+        }
+      ]
+    }
+  ] 
+.sidebar.product-list
+  h3.title
+    | 線上購物
+    span Online Shop
+  each item, index in product
+    if (item.children)
+      .panel
+        a(href="#product" + index, data-toggle="collapse", data-parent=".product-list")
+          span.name=item.name
+          //- span.nameEn=item.nameEn
+        .collapse(id="product" + index)
+          ul
+            each child in item.children
+              li
+                a(href=child.href)
+                  span.name=child.name
+                  //- span.nameEn=child.nameEn
+    else
+      .panel
+        a(href=item.href)
+          span.name=item.name
+          //- span.nameEn=item.nameEn
+.product-link-module
+  | ===MODULE===
