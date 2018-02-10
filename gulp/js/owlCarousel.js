@@ -21,8 +21,14 @@
 // })
 
 // 商品推薦模組改輪播
+// 商品推薦模組改輪播
 // function owlMshop(target) {
-//   var owl = $(target).find('.module-special')
+//   var owl
+//   // 判斷是否為推薦模組，如是mshop預設關聯性商品則直接使用
+//   owl = $(target).find('.module-special')
+//   if (owl.length === 0) {
+//     owl = $('.module-relate')
+//   }
 //   owl.each(function () {
 //     if ($(this).find('.listBS').attr('class').indexOf('listSlide') < 0) {
 //       $(this).find('.mb').addClass('owl-carousel customSlide')
