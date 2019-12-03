@@ -3,6 +3,5 @@ node_modules/
 dist/
 npm-debug.log
 yarn-error.log
-.html
 package.json
 layout

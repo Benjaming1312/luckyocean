@@ -1,0 +1,110 @@
+// .banner
+//   padding: 0
+//   width: 100%
+//   position: relative
+//   margin-top: 111px
+//   @media #{$mobile}
+//     margin-top: 65px
+//   .banner-bg
+//     padding: 0
+//     // position: absolute
+//     // @media #{$mobile}
+//     //   position: static
+//     img
+//       width: 100%
+//   .banner-img
+//     padding-left: 42%
+//     padding-right: 6%
+//     height: 100%
+//     position: absolute
+//     top: 50px
+//     // margin: 60px
+//     @media #{$mobile}
+//       top: 100px
+//       padding-left: 55%
+//       padding-right: 3%
+//     .module-ads
+//       position: relative
+//       >.mb
+//         &::after
+//           content: ''
+//           display: block
+//           width: 100%
+//           height: 100%
+//           position: absolute
+//           bottom: -30px
+//           right: -30px
+//           background: url(#{$url}bgnner-shaodow.png) center center no-repeat
+//           z-index: 1
+//           background-size: cover
+//           @media #{$mobile}
+//             bottom: -15px
+
+//         .minner
+//           position: relative
+//           z-index: 2
+//     .owl-dot
+//       margin: 1rem .25rem
+//       @media #{$mobile}
+//         margin: 0.5rem .1rem
+//       span
+//         opacity: 1
+//         background: #e0e000
+//         width: 0.5rem
+//         height: 0.5rem
+//       &.active
+//         span
+//           background: #000
+//   &.mb-banner
+//     .banner-img
+//       // padding: 0
+//       position: absolute
+//       bottom: -3.5rem
+//       width: 100%
+//       height: 100%
+//       margin: 0
+//       display: flex
+//       align-items: flex-end
+//       z-index: 3
+//       .module-ads
+//         width: 100%
+.mads-li
+  margin-top: 98px
+  @media #{$mobile}
+    margin-top: 121px
+  .owl-controls
+    position: absolute
+    bottom: 15px
+    width: 100%
+    @media #{$mobile}
+      bottom: 5px
+  .owl-dots
+    .owl-dot
+      opacity: 1
+      border-radius: 0
+      margin-right: 5px
+      @media #{$mobile}
+        margin-right: 0
+      span
+        opacity: 1
+        border-radius: 0
+        background: url(#{$url}dot.png) center center no-repeat
+        background-size: cover
+        background-position: center
+        width: 7px
+        height: 7px
+        +trans
+        @media #{$mobile}
+          width: 7px
+          height: 7px
+      &.active
+        span
+          background: url(#{$url}dot-active.png) center center no-repeat
+          width: 13px
+          height: 13px
+          position: relative
+          top: 2px
+          @media #{$mobile}
+            width: 10px
+            height: 10px
+            top: 0

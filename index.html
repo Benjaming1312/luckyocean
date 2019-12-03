@@ -7,301 +7,145 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="stylesheet" href="/dist/css/usercss.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/vue"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="/dist/js/userjs.js"></script>
     <title>Document</title>
   </head>
   <body>
     <nav class="navbar">
-      <div class="container">
+      <div class="container-fluid"><form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
+<div class="input-group">
+<span class="input-group-btn">
+        <button class="btn svg" type="submit" style="background: url(/ezfiles/761/1761/img/209/search.png);"></button></span>
+<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
+</div>
+</form>
         <div class="navbar-header">
-          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#">
-            <!-- LOGO放置處--><img class="img-responsive" src="dist/images/headlogo.svg" alt=""/></a>
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <!-- LOGO放置處--><a class="navbar-brand svg" href="/" style="background: url(/ezfiles/761/1761/img/209/logo.png); width: 268px; height: 62px;"></a>
         </div>
         <div class="navbar-collapse collapse" id="navbar">
           <ul class="nav navbar-nav">
-            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">關於樂高認真玩(LSP) About LSP</a>
+            <li class="dropdown" data-aos="fade-in" data-aos-delay="300"><a class="fz16a dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">公司介紹</a>
               <ul class="dropdown-menu" role="menu">
-                <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">About LSP</a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="">LSP發展起源</a></li>
-                    <li><a href="">LSP方法與工具</a></li>
-                    <li><a href="">LSP Book參考書籍</a></li>
-                    <li><a href="">About Team</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">About LSP Taiwan</a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="">About Team</a></li>
-                  </ul>
-                </li>
+                <li><a href="">關於鑫品</a></li>
+                <li><a href="">公司沿革</a></li>
+                <li><a href="">經營策略</a></li>
+                <li><a href="">組織架構</a></li>
+                <li><a href="">投資人專區</a></li>
               </ul>
             </li>
-            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">LSP 應用 Applications</a>
+            <li class="dropdown" data-aos-delay="400" data-aos="fade-in"><a class="fz16a dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">免疫新知</a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="">LSP主要應用領域</a></li>
-                <li><a href="">LSP工作坊主題</a></li>
-                <li><a href="">LSP工作坊形式</a></li>
+                <li><a href="">免疫細胞介紹</a></li>
+                <li><a href="">免疫細胞療法</a></li>
+                <li><a href="">影響成效的條件</a></li>
+                <li><a href="">論文佐證</a></li>
               </ul>
             </li>
-            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">相關活動News ＆ Events</a>
+            <li class="dropdown" data-aos-delay="500" data-aos="fade-in"><a class="fz16a dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">研發中心</a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="">近期公開活動</a></li>
-                <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">認證訓練課程</a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="">認證訓練課程時間表</a></li>
-                  </ul>
-                </li>
+                <li><a href="">研究方向</a></li>
+                <li><a href="">合作研究機構</a></li>
               </ul>
             </li>
-            <li><a href="">部落格Blog</a></li>
-            <li><a href="">聯絡我們Contact</a></li>
+            <li data-aos-delay="700" data-aos="fade-in"><a class="fz16" href="">各國臨床研究</a></li>
+            <li class="dropdown" data-aos-delay="800" data-aos="fade-in"><a class="fz16a dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">最新資訊</a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="">相關新聞</a></li>
+                <li><a href="">醫學新知</a></li>
+                <li><a href="">影片中心</a></li>
+              </ul>
+            </li>
+            <li class="dropdown" data-aos-delay="900" data-aos="fade-in"><a class="fz16" href="">聯繫我們</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/VectoriteBiomedical/" target="_blank"><img class="img-responsive" src="/ezfiles/761/1761/img/209/facebook.png" style="width: 23px; height: 23px;"/></a></li>
           </ul>
         </div>
       </div>
     </nav>
     <div class="banner container-fluid">
-      <div class="row hgroup">
-        <article class="col-xs-12">
-          <header class="group text-center"><span class="circle"></span>
-            <h3 class="title">用手思考。伸手探索</h3>
-            <h4 class="sub_title">動手打造優質的企業團隊</h4><br/><a class="scroll" href="javascript: void(0)"><svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.45 17.85"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px;}</style></defs><title>工作區域 4</title><polyline class="cls-1" points="30.39 1.06 15.73 15.73 1.06 1.06"/></svg></a>
-          </header>
-        </article>
-      </div>
       <div class="row">
-        <div class="col-xs-12">
-          <div class="owl-carousel"><img class="item" src="http://rawpanel.com/N2ISC/image.aspx?id=86ca56ca3b7748da8e0b7d1ca6d7b24c" alt=""/><img class="item" src="http://rawpanel.com/N2ISC/image.aspx?id=86ca56ca3b7748da8e0b7d1ca6d7b24c" alt=""/><img class="item" src="http://rawpanel.com/N2ISC/image.aspx?id=86ca56ca3b7748da8e0b7d1ca6d7b24c" alt=""/><img class="item" src="http://rawpanel.com/N2ISC/image.aspx?id=86ca56ca3b7748da8e0b7d1ca6d7b24c" alt=""/><img class="item" src="http://rawpanel.com/N2ISC/image.aspx?id=86ca56ca3b7748da8e0b7d1ca6d7b24c" alt=""/><img class="item" src="http://rawpanel.com/N2ISC/image.aspx?id=86ca56ca3b7748da8e0b7d1ca6d7b24c" alt=""/></div>
+        <div class="col-xs-12 banner-bg"><img class="img-responsive" src="/ezfiles/761/1761/img/209/banner-bg.png" alt=""/></div>
+        <div class="col-xs-12 banner-img">===MODULE===</div>
+      </div>
+    </div>
+    <div class="idx section section-1 container-fluid text-center">
+      <h3 class="title text-green">全方位預防醫學與癌症醫療的先驅</h3>
+      <h4 class="sub-title text-blue">持續創新研發  整合抗衰老與癌症預防醫學一條龍服務</h4>
+      <p>鑫品生醫以『防患於未然』的理念成立鑫品生醫集團，由旗下子公司共同合作與<br/>努力，從抗老保健與防癌規劃，到免疫細胞儲存與治療技術研發，<br/>提供民眾全方位預防醫學整合服務之餘，<br/>更給予未來可能罹癌時的生存希望與提升生活品質之專業技術與服務。</p>
+    </div>
+    <div class="idx section section-2 container-fluid text-center">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="box"><img class="img-responsive center-block" src="/ezfiles/761/1761/img/209/section-1-icon-1.png" alt=""/>
+            <h4 class="title">DC樹突細胞治療</h4><img class="img-responsive center-block" src="/ezfiles/761/1761/img/209/section-1-line.svg" alt=""/>
+            <p>樹突細胞有如身體防禦系統的指揮官，能吞噬癌細胞的抗原並呈現在細胞表面上，藉此培訓T細胞認識癌細胞，讓T細胞能針對癌細胞進行準確有效的攻擊。</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="box"><img class="img-responsive center-block" src="/ezfiles/761/1761/img/209/section-1-icon-2.png" alt=""/>
+            <h4 class="title">T細胞治療</h4><img class="img-responsive center-block" src="/ezfiles/761/1761/img/209/section-1-line.svg" alt=""/>
+            <p>T細胞是淋巴細胞的一種，有如防禦系統的精銳士兵，又分成毒殺型T細胞、輔助型T細胞、調節型T細胞以及記憶型T，這些T細胞皆在免疫反應中扮演著重要的角色。</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="box"><img class="img-responsive center-block" src="/ezfiles/761/1761/img/209/section-1-icon-3.png" alt=""/>
+            <h4 class="title">NK自然殺手細胞治療</h4><img class="img-responsive center-block" src="/ezfiles/761/1761/img/209/section-1-line.svg" alt=""/>
+            <p>NK細胞有如體內的警察部隊，與T細胞不同之處在於不須經過免疫刺激，即可針對癌細胞進行非專一性的攻擊，並可釋放特殊細胞激素，作為細胞活化之標記。</p>
+          </div>
         </div>
       </div>
     </div>
-    <section class="idx section_1 container-fluid">
+    <div class="idx section section-3 container-fluid text-center">
+      <h3 class="title text-green">最新消息</h3>
+      <h4 class="sub-title text-grey">NEWS</h4>===MODULE===
+    </div>
+    <div class="idx section section-4 container-fluid text-center">
+      <h3 class="title text-green">免疫新知</h3>
+      <h4 class="sub-title text-grey">KNOWLEDGES</h4>===MODULE===
+    </div>
+    <footer class="foot">
       <div class="row">
-        <header class="col-xs-12 header-title">
-          <h3 class="title">歡迎來到</h3>
-          <h5 class="sub_title">LSP Taiwan 樂高認真玩</h5>
-        </header>
-      </div>
-      <div class="row">
-        <div class="container">
-          <div class="row">
-            <article class="col-sm-12"><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=0f6e1e9cdccd41e19d2a5c5d4041f1f8" alt=""/>
-              <p class="title">什麼是樂高認真玩LEGO® SERIOUS PLAY® (LSP)</p><br/>
-              <p>小編今天要來跟姊妹們聊的是 婚攝 婚禮當天絕對有很多美麗且稍縱即逝的畫面， 就像～婚禮當天新娘無法親眼看到的～新郎闖關時的逗趣認真模樣 以及新娘想永遠記在心中的瞬間～拜別時父親的眼淚、母親的不捨模樣 這都是新人想保留下的感人畫面。 婚攝，就是將這些畫面保留下來的“第三隻眼" 而這個婚攝該如何挑選呢？</p>
-            </article>
-            <article class="col-sm-12"><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=0cbaebb76565475d9f680bdff82ffb10" alt=""/>
-              <p class="title">為什麼要動手，而不是僅僅談論？</p><br/>
-              <p>LEGO® SERIOUS PLAY® (LSP)是一個討論式工作坊，利用技術做溝通與解決組織，團隊與個人問題的會議方式。此技術方法是基於許多研究發現 – “手的知識”，手部骨骼的連接到大腦骨骼，通過此連結使大腦產生最大動力。手與大腦之間的深刻的互聯，使大腦產生最大動力，也是人類發展的中心。</p>
-            </article>
-            <article class="col-sm-12"><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=665f809e6df74fe29a41b31219265743" alt=""/>
-              <p class="title">樂高認真玩 LEGO® SERIOUS PLAY® (LSP) 的應用形式</p><br/>
-              <p>我們用LEGO® SERIOUS PLAY®方式主導會議、工作坊和解決問題的研討會，使所有參與者了解目前處境，發現問題的根源，達成共識，為未來目標敲一同向前。最重要的是，我們能在最短時間內做出最有效率的決定，更重要的是，整個過程生動有趣，確保每個人百分之百參與。所有研討會議／工作坊主題依照客戶量身定制，歡迎聯絡我們 </p>
-            </article>
-            <footer class="col-xs-12"><a class="pull-right" href="">read more</a></footer>
+        <div class="logo"><span class="svg" style="background:url(/ezfiles/761/1761/img/209/foot-logo.svg); width: 332px; height: 57px;"></span></div>
+        <div class="info">
+          <p>TEL：<a href="tel: +886-2-2697-1100">+886-2-2697-1100</a></p>
+          <p>Email：<a href="mailto: info@yuva.com.tw">info@yuva.com.tw</a></p>
+          <p>FAX：+886-2-2697-1155</p>
+          <div class="addr">
+            <table>
+              <tr>
+                <td>ADD：</td>
+                <td>22175新北市汐止區新台五路一段97號6樓-11<br/>(遠雄U-TOWN B棟)</td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
-    </section>
-    <section class="idx section_2 container-fluid">
-      <div class="row">
-        <div class="container">
-          <article class="row">
-            <header class="col-xs-12">
-              <h3 class="title">認識 樂高認真玩 LEGO® SERIOUS PLAY®</h3>
-              <h5 class="sub_title">部落格文章</h5>
-            </header>
-          </article>
-          <div class="row">
-            <article class="col-xs-12">
-              <header>
-                <ul class="nav nav-tabs" role="tablist">
-                  <li class="active"><a href="#menu1" role="tab" data-toggle="tab" aria-expanded="true">Benefit效益</a></li>
-                  <li><a href="#menu2" role="tab" data-toggle="tab" aria-expanded="true">Basics原理方法</a></li>
-                  <li><a href="#menu3" role="tab" data-toggle="tab" aria-expanded="true">Application應用</a></li>
-                  <li><a href="#menu4" role="tab" data-toggle="tab" aria-expanded="true">Others其他</a></li>
-                </ul>
-              </header>
-              <article class="tab-content">
-                <div class="active in" id="menu1">
-                  <div class="grid">
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=a236a6f842124e04813b74169ad1d0bb" alt=""/>
-                        <p class="title">LSP 部落格文章 01</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=0b2c01c53d3744fb88a021fcdef61641" alt=""/>
-                        <p class="title">部落格文章 04</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=d4bc8a92ab96476aa18c4125bb2a7627" alt=""/>
-                        <p class="title">部落格文章 02</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=bdd1232c3fe34ec5bb0b00b231937f5d" alt=""/>
-                        <p class="title">部落格文章 05</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=d75761f87cba499eb6ea412bb4dfe431" alt=""/>
-                        <p class="title">部落格文章 03</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=60287f8b7a234b25bd7178c9cf17125d" alt=""/>
-                        <p class="title">部落格文章 06</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                  </div>
-                </div>
-                <div id="menu2">
-                  <div class="grid">
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=a236a6f842124e04813b74169ad1d0bb" alt=""/>
-                        <p class="title">LSP 部落格文章 01</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=0b2c01c53d3744fb88a021fcdef61641" alt=""/>
-                        <p class="title">部落格文章 04</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=d4bc8a92ab96476aa18c4125bb2a7627" alt=""/>
-                        <p class="title">部落格文章 02</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=bdd1232c3fe34ec5bb0b00b231937f5d" alt=""/>
-                        <p class="title">部落格文章 05</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=d75761f87cba499eb6ea412bb4dfe431" alt=""/>
-                        <p class="title">部落格文章 03</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=60287f8b7a234b25bd7178c9cf17125d" alt=""/>
-                        <p class="title">部落格文章 06</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                  </div>
-                </div>
-                <div id="menu3">
-                  <div class="grid">
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=a236a6f842124e04813b74169ad1d0bb" alt=""/>
-                        <p class="title">LSP 部落格文章 01</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=0b2c01c53d3744fb88a021fcdef61641" alt=""/>
-                        <p class="title">部落格文章 04</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=d4bc8a92ab96476aa18c4125bb2a7627" alt=""/>
-                        <p class="title">部落格文章 02</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=bdd1232c3fe34ec5bb0b00b231937f5d" alt=""/>
-                        <p class="title">部落格文章 05</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=d75761f87cba499eb6ea412bb4dfe431" alt=""/>
-                        <p class="title">部落格文章 03</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=60287f8b7a234b25bd7178c9cf17125d" alt=""/>
-                        <p class="title">部落格文章 06</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                  </div>
-                </div>
-                <div id="menu4">
-                  <div class="grid">
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=a236a6f842124e04813b74169ad1d0bb" alt=""/>
-                        <p class="title">LSP 部落格文章 01</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=0b2c01c53d3744fb88a021fcdef61641" alt=""/>
-                        <p class="title">部落格文章 04</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=d4bc8a92ab96476aa18c4125bb2a7627" alt=""/>
-                        <p class="title">部落格文章 02</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=bdd1232c3fe34ec5bb0b00b231937f5d" alt=""/>
-                        <p class="title">部落格文章 05</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=d75761f87cba499eb6ea412bb4dfe431" alt=""/>
-                        <p class="title">部落格文章 03</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                    <div class="grid-item"><a href=""><img class="img-responsive" src="http://rawpanel.com/N2ISC/image.aspx?id=60287f8b7a234b25bd7178c9cf17125d" alt=""/>
-                        <p class="title">部落格文章 06</p>
-                        <hr/>
-                        <p>
-                           我們相信雜誌不單單是圖文上的編排， <br/>是傳達一種態度， <br/>是表述一份群眾或企業的理念。</p></a></div>
-                  </div>
-                </div>
-              </article>
-            </article>
-          </div>
+      <div class="row list">
+        <div class="col-xs-12">
+          <ul class="list-inline">
+            <li><a href="">公司介紹</a></li>
+            <li><a href="">免疫新知</a></li>
+            <li><a href="">研發中心</a></li>
+            <li><a href="">各國臨床研究</a></li>
+            <li><a href="">最新資訊</a></li>
+            <li><a href="">聯繫我們</a></li>
+          </ul>
         </div>
-      </div>
-    </section>
-    <footer class="foot container-fluid">
-      <div class="row">
-        <div class="container">
-          <div class="row">
-                <header class="col-xs-12 header-title">
-                  <h3 class="title">Contact us</h3>
-                  <h5 class="sub_title">聯絡我們</h5>
-                </header>
-            <article class="col-xs-12"><img class="logo img-responsive" src="dist/images/footer-logo.svg" alt=""/>
-              <p><a href="mailto:lsptw@knac.com.tw">lsptw@knac.com.tw</a></p>
-            </article>
-            <footer class="col-xs-12">
-              <ul class="list-inline">
-                <li><a href=""><img src="dist/images/social-icon-fb.svg" alt=""/></a></li>
-                <li><a href=""><img src="dist/images/social-icon-linkin.svg" alt=""/></a></li>
-                <li><a href=""><img src="dist/images/social-icon-ig.svg" alt=""/></a></li>
-                <li><a href=""><img src="dist/images/social-icon-google.svg" alt=""/></a></li>
-                <li><a href=""><img src="dist/images/social-icon-twitter.svg" alt=""/></a></li>
-                <li><a href=""><img src="dist/images/social-icon-line@.svg" alt=""/></a></li>
-                <li><a href=""><img src="dist/images/social-icon-edm.svg" alt=""/></a></li>
-              </ul>
-            </footer>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <article class="col-xs-12"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14460.124084039391!2d121.5531937!3d25.0330213!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xedda4225bb1305b9!2z5o236YGL5L-h576p5a6J5ZKM56uZ!5e0!3m2!1szh-TW!2stw!4v1506313836554" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></article>
-        <footer class="col-xs-12">
-          <p class="text-center"><span>© 2015~2017 LSP Taiwan 台灣樂高認真玩  All rights reserved.  版權資訊　</span><a href="http://redmedia.tw" target="_blank">+網頁設計+</a></p>
-        </footer>
       </div>
     </footer>
-    <div class="gotop"><a href="javascript: void(0)"><svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.84 12.92"><defs><style>.cls-1{fill:#050505;}</style></defs><title>工作區域 24</title><polygon class="cls-1" points="0 12.92 12.92 0 25.84 12.92 0 12.92"/></svg>
-<svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 58"><defs><style>.cls-1{fill:#050505;}.cls-2{font-size:14px;fill:#fff;font-family:MicrosoftJhengHeiBold, Microsoft JhengHei;font-weight:700;}</style></defs><title>工作區域 25</title><circle class="cls-1" cx="29" cy="29" r="29"/><text class="cls-2" transform="translate(8.33 35.38)">ＴＯＰ</text></svg></a></div>
+    <div class="design container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <p class="text-center">Coppyrightⓒ2019.All Rights Reserved<a href="http://www.e-creation.com.tw" target="_blank">+Design By 藝創媒體</a></p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

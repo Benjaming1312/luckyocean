@@ -1,0 +1,115 @@
+.idx.section-4
+  padding-top: 80px
+  padding-bottom: 50px
+  background: url(#{$url}section-4-bg.png) center center no-repeat
+  background-size: cover
+  @media #{$mobile}
+    padding-top: 50px
+    padding-bottom: 25px
+  .title
+    color: #70b8a4
+    +title
+    margin-bottom: 15px
+    @media #{$mobile}
+      margin-bottom: 0
+  .sub-title
+    +sub-title
+    color: #b0b0b1
+    font-size: 22px
+    margin-top: 0
+  .module
+    +max-width
+    margin-left: auto
+    margin-right: auto
+    margin-top: 80px
+    .d-item
+      padding: 0
+    .listBS
+      margin-bottom: 73px
+      &:nth-child(odd)
+        .mbox
+          flex-direction: row-reverse
+          .d-txt
+            @media screen and (min-width: 768px)
+              padding-right: 100px
+      &:nth-child(even)
+        .mbox
+          // flex-direction: row-reverse
+          .d-txt
+            @media screen and (min-width: 768px)
+              padding-left: 100px
+            a
+              color: #008dc5
+              &::before
+                background: url(#{$url}plus-blue.svg)center center no-repeat
+            .btn
+              background: #008dc5
+              color: white
+              &:hover
+                border-color: #008dc5
+                color: #008dc5
+                background: $color-n
+      .mbox
+        display: flex
+        width: 100%
+        @media #{$mobile}
+          flex-wrap: wrap
+        .d-img
+          max-width: 51%
+          width: 100%
+          padding: 0
+          @media #{$mobile}
+            max-width: 100%
+          img
+            width: 100%
+        .d-txt
+          max-width: 49%
+          width: 100%
+          display: flex
+          align-items: center
+          flex-wrap: wrap
+          @media screen and (min-width: 768px)
+            padding: 5% 0
+          @media #{$mobile}
+            max-width: 100%
+            padding-top: 30px
+          h5
+            width: 100%
+            text-align: left
+            a
+              font-size: 28px
+              font-weight: bold
+              color: #4fb59b
+              &::before
+                content: ''
+                display: inline-block
+                $w: 15px
+                width: $w
+                height: $w
+                background: url(#{$url}plus-green.svg)center center no-repeat
+                background-size: cover
+                margin-right: 5px
+          .mdetail
+            width: 100%
+            text-align: left
+            font-size: 16px
+            color: #6d6c6c
+            line-height: 2.5rem
+        .more
+          text-align: right
+          display: block
+          width: 100%
+          margin-top: 30px
+          @media screen and (min-width: 768px)
+            padding-right: 30px
+          .btn
+            font-weight: bold
+            color: white
+            background: #4fb59b
+            border-radius: 0
+            border: 1px solid $color-n
+            +trans
+            &:hover
+              border-color: #4fb59b
+              color: #4fb59b
+              background: $color-n

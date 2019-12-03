@@ -5,13 +5,19 @@ $color-3: #00913a
 $color-4: #ffb600
 $color-5: #ea5514
 $color-n: transparent
-$color-b: #3e3a39
-$color-b2: #727171
+$color-b: #4C4948
+$color-b2: #595757
 $color-menu: #f1efea
-$color-gray: #efefef
-$color-red: darken(red, 10%)
-$color-blue: #171c61
-
+$color-red: #cf0a2c
+$color-blue: rgba(#022051, .85)
+$color-blued: #033557
+$color-orange: #eabf70
+$color-yellow: #d3b41e
+$color-grey: #898989
+$color-gray: #898989
+$color-green: #88bfb1
+$color-green: #2f5359
+$color-skyblue: #339dd1
 /*RWD*/
 $mobile: "screen and (max-width:767px)"
 $pad: "(min-width:768px) and (max-width:991px)"
@@ -24,6 +30,8 @@ $fm-1: "FangSong","LiSong Pro Light","STFangsong","sans-serif"
 // 標楷體
 $fm-kai: "DFKai-sb","標楷體","sans-serif"
 
+$fm-proximNova: "ProximaNova", "微軟正黑體","sans-serif" // google
+$fm-ms: "Microsoft JhengHei ", "微軟正黑體","sans-serif" // google
 $fm-google: "Noto Sans TC","微軟正黑體","sans-serif" // google
 $fm-google-FS: 'cwTeXFangSong', serif // 仿宋
 $fm-gogole-Kai: 'cwTeXKai', serif // 楷體
@@ -32,6 +40,51 @@ $fm-gogole-Ming: 'cwTeXYen', sans-serif // 園體
 
 // 雅黑
 $fm-cn: "Microsoft YaHei","SimHei","LiHei Pro Medium","SimHei","sans-serif"
+
+
+@font-face 
+	font-family: ProximaNova
+	src: url(/dist/css/proxima-nova-thin.woff) format("woff")
+	font-weight: 100
+	font-style: normal
+
+@font-face 
+    font-family: ProximaNova
+    src: url(/dist/css/proxima-nova-light.woff) format("woff")
+    font-weight: 300
+    font-style: normal
+
+@font-face 
+    font-family: ProximaNova
+    src: url(/dist/css/proxima-nova-regular.woff) format("woff")
+    font-weight: 400
+    font-style: normal
+
+@font-face 
+    font-family: ProximaNova
+    src: url(/dist/css/proxima-nova-semibold.woff) format("woff")
+    font-weight: 600
+    font-style: normal
+
+@font-face 
+    font-family: ProximaNova
+    src: url(/dist/css/proxima-nova-bold.woff) format("woff")
+    font-weight: 700
+    font-style: normal
+
+@font-face 
+    font-family: ProximaNova
+    src: url(/dist/css/proxima-nova-extrabold.woff) format("woff")
+    font-weight: 800
+    font-style: normal
+
+@font-face 
+    font-family: ProximaNova
+    src: url(/dist/css/proxima-nova-black.woff) format("woff")
+    font-weight: 900
+    font-style: normal
+
+
 
 // 三角形（上·右·下·左）
 @mixin tr3($color_1,$color_2,$color_3,$color_4) 
@@ -79,13 +132,18 @@ $fm-cn: "Microsoft YaHei","SimHei","LiHei Pro Medium","SimHei","sans-serif"
 @mixin radial-gradient($radial, $fromColor, $toColor)
 	background: radial-gradient($radial, $fromColor, $toColor)
 a
-    &:hover,&:focus,&:focus
-        text-decoration: none
-        outline: none
+	&:hover,&:focus,&:focus
+		text-decoration: none!important
+		outline: none!important
+
 *
-    font-family: $fm-google
-    font-size: 16px
-    letter-spacing: .1em
+	font-family: $fm-google
+	font-size: 16px
+	color: $color-b
+	font-weight: normal
+
+[class^="icon-"], [class*=" icon-"]
+	font-family: 'icomoon'!important
 
 @mixin idx-h3-title
 	font-size: 26px
@@ -95,3 +153,10 @@ a
 	font-size: 22px
 	margin-top: 0.5em
 	color: $color-blue
+
+$url: '/ezfiles/761/1761/img/209/'
+$trans: .3s ease-in-out
+
+@for $i from 10 through 100
+	.fz#{$i}
+		font-size: #{$i}px

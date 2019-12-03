@@ -1,0 +1,56 @@
+a
+  &:hover,
+  &:focus
+    outline: 0
+    text-decoration: none
+html
+  overflow-x: hidden
+.langbar
+  display: none
+
+.svg
+  display: inline-block
+  background-size: contain!important
+  background-repeat: no-repeat!important
+  background-position: center!important
+
+=bg-grey
+  background: #f2f2f3
+=max-width
+  max-width: 1100px
+
+=box-shadow
+  box-shadow: 0 4px 30px rgba(0, 0, 0, .15)
+=text-shadow
+  text-shadow: 1px 1px 30px rgba(#000, 1)
+=trans
+  transition: $trans
+
+=btn
+  width: 150px
+  height: 30px
+  line-height: 2rem
+  font-size: 16px
+  text-align: center
+  padding: 0
+  font-weight: normal
+  background: none
+  display: flex
+  align-items: center
+  justify-content: center
+  +trans
+  border: 1px solid #cf0a2c
+  color: #cf0a2c
+
+=title
+  font-size: 35px
+  font-weight: bold
+  line-height: 2.5rem
+  @media #{$mobile}
+    font-size: 22px
+=sub-title
+  font-size: 23px
+  font-weight: bold
+  line-height: 2.5rem
+  @media #{$mobile}
+    font-size: 18px

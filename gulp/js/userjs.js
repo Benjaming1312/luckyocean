@@ -4,3 +4,169 @@
 // $('test').click((e) => {
 //     return e ? true : false
 // })
+function is (name) {
+  return $(name).is(name)
+}
+
+function showTitle (dataTitle, lang) {
+  const target = isENG(lang) ? 'lang-title-en' : 'lang-title-tw'
+  $('.page-title').each(function () {
+    if ($(this).attr('data-title') === dataTitle && $(this).hasClass(target)) {
+      $(this).removeClass('hidden')
+    }
+  })
+}
+
+function isENG (lang) {
+  return lang === 'ENG'
+}
+
+
+$(function () {
+  if (is('.idx.section-4')) {
+    $('.idx.section-4 .d-item').each(function () {
+      const link = $(this).find('a').attr('href')
+      $(this).find('.d-txt').append(`<p class="more"><a class="btn" href="${link}">READ MORE</a></p>`)
+    })
+  }
+  // if ('.productlist') {
+  //   if (window.location.href.indexOf('/prod/') >= 0) { // 明細
+  //     $('body').addClass('product-detail')
+  
+  //     const swiper = new Swiper('.swiper-container.main', {
+  //       spaceBetween: 30,
+  //       hashNavigation: {
+  //         watchState: true
+  //       }
+  //     })
+  
+  //     if ($('.swiper-container.hash-link .swiper-slide').length > 4) {
+  //       const swiperHash = new Swiper('.swiper-container.hash-link', {
+  //         slidesPerView: 4,
+  //         spaceBetween: 10,
+  //         navigation: {
+  //           nextEl: '.swiper-button-next',
+  //           prevEl: '.swiper-button-prev'
+  //         }
+  //       })
+  //     }
+  //     $('.page-banner').addClass('hidden')
+  //   }
+  //   else { // 分類
+  //     $('.productlist .productlist-main >.row').each(function (idx) {
+  //       if (idx === 0 || idx === $('.productlist .productlist-main >.row').length) return
+  //       $(this).find('.col-sm-6').appendTo($('.productlist .productlist-main >.row').eq(1))
+  //     })
+  //   }
+  // }
+  // var nav
+  // var lang = readCookie('ulang')
+  // if (!isENG(lang)) {
+  //   nav = '.lang-tw'
+  //   $('.lang-tw').removeClass('hidden')
+  //   $('.lang-en').addClass('hidden')
+  //   $('body').addClass('tw')
+  //   $('body').removeClass('en')
+  // }
+  // else {
+  //   nav = '.lang-en'
+  //   $('.lang-en').removeClass('hidden')
+  //   $('.lang-tw').addClass('hidden')
+  //   $('body').addClass('en')
+  //   $('body').removeClass('tw')
+  // }
+
+  // // lang
+  // $('#alang').appendTo($(`${nav} .special .lang`))
+
+  // if (!is('#homebody')) {
+  //   $('.page-banner').removeClass('hidden')
+  // }
+
+  // if (window.location.href.indexOf('products') >= 0 || window.location.href.indexOf('productcate') >= 0) {
+  //   $('body').addClass('product-list')
+  //   showTitle('product', lang)
+
+  //   if (!isENG(lang)) {
+  //     $('#ContentPlaceHolder1_h3catetitle').text('產品列表')
+  //   }
+  //   else {
+  //     $('#ContentPlaceHolder1_h3catetitle').text('Products')
+  //   }
+  // }
+
+  // if (is('.product-iframe-title')) {
+  //   $('.productlist-main .row').eq(0).hide()
+  //   $('.productlist-main .row').eq(1).hide()
+  //   $('.productlist-main .row').eq(2).hide()
+  // }
+
+  
+
+  // if (window.location.href.indexOf('/contact') >= 0) {
+  //   const target = isENG(lang) ? 'contact-en' : 'contact-tw'
+  //   showTitle('contactus', lang)
+  //   $('body').addClass('contact')
+  //   $(`.contact.append.${target}`).removeClass('hidden')
+  //   $(`.contact.append.${target}`).appendTo($('.contact.product .col-sm-4'))
+  //   $('.contact.product .col-sm-4 address').remove()
+
+  //   if (!isENG(lang)) {
+  //     $('#ContentPlaceHolder1_txtText').attr('placeholder', '公司名稱')
+  //   }
+  //   else {
+  //     $('#ContentPlaceHolder1_txtText').attr('placeholder', 'Company')
+  //   }
+  // }
+
+  // if (is('.blog-post')) {
+  //   showTitle('news', lang)
+  //   if (window.location.href.indexOf('newslist') >= 0) {
+  //     const text = isENG(lang) ? 'read more' : '閱讀更多'
+  //     $('.blog').addClass('newslist')
+  //     $('.blog-post').each(function () {
+  //       const imgLink = $(this).find('img').attr('src')
+  //       $(this).prepend(`<div class="img"><img src="${imgLink}"></div>`)
+  //       $(this).append('<div class="content"></div>')
+  //       $(this).find('.post-hd').appendTo($(this).find('.content'))
+  //       $(this).find('.post-con').appendTo($(this).find('.content'))
+  //       $(this).find('img').parent('p').remove()
+  //       $(this).find('.con-more a').text(text)
+  //     })
+  //   }
+  //   else if (window.location.href.indexOf('newslist') < 0) {
+  //     $('.blog').addClass('detail')
+  //   }
+  // }
+
+  // if (is('.product-info')) {
+  //   if ($(window).width() > 768) {
+  //     $('.product-detail .product-info').appendTo($('.col-sm-4.product-info'))
+  //   }
+  //   else {
+  //     $('.product-detail .product-info').prependTo($('.productlist-main .col-sm-8'))
+  //   }
+  // }
+  
+  setTimeout(() => {
+    AOS.init({
+      once: true,
+      duration: 1500,
+      delay: 200
+    })
+  })
+
+  // setTimeout(() => {
+  //   if (window.location.href.indexOf('#aboutus') >= 0) {
+  //     var target = isENG(lang) ? 'aboutus-en' : 'aboutus-tw'
+  //     if (window.location.href.indexOf(target) < 0) {
+  //       return
+  //     }
+
+  //     // var top = $('#' + target).offset().top
+  //     // $('html, body').stop().animate({
+  //     //   scrollTop: top - 100
+  //     // }, 1000)
+  //   }
+  // }, 1000);
+})

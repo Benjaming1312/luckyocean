@@ -1,55 +1,68 @@
+- var url = '/ezfiles/761/1761/img/209/'
 nav.navbar
-    .container
-        .navbar-header
-            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-                span.sr-only Toggle navigation
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
-            a.navbar-brand(href='#')
-                // LOGO放置處
-                img.img-responsive(src="dist/images/headlogo.svg", alt="")
-        #navbar.navbar-collapse.collapse
-            ul.nav.navbar-nav
-                li.dropdown
-                    a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 關於樂高認真玩(LSP) About LSP
-                    ul.dropdown-menu(role='menu')
-                        li.dropdown
-                            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') About LSP
-                            ul.dropdown-menu(role="menu")
-                                li
-                                    a(href="") LSP發展起源
-                                li
-                                    a(href="") LSP方法與工具
-                                li
-                                    a(href="") LSP Book參考書籍
-                                li
-                                    a(href="") About Team
-                        li.dropdown
-                            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') About LSP Taiwan
-                            ul.dropdown-menu(role="menu")
-                                li
-                                    a(href="") About Team
-                li.dropdown
-                    a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') LSP 應用 Applications
-                    ul.dropdown-menu(role='menu')
-                        li
-                            a(href="") LSP主要應用領域
-                        li
-                            a(href="") LSP工作坊主題
-                        li
-                            a(href="") LSP工作坊形式
-                li.dropdown
-                    a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 相關活動News ＆ Events
-                    ul.dropdown-menu(role='menu')
-                        li
-                            a(href="") 近期公開活動
-                        li.dropdown
-                            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 認證訓練課程
-                            ul.dropdown-menu(role="menu")
-                                li
-                                    a(href="") 認證訓練課程時間表
-                li
-                    a(href="") 部落格Blog
-                li
-                    a(href="") 聯絡我們Contact
+	.container-fluid
+		<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
+			<div class="input-group">
+				<span class="input-group-btn">
+					button.btn.svg(type="submit" style="background: url("+url+"search.png)")
+				</span>
+				<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
+			</div>
+		</form>
+		.navbar-header
+			button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+				span.sr-only Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			// LOGO放置處
+			a.navbar-brand.svg(href='/' style="background: url("+url+"logo.png); width: 268px; height: 62px;")
+		#navbar.navbar-collapse.collapse
+			ul.nav.navbar-nav
+				li.dropdown(data-aos="fade-in" data-aos-delay="300")
+					a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 公司介紹
+					ul.dropdown-menu(role='menu')
+						li
+							a(href="") 關於鑫品
+						li
+							a(href="") 公司沿革
+						li
+							a(href="") 經營策略
+						li
+							a(href="") 組織架構
+						li
+							a(href="") 投資人專區
+				li.dropdown(data-aos-delay="400", data-aos="fade-in")
+					a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 免疫新知
+					ul.dropdown-menu(role='menu')
+						li
+							a(href="") 免疫細胞介紹
+						li
+							a(href="") 免疫細胞療法
+						li
+							a(href="") 影響成效的條件
+						li
+							a(href="") 論文佐證
+				li.dropdown(data-aos-delay="500", data-aos="fade-in")
+					a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 研發中心
+					ul.dropdown-menu(role='menu')
+						li
+							a(href="") 研究方向
+						li
+							a(href="") 合作研究機構
+				li(data-aos-delay="700", data-aos="fade-in")
+					a.fz16(href="") 各國臨床研究
+				li.dropdown(data-aos-delay="800", data-aos="fade-in")
+					a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 最新資訊
+					ul.dropdown-menu(role='menu')
+						li
+							a(href="") 相關新聞
+						li
+							a(href="") 醫學新知
+						li
+							a(href="") 影片中心
+				li.dropdown(data-aos-delay="900", data-aos="fade-in")
+					a.fz16(href="") 聯繫我們
+				li.facebook
+					a(href="https://www.facebook.com/VectoriteBiomedical/" target="_blank")
+						img.img-responsive(src=url+"facebook.png" style="width: 23px; height: 23px;")

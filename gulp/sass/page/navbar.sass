@@ -1,0 +1,242 @@
+.navbar.navbar.navbar
+  position: fixed
+  margin-bottom: 0
+  z-index: 99
+  width: 100%
+  border: 0
+  box-shadow: none
+  border-radius: 0
+  background: white
+  padding: 15px 0
+  @media #{$mobile}
+    padding: 0px 0 15px
+  .formBS
+    position: absolute
+    top: 10px
+    right: 60px
+    max-width: 219px
+    @media #{$mobile}
+      width: 90%
+      max-width: 100%
+      right: 0
+      position: static
+      margin-top: 10px
+      margin-left: auto
+      margin-right: auto
+    .input-group
+      position: relative
+      display: block
+      // @media #{$mobile}
+    input
+      border: 1px solid #b0b0b1
+      border-radius: 10px
+      height: 26px
+    .input-group-btn
+      height: 26px
+      padding: 0
+      position: absolute
+      right: 15px
+      top: 4px
+      width: 19px
+      height: 19px
+      z-index: 99999
+      .btn
+        width: 19px
+        height: 19px
+        border: 0
+  .container-fluid
+    width: calc(100% - 160px)
+    margin: 0 autom
+    @media #{$mobile}
+      padding: 0
+      width: 100%
+  .header
+    border: 0
+  .navbar-brand
+    margin-left: 0px
+    margin-top: 0px
+    max-width: 20vw
+    @media #{$mobile}
+      max-width: 250px
+      max-height: 50px
+      margin-top: 20px
+      margin-left: 30px
+      margin-bottom: 0px
+      padding: 0
+      background-position: left center!important
+  .navbar-toggle
+    border: 0
+    margin-top: 80px
+    background: none
+    border-radius: 0
+    .sr-only
+      display: none
+    //   &::before,
+    //   &::after
+    //     background: #000
+    .icon-bar
+      background: #25a4cc
+      width: 30px
+      margin-bottom: 0.5rem
+      &::before,
+      &::after
+        display: none
+  .navbar
+    border: 0
+    background: white
+    padding-bottom: 0px
+    @media #{$mobile}
+      padding-bottom: 15px
+  // .navbar-header
+  #navbar
+    padding: 0
+    @media #{$mobile}
+      width: 100%
+      margin: 0
+      // background: #000
+      padding-bottom: 15px
+      box-shadow: none
+      a
+        border: 0
+        color: white
+    .navbar-nav
+      float: left
+      position: initial
+      // width: 100%
+      @media screen and (min-width: 768px)
+        display: flex
+        justify-content: space-around
+        align-items: center
+        margin-top: 30px
+        padding-left: 0px
+      @media #{$mobile}
+        margin: 0
+        float: left
+        margin-top: 15px
+        width: 100%
+        padding: 0 5px
+        margin-top: 0
+      *
+        color: $color-b
+        font-size: 16px
+        font-weight: 300
+        letter-spacing: 0.05rem
+      >li
+        @media screen and (min-width: 768px)
+          margin-left: 3vw
+        >a
+          position: relative
+          overflow: hidden
+          text-transform: uppercase
+          color: #666665
+          padding-bottom: 0
+          font-weight: normal
+          padding-left: 8px
+          @media screen and (min-width: 768px)
+            margin-right: 0px
+          +trans
+          &:hover
+            color: #70b8a4
+        &.facebook
+          @media screen and (min-width: 768px)
+            margin-left: 10px
+          a
+            padding-left: 23px
+            display: inline-block
+            float: left
+            width: auto
+            img
+              width: 23px
+              height: 23px
+      li
+        position: initial
+        // padding-bottom: 15px
+        padding-bottom: 10px
+        a
+          border: 0
+          padding-bottom: 0
+          transition: $trans
+          &.dropdown-toggle
+            @media #{$mobile}
+              display: block
+            &::before
+              @media #{$mobile}
+                content: '+'
+                color: white
+                float: right
+                font-size: 24px
+        &.dropdown
+          @media screen and (min-width: 768px)
+            position: relative
+            z-index: 99999999
+          .dropdown-menu
+            left: 0
+            background: rgba(#25a4cc, .7)
+            border: 0
+            width: 100%
+            overflow: initial
+            box-shadow: none
+            @media #{$mobile}
+              margin-top: 5px
+              // padding: 15px 5px
+          &:hover,
+          &.open
+            .dropdown-toggle
+              &::before
+                @media #{$mobile}
+                  content: '-'
+            .dropdown-menu
+              border: 0
+              width: 100%
+              @media screen and (min-width: 768px)
+                display: flex
+                flex-wrap: wrap
+              li
+                padding-bottom: 0
+                @media screen and (min-width: 768px)
+                  width: 100%
+                a
+                  padding: 0
+                  padding: 7.5px 0
+                  font-size: 16px
+                  white-space: nowrap
+                  font-weight: normal
+                  transition: $trans
+                  color: white
+                  padding-left: 15px
+                  &:hover
+                    color: darken(#126CB5, 20%)
+  .navbar
+    &+.search.search.search
+      margin-left: 0px
+      background: #000
+      padding: 15px
+      .input-group
+        margin-left: 0
+      input
+        width: calc(100% - 28px)
+  .search.formBS
+    position: absolute
+    top: 35px
+    right: 30px
+    @media #{$mobile}
+      position: static
+      margin-top: 15px
+      margin-bottom: 15px
+    .input-group
+      input
+        border-top: 0
+        border-left: 0
+        border-right: 0
+        border-radius: 0
+        border: 2px solid $color-red
+        border-radius: 30px
+      .input-group-btn
+        position: relative
+        z-index: 9999
+        button
+          font-size: 16px
+          color: $color-b
+          margin: 0
+          padding: 0
+          background: none!important
