@@ -14,6 +14,11 @@ html
   background-repeat: no-repeat!important
   background-position: center!important
 
+.text-green
+  color: $color-green
+.text-blue
+  color: $color-blue
+
 =bg-grey
   background: #f2f2f3
 =max-width
@@ -54,3 +59,43 @@ html
   line-height: 2.5rem
   @media #{$mobile}
     font-size: 18px
+
+.page,
+.module-detail
+  .title
+    +title
+    margin-bottom: 60px
+    @media #{$mobile}
+      margin-bottom: 30px
+  p, figcaption
+    font-size: 16px
+    line-height: 3rem
+    margin-bottom: 60px
+    color: $color-b
+    @media #{$mobile}
+      margin-bottom: 30px
+  >.row
+    +max-width
+    margin-left: auto
+    margin-right: auto
+  ul
+    padding-left: 20px
+    margin-bottom: 60px
+  a
+    font-size: 16px
+    border-bottom: 1px solid $color-green
+
+.mbtn, .btn
+  +btn
+  border-color: $color-blue
+  margin-left: auto
+  margin-right: auto
+  background: $color-blue
+  color: white
+  span
+    +trans
+  &:hover
+    background: none
+    color: $color-blue
+    span
+      color: $color-blue

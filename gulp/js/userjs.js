@@ -29,6 +29,32 @@ $(function () {
       $(this).find('.d-txt').append(`<p class="more"><a class="btn" href="${link}">READ MORE</a></p>`)
     })
   }
+
+  if (is('.video')) {
+    $('.module-rcglist').addClass('media')
+    $('.d-txt h5 a').click(function (e) {
+      e.preventDefault()
+    })
+  }
+
+  if (is('.table-responsive')) {
+    $('.page-banner').prependTo('.wrap >.minner >.main')
+    $('.page_mobilercglist').addClass('research')
+
+    $('.module-rcglist .mt').prependTo('.research-table')
+
+    $('#pageptlist .listBS').each(function (idx) {
+      const title = $(this).find('.d-txt h5 a').text()
+      const link = $(this).find('.d-txt h5 a').attr('href')
+      const category = $(this).find('.mdetail').text()
+
+      $('.research-table tbody').append(`<tr>
+      <td>${idx}</td>
+      <td><a href="${link}">${title}</a></td>
+      <td>${category}</td>
+      </tr>`)
+    })
+  }
   // if ('.productlist') {
   //   if (window.location.href.indexOf('/prod/') >= 0) { // 明細
   //     $('body').addClass('product-detail')

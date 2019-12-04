@@ -1,11 +1,19 @@
 .banner.page-banner
-  margin-bottom: 60px
   z-index: -1
+  margin-top: 101px
+  margin-bottom: 55px
+  @media #{$mobile}
+    margin-top: 121px
+    margin-bottom: 30px
+    padding: 0
   .row
     min-height: 400px
     position: relative
     @media #{$mobile}
       min-height: 250px
+  .col-xs-12
+    @media #{$mobile}
+      padding: 0
   .banner-img
     height: 100%
     position: absolute
