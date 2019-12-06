@@ -70,20 +70,22 @@ html
   p, figcaption
     font-size: 16px
     line-height: 3rem
-    margin-bottom: 60px
+    margin-bottom: 30px
     color: $color-b
     @media #{$mobile}
-      margin-bottom: 30px
+      margin-bottom: 15px
   >.row
     +max-width
     margin-left: auto
     margin-right: auto
   ul
     padding-left: 20px
-    margin-bottom: 60px
+    margin-bottom: 30px
   a
     font-size: 16px
     border-bottom: 1px solid $color-green
+  small
+    font-size: 16px
 
 .mbtn, .btn
   +btn
@@ -98,4 +100,36 @@ html
     background: none
     color: $color-blue
     span
+      color: $color-blue
+
+body:not(.page_mobilehome)
+  background: url(#{$url}section-4-bg.png) center center repeat-y
+  background-size: contain
+
+.module-
+  +max-width
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 60px
+  @media #{$mobile}
+    margin-bottom: 30px
+  .mt
+    margin-bottom: 15px
+    h3
+      color: $color-green
+      border-bottom: 1px solid #ccc
+      padding: 0
+      padding-bottom: 15px
+      line-height: 2.5rem
+      font-size: 28px
+      font-weight: bold
+  h5
+    background: none!important
+    padding-left: 0!important
+    border-bottom: 1px dotted #ccc
+    padding-bottom: 15px
+    margin-bottom: 15px
+    padding-top: 30px
+    a
+      font-size: 20px
       color: $color-blue
