@@ -37,23 +37,44 @@ $(function () {
     })
   }
 
-  if (is('.table-responsive')) {
+  if (is('.table-responsive') && is('.module-rcglist')) {
+    const isSupportPage = is('.support')
     $('.page-banner').prependTo('.wrap >.minner >.main')
-    $('.page_mobilercglist').addClass('research')
+    $('.page_mobilercglist').addClass(!isSupportPage ? 'research' : 'research support')
 
     $('.module-rcglist .mt').prependTo('.research-table')
 
     $('#pageptlist .listBS').each(function (idx) {
       const title = $(this).find('.d-txt h5 a').text()
       const link = $(this).find('.d-txt h5 a').attr('href')
-      const category = $(this).find('.mdetail').text()
+      let category = $(this).find('.mdetail').text()
+      let from
+      if(isSupportPage) {
+        from = $(this).find('.mdetail .from').text()
+        category = $(this).find('.mdetail .category').text()
+      }
 
       $('.research-table tbody').append(`<tr>
       <td>${idx}</td>
-      <td><a href="${link}">${title}</a></td>
+      <td>
+        <a target="${isSupportPage ? '_blank' : '_self'}" href="${link}">${title}</a>
+        <p class="${!isSupportPage ? 'hidden' : 'from'}">${from}</p>
+      </td>
       <td>${category}</td>
       </tr>`)
     })
+  }
+
+  if (is('.support') && is('.module-rcglist')) { // 免疫細胞療法
+    $('.module-rcglist').addClass('support')
+  }
+
+  if (is('.prod') && is('.module-rcglist')) { // 研究方向
+    $('.module-rcglist').addClass('support prod')
+  }
+
+  if (is('.prod') && is('.module-ptlist')) { // 合作機構研究
+    $('.module-ptlist').addClass('prod')
   }
   // if ('.productlist') {
   //   if (window.location.href.indexOf('/prod/') >= 0) { // 明細

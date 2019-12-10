@@ -1,0 +1,31 @@
+.support
+  .table-responsive
+    margin-bottom: 30px
+    .table
+      margin-bottom: 0
+      th, td
+        padding: 15px
+        border: 1px solid #ccc
+      thead
+        tr
+          th
+            background: $color-green
+            color: white
+  .media
+    display: flex
+    justify-content: center
+    margin-bottom: 30px
+    iframe
+      @media #{$mobile}
+        max-width: 100%
+  &.module-rcglist
+    .mt
+      display: none
+    .d-img
+      @media screen and (min-width: 768px)
+        max-width: 200px
+    .d-txt
+      h5
+        a
+          &::after
+            display: none!important

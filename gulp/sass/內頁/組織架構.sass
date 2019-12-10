@@ -1,0 +1,47 @@
+.page.aboutus.structure
+  ul
+    margin-top: 60px
+    display: flex
+    justify-content: center
+    flex-wrap: nowrap
+    border: 0
+    @media #{$mobile}
+      margin-top: 30px
+      padding: 0
+    li
+      width: calc(100% / 3)
+      text-align: center
+      padding: 0 7.5px
+      a
+        border: 1px solid $color-blue
+        border-radius: 30px
+        font-size: 18px
+        +trans
+        @media #{$mobile}
+          padding-left: 5px
+          padding-right: 5px
+          white-space: nowrap
+      &:hover
+        a
+          background: rgba($color-blue, .5)
+          color: white
+      &.active
+        a
+          background: $color-blue
+          color: white
+  .tab-pane
+    .title
+      border-bottom: 1px solid #ccc
+      padding-bottom: 30px
+      margin-bottom: 30px
+      @media #{$mobile}
+        padding-bottom: 15px
+        margin-bottom: 15px
+      &+h5
+        margin-bottom: 60px
+        font-size: 22px
+        line-height: 3rem
+        @media #{$mobile}
+          margin-bottom: 30px
+    a
+      margin-left: 15px

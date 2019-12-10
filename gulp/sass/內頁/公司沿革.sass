@@ -1,0 +1,44 @@
+.page.aboutus.history
+  ul
+    margin-top: 60px
+    list-style: none
+    padding-left: 0
+    padding-left: 30px
+    position: relative
+    @media #{$mobile}
+      margin-top: 30px
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      top: 5px
+      height: 100%
+      border-left: 1px solid $color-blue
+      @media screen and (min-width: 768px)
+        left: 50%
+    li
+      margin-bottom: 20px
+      position: relative
+      &:nth-child(odd)
+        @media screen and (min-width: 768px)
+          padding-left: calc(50% + 15px)
+      &:nth-child(even)
+        @media screen and (min-width: 768px)
+          padding-right: calc(50% + 45px)
+          text-align: right
+
+    .fa
+      color: $color-blue
+      margin-right: 15px
+      position: absolute
+      left: -42.5px
+      top: 2.5px
+      background: white
+      padding: 5px
+      border-radius: 50%
+      border: 1px solid  $color-blue
+      @media screen and (min-width: 768px)
+        left: 47.25%
+      @media #{$mobile}
+        left: -42.5px

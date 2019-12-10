@@ -1,0 +1,56 @@
+.page.aboutus.stock
+  img
+    width: 100%
+  .row:not(:first-child)
+    .title
+      border-bottom: 1px solid #ccc
+      padding-bottom: 30px
+      margin-bottom: 30px
+      @media #{$mobile}
+        padding-bottom: 15px
+        margin-bottom: 15px
+  p
+    a+span
+      margin-left: 15px
+  .list-inline
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 30px
+    @media #{$mobile}
+      margin-top: 15px
+      flex-wrap: wrap
+      padding: 0
+    li
+      position: relative
+      margin: 0 30px
+      @media #{$mobile}
+        margin: 0
+        width: 50%
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+    .img
+      background: rgba($color-blue, .7)
+      width: 150px
+      height: 150px
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      +trans
+      @media #{$mobile}
+        width: 130px
+        height: 130px
+      &:hover
+        opacity: 0.5
+      .svg
+        background-size: 80%!important
+        mask-size: cover
+        background-color: #fff
+    p
+      margin-top: 7.5px
+      a
+        border: 0
+        font-weight: bold
+        font-size: 18px
