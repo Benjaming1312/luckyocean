@@ -1,11 +1,18 @@
 .support
   .table-responsive
     margin-bottom: 30px
+    @media #{$mobile}
+      overflow-x: hidden
     .table
       margin-bottom: 0
+      @media #{$mobile}
+        white-space: pre-line
+        width: 100%!important
       th, td
         padding: 15px
         border: 1px solid #ccc
+        @media #{$mobile}
+          white-space: pre-line
       thead
         tr
           th

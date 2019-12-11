@@ -91,9 +91,15 @@
 .page_mobileptdetail
   .mpgdetail
     .research
+      .table-responsive
+        @media #{$mobile}
+          // overflow-x: hidden
+          // overflow-y: hidden
+          // margin-bottom: 0
+          // width: auto
       table
         @media #{$mobile}
-          width: 750px!important
+          // width: 750px!important
         td
           border: 1px solid #ccc
           padding: 7.5px 15px
