@@ -32,6 +32,9 @@ $(function () {
 
   if (is('.video')) {
     $('.module-rcglist').addClass('media')
+    $('.listBS').each(function () {
+      $(this).find('.video p').eq(0).after($(this).find('h5'))
+    })
     $('.d-txt h5 a').click(function (e) {
       e.preventDefault()
     })
