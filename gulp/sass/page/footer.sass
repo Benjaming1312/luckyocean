@@ -1,50 +1,77 @@
 footer.foot
-  background: #1d96b2
+  background: url(#{$url}footer-bg.png)center center no-repeat
+  background-size: cover
   padding-top: 60px
   padding-bottom: 60px
   @media #{$mobile}
-    padding-left: 30px
-    padding-right: 30px
+    padding-left: 15px
+    padding-right: 15px
     padding-top: 30px
     padding-bottom: 30px
+  .title,
+  .sub-title
+    text-align: center
+    color: #42403f
+  .col-xs-12
+    .svg
+      margin-left: auto
+      margin-right: auto
+      display: block
+      margin-top: 15px
+      margin-bottom: 60px
+      @media #{$mobile}
+        max-width: 100%
+        margin-bottom: 30px
+  .title
+    font-size: 27px
+    font-weight: bold
+    margin-bottom: 15px
+  .sub-title
+    font-size: 18px
+    font-weight: bold
   .row
     +max-width
-    margin-left: auto
+    margin-left:  auto
     margin-right: auto
-    .logo
-      width: 40%
-      float: left
-      text-align: center
-      @media #{$mobile}
-        width: 100%
-        margin-bottom: 15px
-      .svg
-        margin-left: auto
-        margin-right: auto
-        @media #{$mobile}
-          max-width: 250px
     .info
-      width: 60%
       float: left
+      display: flex
+      flex-wrap: nowrap
+      margin-left: auto
+      margin-right: auto
+      width: 800px
+      padding-left: 60px
       @media #{$mobile}
         width: 100%
+        padding-left: 0
+        flex-wrap: wrap
       p
         display: block
         float: left
         width: 50%
-        color: white
-        font-size: 14px
-        color: white
+        font-size: 19px
+        color: #413b38
+        @media screen and (min-width: 768px)
+          white-space: nowrap
         @media #{$mobile}
           width: 100%
-        &:nth-child(odd)
+          margin-bottom: 15px
+        &:first-child
           @media screen and (min-width: 768px)
-            padding-left: 30px
-      a, td
-        font-size: 14px
-        color: white
-      td
-        vertical-align: top
+            padding-left: 100px
+        .social
+          margin-left: 15px
+          .svg
+            margin-left: 15px
+            @media #{$mobile}
+              position: relative
+              top: 7.5px
+      a
+        font-size: 19px
+        color: #413b38
+        +trans
+        &:hover
+          color: $color-gorden
   .list .col-xs-12
     @media #{$mobile}
       padding: 0
@@ -89,14 +116,22 @@ footer.foot
           right: 0px
           @media #{$mobile}
             display: none
+  .map
+    max-width: 900px
+    @media screen and (min-width: 768px)
+      margin-top: 60px
+    @media #{$mobile}
+      margin-top: 30px
+    iframe
+      height: 170px
 div.design
-  background: white
+  background: #bd7a11
   p
     margin: 0
     padding: 10px 0
     text-align: center
     font-size: 12px
-    color: #808080
+    color: white
     span
       float: left!important
       display: block
@@ -104,7 +139,7 @@ div.design
       text-align: center
     span, a
       font-size: 12px
-      color: #808080
+      color: #white
     a
       position: absolute
       right: 30px
@@ -113,3 +148,14 @@ div.design
         display: block
         width: 100%
         margin-top: 5px
+
+.right
+  position: fixed
+  top: 35%
+  width: 80px
+  right: 15px
+  z-index: 9999
+  .svg
+    box-shadow: 7px 7px 10px -3px rgba(#231815, .19)
+    border-radius: 50%
+    margin-bottom: 15px

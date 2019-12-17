@@ -23,62 +23,38 @@ function isENG (lang) {
 
 
 $(function () {
-  if (is('.idx.section-4')) {
-    $('.idx.section-4 .d-item').each(function () {
-      const link = $(this).find('a').attr('href')
-      $(this).find('.d-txt').append(`<p class="more"><a class="btn" href="${link}">READ MORE</a></p>`)
-    })
+  if (is('.page_mobilehome')) {
+    $('.tab-pane').appendTo('.tab-content')
+    $('.hdmenu .nav.navbar-nav').appendTo('.navbar .social')
   }
 
-  if (is('.video')) {
-    $('.module-rcglist').addClass('media')
-    $('.listBS').each(function () {
-      $(this).find('.video p').eq(0).after($(this).find('h5'))
-    })
-    $('.d-txt h5 a').click(function (e) {
-      e.preventDefault()
-    })
-  }
+  // if (is('.table-responsive') && is('.module-rcglist')) {
+  //   const isSupportPage = is('.support')
+  //   $('.page-banner').prependTo('.wrap >.minner >.main')
+  //   $('.page_mobilercglist').addClass(!isSupportPage ? 'research' : 'research support')
 
-  if (is('.table-responsive') && is('.module-rcglist')) {
-    const isSupportPage = is('.support')
-    $('.page-banner').prependTo('.wrap >.minner >.main')
-    $('.page_mobilercglist').addClass(!isSupportPage ? 'research' : 'research support')
+  //   $('.module-rcglist .mt').prependTo('.research-table')
 
-    $('.module-rcglist .mt').prependTo('.research-table')
+  //   $('#pageptlist .listBS').each(function (idx) {
+  //     const title = $(this).find('.d-txt h5 a').text()
+  //     const link = $(this).find('.d-txt h5 a').attr('href')
+  //     let category = $(this).find('.mdetail').text()
+  //     let from
+  //     if(isSupportPage) {
+  //       from = $(this).find('.mdetail .from').text()
+  //       category = $(this).find('.mdetail .category').text()
+  //     }
 
-    $('#pageptlist .listBS').each(function (idx) {
-      const title = $(this).find('.d-txt h5 a').text()
-      const link = $(this).find('.d-txt h5 a').attr('href')
-      let category = $(this).find('.mdetail').text()
-      let from
-      if(isSupportPage) {
-        from = $(this).find('.mdetail .from').text()
-        category = $(this).find('.mdetail .category').text()
-      }
-
-      $('.research-table tbody').append(`<tr>
-      <td>${idx}</td>
-      <td>
-        <a target="${isSupportPage ? '_blank' : '_self'}" href="${link}">${title}</a>
-        <p class="${!isSupportPage ? 'hidden' : 'from'}">${from}</p>
-      </td>
-      <td>${category}</td>
-      </tr>`)
-    })
-  }
-
-  if (is('.support') && is('.module-rcglist')) { // 免疫細胞療法
-    $('.module-rcglist').addClass('support')
-  }
-
-  if (is('.prod') && is('.module-rcglist')) { // 研究方向
-    $('.module-rcglist').addClass('support prod')
-  }
-
-  if (is('.prod') && is('.module-ptlist')) { // 合作機構研究
-    $('.module-ptlist').addClass('prod')
-  }
+  //     $('.research-table tbody').append(`<tr>
+  //     <td>${idx}</td>
+  //     <td>
+  //       <a target="${isSupportPage ? '_blank' : '_self'}" href="${link}">${title}</a>
+  //       <p class="${!isSupportPage ? 'hidden' : 'from'}">${from}</p>
+  //     </td>
+  //     <td>${category}</td>
+  //     </tr>`)
+  //   })
+  // }
   // if ('.productlist') {
   //   if (window.location.href.indexOf('/prod/') >= 0) { // 明細
   //     $('body').addClass('product-detail')

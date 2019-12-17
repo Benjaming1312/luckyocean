@@ -8,19 +8,75 @@
   border-radius: 0
   background: white
   padding: 15px 0
+  border-bottom: 1px solid rgba(#d3a500, .31)
   @media #{$mobile}
+    padding-top: 0
+  .social
     padding: 0px 0 15px
-  .formBS
     position: absolute
     top: 10px
-    right: 60px
-    max-width: 219px
+    right: 15px
+    display: flex
+    flex-wrap: nowrap
     @media #{$mobile}
       width: 90%
       max-width: 100%
       right: 0
       position: static
       margin-top: 10px
+      margin-left: auto
+      margin-right: auto
+      flex-direction: column-reverse
+      flex-wrap: wrap
+      margin: 0
+      padding: 0
+      width: 100%
+    ul
+      margin-top: 0
+      margin-left: 15px
+      @media #{$mobile}
+        width: 100%
+        display: flex
+        flex-wrap: nowrap
+        margin: 0
+        border-bottom: 1px solid rgba(#413b38, .2)
+      li
+        margin: 0
+        @media #{$mobile}
+          width: calc(100% / 3)
+        a
+          padding: 0 8px
+          font-size: 14px
+          color: #413b38
+          position: relative
+          border-bottom: 0
+          +trans
+          @media #{$mobile}
+            display: block
+            border-right: 1px solid rgba(#413b38, .2)
+            text-align: center
+            padding: 5px
+          &:hover
+            color: $color-gorden
+          &::after
+            content: ''
+            position: absolute
+            width: 1px
+            height: 13px
+            background: #413b38
+            right: 0
+            top: 5px
+            @media #{$mobile}
+              display: none
+        &:last-child
+          border-right: 0
+          a::after
+            display: none
+  .formBS
+    width: 138px
+    @media #{$mobile}
+      width: 90%
+      margin-top: 8px
       margin-left: auto
       margin-right: auto
     .input-group
@@ -30,19 +86,19 @@
     input
       border: 1px solid #b0b0b1
       border-radius: 10px
-      height: 26px
+      height: 20px
     .input-group-btn
       height: 26px
       padding: 0
       position: absolute
       right: 15px
       top: 4px
-      width: 19px
-      height: 19px
+      width: 13px
+      height: 13px
       z-index: 99999
       .btn
-        width: 19px
-        height: 19px
+        width: 13px
+        height: 13px
         border: 0
   .container-fluid
     width: calc(100% - 160px)
@@ -66,7 +122,7 @@
       background-position: left center!important
   .navbar-toggle
     border: 0
-    margin-top: 80px
+    margin-top: 100px
     background: none
     border-radius: 0
     .sr-only
@@ -75,7 +131,7 @@
     //   &::after
     //     background: #000
     .icon-bar
-      background: #25a4cc
+      background: $color-gorden
       width: 30px
       margin-bottom: 0.5rem
       &::before,
@@ -90,6 +146,8 @@
   // .navbar-header
   #navbar
     padding: 0
+    @media screen and (min-width: 768px)
+      margin-right: 60px
     @media #{$mobile}
       width: 100%
       margin: 0
@@ -123,7 +181,7 @@
         letter-spacing: 0.05rem
       >li
         @media screen and (min-width: 768px)
-          margin-left: 3vw
+          margin-left: 5vw
         >a
           position: relative
           overflow: hidden
@@ -132,14 +190,14 @@
           padding-bottom: 0
           font-weight: normal
           padding-left: 8px
+          +trans
           @media screen and (min-width: 768px)
             margin-right: 0px
-          +trans
           &:hover
-            color: #70b8a4
+            color: $color-gorden
         &.facebook
           @media screen and (min-width: 768px)
-            margin-left: 10px
+            margin-left: 2vw
           a
             padding-left: 23px
             display: inline-block
@@ -171,7 +229,7 @@
             z-index: 99999999
           .dropdown-menu
             left: 0
-            background: rgba(#25a4cc, .7)
+            background: rgba($color-gorden, .7)
             border: 0
             width: 100%
             overflow: initial

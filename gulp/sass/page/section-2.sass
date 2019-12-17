@@ -14,6 +14,11 @@
       flex-wrap: wrap
     @media #{$mobile}
       margin: 0
+  a
+    &:hover
+      .box
+        +box-shadow
+        transform: translateY(-10px)
   .col-sm-4
     padding: 15px
     @media #{$mobile}
@@ -30,6 +35,7 @@
       padding-top: 30px
       padding-bottom: 60px
       height: 100%
+      +trans
       *
         color: white
     .title

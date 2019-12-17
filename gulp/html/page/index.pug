@@ -1,4 +1,4 @@
-- var url = '/ezfiles/761/1761/img/209/'
+- var url = '/ezfiles/766/1766/img/242/'
 include ../custom_module/title.pug
 <!DOCTYPE html>
 html(lang="zh-hant")
@@ -11,7 +11,7 @@ html(lang="zh-hant")
 		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css")
 		link(rel="stylesheet", href="https://fonts.googleapis.com/earlyaccess/notosanstc.css")
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-		link(rel="stylesheet", href="/dist/css/usercss.css")
+		link(rel="stylesheet", href="/ezfiles/766/1766/img/243/usercss.css")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js")
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js"></script>
@@ -19,50 +19,29 @@ html(lang="zh-hant")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js")
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-		script(src="/dist/js/userjs.js")
+		script(src="/ezfiles/766/1766/img/244/userjs.js")
 		title Document
 	body
 		include ../custom_module/navbar3.pug
 		include ../custom_module/owlcarousel.pug
 
 		.idx.section.section-1.container-fluid.text-center
-			h3.title.text-green 全方位預防醫學與癌症醫療的先驅
-			h4.sub-title.text-blue 持續創新研發  整合抗衰老與癌症預防醫學一條龍服務
-			p
-				| 鑫品生醫以『防患於未然』的理念成立鑫品生醫集團，由旗下子公司共同合作與
-				br
-				| 努力，從抗老保健與防癌規劃，到免疫細胞儲存與治療技術研發，
-				br
-				| 提供民眾全方位預防醫學整合服務之餘，
-				br
-				| 更給予未來可能罹癌時的生存希望與提升生活品質之專業技術與服務。
-		.idx.section.section-2.container-fluid.text-center
-			.row
-				.col-sm-4
-					.box
-						img.img-responsive.center-block(src=url+"section-1-icon-1.png", alt="")
-						h4.title DC樹突細胞治療
-						img.img-responsive.center-block(src=url+"section-1-line.svg", alt="")
-						p 樹突細胞有如身體防禦系統的指揮官，能吞噬癌細胞的抗原並呈現在細胞表面上，藉此培訓T細胞認識癌細胞，讓T細胞能針對癌細胞進行準確有效的攻擊。
-				.col-sm-4
-					.box
-						img.img-responsive.center-block(src=url+"section-1-icon-2.png", alt="")
-						h4.title T細胞治療
-						img.img-responsive.center-block(src=url+"section-1-line.svg", alt="")
-						p T細胞是淋巴細胞的一種，有如防禦系統的精銳士兵，又分成毒殺型T細胞、輔助型T細胞、調節型T細胞以及記憶型T，這些T細胞皆在免疫反應中扮演著重要的角色。
-				.col-sm-4
-					.box
-						img.img-responsive.center-block(src=url+"section-1-icon-3.png", alt="")
-						h4.title NK自然殺手細胞治療
-						img.img-responsive.center-block(src=url+"section-1-line.svg", alt="")
-						p NK細胞有如體內的警察部隊，與T細胞不同之處在於不須經過免疫刺激，即可針對癌細胞進行非專一性的攻擊，並可釋放特殊細胞激素，作為細胞活化之標記。
-		.idx.section.section-3.container-fluid.text-center
-			h3.title.text-green 最新消息
-			h4.sub-title.text-grey NEWS
-			| ===MODULE===
-		.idx.section.section-4.container-fluid.text-center
-			h3.title.text-green 免疫新知
-			h4.sub-title.text-grey KNOWLEDGES
-			| ===MODULE===
+			.col-xs-12
+				ul.nav.nav-tabs
+					li.active
+						a(href="#tab-1", data-toggle="tab") 芽莊
+					li
+						a(href="#tab-2", data-toggle="tab") 芽莊高爾夫球場
+					li
+						a(href="#tab-3", data-toggle="tab") 富國島行程
+				.tab-content
+		.tab-pane.fade.in.active#tab-1
+				| ===MODULE===
+		.tab-content
+			.tab-pane.fade#tab-2
+				| ===MODULE===
+		.tab-content
+			.tab-pane.fade#tab-3
+				| ===MODULE===
 		include ../custom_module/footer.pug
-		//- include ../custom_module/gotop.pug
+		include ../custom_module/gotop.pug
