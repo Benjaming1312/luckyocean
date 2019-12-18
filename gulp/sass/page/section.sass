@@ -44,13 +44,19 @@ html
   align-items: center
   justify-content: center
   +trans
-  border: 1px solid #cf0a2c
-  color: #cf0a2c
+  border: 1px solid $color-gorden
+  color: white
+  background: $color-gorden
+  &:hover
+    color: $color-gorden
+    background: $color-n
 
 =title
-  font-size: 35px
+  // font-size: 35px
   font-weight: bold
-  line-height: 2.5rem
+  line-height: 3rem
+  color: $color-gorden
+  border-color: $color-gorden
   @media #{$mobile}
     font-size: 22px
 =sub-title

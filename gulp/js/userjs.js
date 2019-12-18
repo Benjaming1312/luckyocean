@@ -25,8 +25,8 @@ function isENG (lang) {
 $(function () {
   if (is('.page_mobilehome')) {
     $('.tab-pane').appendTo('.tab-content')
-    $('.hdmenu .nav.navbar-nav').appendTo('.navbar .social')
   }
+  $('.hdmenu .nav.navbar-nav').appendTo('.navbar .social')
 
   // if (is('.table-responsive') && is('.module-rcglist')) {
   //   const isSupportPage = is('.support')

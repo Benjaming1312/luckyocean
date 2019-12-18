@@ -75,10 +75,13 @@
   .formBS
     width: 138px
     @media #{$mobile}
-      width: 90%
-      margin-top: 8px
+      width: 65%
+      margin-top: 15px
       margin-left: auto
       margin-right: auto
+      position: absolute
+      top: 30px
+      right: 15px
     .input-group
       position: relative
       display: block
@@ -113,16 +116,16 @@
     margin-top: 0px
     max-width: 20vw
     @media #{$mobile}
-      max-width: 250px
-      max-height: 50px
-      margin-top: 20px
-      margin-left: 30px
+      max-width: 300px
+      max-height: 70px
+      margin-top: 10px
+      margin-left: 25px
       margin-bottom: 0px
       padding: 0
       background-position: left center!important
   .navbar-toggle
     border: 0
-    margin-top: 100px
+    margin-top: 80px
     background: none
     border-radius: 0
     .sr-only
@@ -133,7 +136,7 @@
     .icon-bar
       background: $color-gorden
       width: 30px
-      margin-bottom: 0.5rem
+      margin-bottom: .5rem
       &::before,
       &::after
         display: none
@@ -263,7 +266,7 @@
                   color: white
                   padding-left: 15px
                   &:hover
-                    color: darken(#126CB5, 20%)
+                    color: $color-gorden
   .navbar
     &+.search.search.search
       margin-left: 0px
