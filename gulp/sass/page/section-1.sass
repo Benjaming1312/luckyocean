@@ -1,95 +1,21 @@
 .idx.section-1
-  margin-top: 60px
+  margin-top: 30px
+  margin-bottom: 35px
   @media #{$mobile}
-    margin-top: 30px
-    padding: 0
-  .nav-tabs
-    border: 0
-    padding: 0 15px
-    position: relative
-    margin-bottom: 60px
-    @media #{$mobile}
-      margin-bottom: 30px
-    &::after
-      content: ''
-      display: block
-      background: url(#{$url}section-1-line.svg)center center no-repeat
-      background-size: 495px
-      width: 45%
-      height: 10px
-      position: absolute
-      top: 15px
-      left: 600px
-      @media #{$mobile}
-        float: left
-        position: static
-        margin: 10px 0 30px
-        background-size: contain
-        width: 100%
-    li
-      @media screen and (min-width: 768px)
-        width: 194px
-        height: 39px
-        margin: 0
-        margin-right: 5px
-      @media #{$mobile}
-        width: 100%
-        margin-bottom: 7.5px
-      a
-        border: 0
-        display: flex
-        align-items: center
-        justify-content: center
-        font-weight: bold
-        letter-spacing: 0.2rem
-        width: 100%
-        height: 100%
-        background: #fbebb0
-        color: #413b38
-        font-size: 18px
-        border-radius: 0
-      &.active
-        a
-          background: #c68f32
-          color: white
-  .tab-content
-    @media screen and (min-width: 768px)
-      margin: 0 -2.5px
-    [class*="col"]
-      padding: 0 5px
-      @media #{$mobile}
-        margin-bottom: 15px
-    .mbox
-      position: relative
-      padding: 0
-      .d-txt
-        position: absolute
-        top: 0
-        width: 100%
-        height: 100%
-        display: flex
-        align-items: center
-        justify-content: center
-        background-image: url(#{$url}section-mask.png)
-        background-size: 95%
-        background-position: center
-        background-repeat: no-repeat
-        background-color: rgba(#291408, .53)
-        +trans
-        a
-          font-size: 32px
-          font-weight: bolder
-          display: inline-block
-          color: white
-          letter-spacing: 0.2rem
-          line-height: 3rem
-          transform: translateY(0px)
-          +trans
-          transition: transform .4s ease-in-out
-      &:hover
-        .d-txt
-          background-image: url(#{$url}section-mask-hover.png)
-          background-color: $color-n
-          a
-            transform: translateY(100px)
-            transition: transform .4s ease-in-out
+    margin-top: 15px
+    margin-bottom: 20px
+  max-width: 911px
+  margin-left: auto
+  margin-right: auto
+  .module-title
+    +module-title
+  p
+    color: #5e5957
+    font-size: 17px
+    line-height: 45px
+    margin-bottom: 0
+  p.more
+    text-align: center
+    margin-top: 20px
+    a.btn
+      +btn

@@ -1,4 +1,4 @@
-- var url = '/ezfiles/766/1766/img/242/'
+- var url = '/ezfiles/773/1773/img/271/'
 include ../custom_module/title.pug
 <!DOCTYPE html>
 html(lang="zh-hant")
@@ -11,7 +11,7 @@ html(lang="zh-hant")
 		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css")
 		link(rel="stylesheet", href="https://fonts.googleapis.com/earlyaccess/notosanstc.css")
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-		link(rel="stylesheet", href="/ezfiles/766/1766/img/243/usercss.css")
+		link(rel="stylesheet", href="/ezfiles/773/1773/img/272/usercss.css")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js")
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js"></script>
@@ -19,29 +19,68 @@ html(lang="zh-hant")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js")
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-		script(src="/ezfiles/766/1766/img/244/userjs.js")
+		script(src="/ezfiles/773/1773/img/273/userjs.js")
 		title Document
 	body
 		include ../custom_module/navbar3.pug
 		include ../custom_module/owlcarousel.pug
 
-		.idx.section.section-1.container-fluid.text-center
-			.col-xs-12
-				ul.nav.nav-tabs
-					li.active
-						a(href="#tab-1", data-toggle="tab") 芽莊
-					li
-						a(href="#tab-2", data-toggle="tab") 芽莊高爾夫球場
-					li
-						a(href="#tab-3", data-toggle="tab") 富國島行程
-				.tab-content
-		.tab-pane.fade.in.active#tab-1
-				| ===MODULE===
-		.tab-content
-			.tab-pane.fade#tab-2
-				| ===MODULE===
-		.tab-content
-			.tab-pane.fade#tab-3
-				| ===MODULE===
+		.idx.section.section-1.container-fluid
+			.row
+				.col-xs-12
+					hgroup.module-title.text-center
+						h3.title 利統 研發目標
+						h3.sub-title ABOUT US
+					p 利統公司以生物技術為核心，致力於功能性食品、農業及畜牧資材的研究與產品設計開發，將這些具有特色的產品，運用於「每天都會用到」的傳統產業，同時，提供客戶即時且完整的技術服務及全方位的產品開發解決方案。
+					p 未來五年將著力於以下研發目標：
+					p ① 延緩老化、機能性胜肽、增強體力、輔助血糖穩定等保健食品素材應用及劑型開發。
+					p ② 益生菌及益生質的應用開發、最適化生產及微生物菌相群分析。
+					p ③ 農業天然保鮮劑開發。
+					p ④ 畜牧用飼料添加劑開發。
+					p.more.text-center
+						a.btn(href="") 了解更多
+		.idx.section.section-2.container-fluid
+			.append-news
+		.idx.section.section-3.container-fluid
+			.row
+				.col-xs-12
+					img.img-responsive.center-block(src=url+"sec-3-img.png", alt="")
+		.idx.section.section-4.container-fluid
+			.row
+				.col-sm-3
+					.content(style="background:url("+url+"sec-4-img-1.png);")
+						.img
+							img.img-responsive.center-block(src=url+"sec-4-img-1.png", alt="")
+						.text
+							p.title 研發團隊
+							p.more.text-center
+								a.btn(href="") 了解更多
+				.col-sm-3
+					.content(style="background:url("+url+"sec-4-img-2.png);")
+						.img
+							img.img-responsive.center-block(src=url+"sec-4-img-2.png", alt="")
+						.text
+							p.title 機能素材
+							p.more.text-center
+								a.btn(href="") 了解更多
+				.col-sm-3
+					.content(style="background:url("+url+"sec-4-img-3.png);")
+						.img
+							img.img-responsive.center-block(src=url+"sec-4-img-3.png", alt="")
+						.text
+							p.title 保鮮技術
+							p.more.text-center
+								a.btn(href="") 了解更多
+				.col-sm-3
+					.content(style="background:url("+url+"sec-4-img-4.png);")
+						.img
+							img.img-responsive.center-block(src=url+"sec-4-img-4.png", alt="")
+						.text
+							p.title 農畜資材
+							p.more.text-center
+								a.btn(href="") 了解更多
+
+
+
 		include ../custom_module/footer.pug
 		include ../custom_module/gotop.pug

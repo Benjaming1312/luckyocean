@@ -23,10 +23,14 @@ function isENG (lang) {
 
 
 $(function () {
-  if (is('.page_mobilehome')) {
-    $('.tab-pane').appendTo('.tab-content')
+  if (is('.appendto-news')) {
+    $('.appendto-news').appendTo('.append-news')
+    $('.append-news .d-item').each(function () {
+      const link = $(this).find('a').attr('href')
+      $(this).find('.mdetail').append(`<p class="more"><a href="${link}">了解更多</a></p>`)
+    })
   }
-  $('.hdmenu .nav.navbar-nav').appendTo('.navbar .social')
+  // $('.hdmenu .nav.navbar-nav').appendTo('.navbar .social')
 
   // if (is('.table-responsive') && is('.module-rcglist')) {
   //   const isSupportPage = is('.support')

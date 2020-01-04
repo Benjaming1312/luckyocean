@@ -69,16 +69,16 @@
 //       .module-ads
 //         width: 100%
 .mads-li
-  margin-top: 112px
+  // margin-top: 112px
   @media #{$mobile}
-    margin-top: 144px
+    margin-top: 120px
   .owl-controls
     position: absolute
     width: 100%
     @media screen and (min-width: 768px)
-      bottom: -50px
+      bottom: 10px
     @media #{$mobile}
-      bottom: -30px
+      bottom: 5px
   .owl-dots
     .owl-dot
       opacity: 1
@@ -90,21 +90,21 @@
         opacity: 1
         border-radius: 0
         background: white
-        border: 1px solid #0e0909
+        border: 1px solid #fff
         border-radius: 50%
         // background: url(#{$url}dot.png) center center no-repeat
         // background-size: cover
         // background-position: center
-        width: 9px
-        height: 9px
+        width: 5px
+        height: 5px
         +trans
         @media #{$mobile}
-          width: 9px
-          height: 9px
+          width: 5px
+          height: 5px
       &.active
         span
-          background: #f5b136
-          border: 1px solid #f5b136
+          background: #2a4b9e
+          border: 1px solid #2a4b9e
           border-radius: 50%
           // background: url(#{$url}dot-active.png) center center no-repeat
           // width: 9px
@@ -112,6 +112,6 @@
           // position: relative
           // top: 2px
           @media #{$mobile}
-            width: 10px
-            height: 10px
+            width: 5px
+            height: 5px
             top: 0

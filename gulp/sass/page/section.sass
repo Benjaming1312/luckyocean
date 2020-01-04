@@ -22,7 +22,7 @@ html
 =bg-grey
   background: #f2f2f3
 =max-width
-  max-width: 1100px
+  max-width: 1200px
 
 =box-shadow
   box-shadow: 0 4px 30px rgba(0, 0, 0, .15)
@@ -32,10 +32,10 @@ html
   transition: $trans
 
 =btn
-  width: 150px
+  width: 109px
   height: 30px
   line-height: 2rem
-  font-size: 16px
+  font-size: 14px
   text-align: center
   padding: 0
   font-weight: normal
@@ -44,11 +44,11 @@ html
   align-items: center
   justify-content: center
   +trans
-  border: 1px solid $color-gorden
+  border: 1px solid $color-blue
   color: white
-  background: $color-gorden
+  background: $color-blue
   &:hover
-    color: $color-gorden
+    color: $color-blue
     background: $color-n
 
 =title
@@ -67,7 +67,17 @@ html
   line-height: 2.5rem
   @media #{$mobile}
     font-size: 18px
-
+=module-title
+  .title
+    font-size: 37px
+    color: $color-blue
+    font-weight: bold
+    margin-bottom: 20px
+  .sub-title
+    font-size: 36px
+    color: $color-blue
+    font-weight: bold
+    margin-bottom: 20px
 .page,
 .module-detail
   .title

@@ -52,7 +52,7 @@ gulp.task('styles',function(){
             includeContent: false,
             sourceRoot: 'gulp/sass'
         })) //sourceMap寫入在一樣的地方  
-        .pipe(gulp.dest('dist/css/ec005.so-buy.com/ezfiles/766/1766/img/243/')) //翻譯後的路徑
+        .pipe(gulp.dest('dist/css/ec010.so-buy.com/ezfiles/773/1773/img/272/')) //翻譯後的路徑
         .pipe(gulp.dest('dist/css/')) //翻譯後的路徑
         .pipe(connect.reload())
 })
