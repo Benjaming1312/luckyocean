@@ -30,7 +30,7 @@ footer.foot
         margin-top: 15px
   .info
     @media #{$mobile}
-      padding: 0 8px
+      padding: 0 15px
     p, a, span
       font-size: 17px
       color: #413b38
@@ -42,8 +42,16 @@ footer.foot
         margin-bottom: 15px
     .list-inline
       margin-bottom: 0
+      @media #{$mobile}
+        display: flex
+        justify-content: center
+        width: 100%
+        margin: 0
       li
         margin: 0 5px
+        @media #{$mobile}
+          width: auto
+          text-align: center
         &:first-child
           margin-left: 0
   .map
