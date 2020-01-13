@@ -1,0 +1,72 @@
+.ads-images
+  margin-top: 117px
+  @media #{$mobile}
+    margin-top: 120px
+  img
+    width: 100%
+
+.page-title
+  +module-title
+  margin-top: 60px
+  margin-bottom: 30px
+  @media #{$mobile}
+    margin-top: 30px
+    margin-bottom: 0px
+
+.aboutus-1
+  p
+    max-width: 750px
+    margin: 0 auto
+
+#aboutus-2
+  margin-top: 120px
+  @media #{$mobile}
+    margin-top: 30px
+.module-rcglist
+  +max-width
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 30px
+  @media #{$mobile}
+    padding: 0 15px
+  .d-item
+    margin-bottom: 30px
+    .d-img
+      @media #{$mobile}
+        width: 100%
+        margin-bottom: 15px
+        max-width: initial
+      img
+        +box-shadow
+    .d-txt
+      @media screen and (min-width: 768px)
+        padding-left: 15px
+      @media #{$mobile}
+        width: 100%
+    .mdate
+      display: block
+      color: $color-blue
+      font-size: 15px
+      font-weight: 500
+      margin-bottom: 12px
+    h5
+      margin-bottom: 0
+      padding-bottom: 0
+      @media #{$mobile}
+        margin-top: 15px
+      a
+        font-size: 19px
+        color: $color-green
+        font-weight: 500
+        &::after
+          content: ''
+          display: block
+          width: 41px
+          height: 3px
+          background: $color-green
+          margin-top: 25px
+          margin-bottom: 25px
+    .mdetail
+      font-size: 15px
+      line-height: 30px
+      color: #5e5957

@@ -30,6 +30,10 @@ $(function () {
       $(this).find('.mdetail').append(`<p class="more"><a href="${link}">了解更多</a></p>`)
     })
   }
+
+  if (is('.patent')) {
+    $('.module-detail').appendTo($('.append-detail'))
+  }
   // $('.hdmenu .nav.navbar-nav').appendTo('.navbar .social')
 
   // if (is('.table-responsive') && is('.module-rcglist')) {

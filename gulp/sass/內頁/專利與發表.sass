@@ -1,0 +1,59 @@
+.patent
+  .mb
+    padding-top: 0
+  .mpgtitle
+    background: none
+    border-width: 5px
+    padding: 0
+    padding-left: 15px
+    border-color: $color-blue
+    h3
+      font-size: 22px
+      color: $color-blue
+      font-weight: bold
+      margin-bottom: 20px
+      padding: 0
+  .mpgdetail
+    padding: 0
+    table
+      margin-left: 0!important
+      width: 100%!important
+      tbody
+        td
+          text-align: center!important
+          vertical-align: middle!important
+          padding: 15px!important
+          border: 1px solid #ccc!important
+          &:nth-of-type(1)
+            width: 25%
+          &:nth-of-type(2)
+            width: 25%
+          &:nth-of-type(3)
+            width: 50%
+          p
+            margin-bottom: 0
+        tr:first-child
+          td
+            background: rgba($color-blue, .5)
+            color: white!important
+          p
+            color: white!important
+            *
+              color: white!important
+  aside.col-sm-3
+    @media screen and (min-width: 768px)
+      padding-right: 60px
+    ul
+      list-style: none
+      padding-left: 0
+      li
+        margin-bottom: 15px
+        a
+          border-bottom: 1px dotted #000
+          padding: 7.5px
+          display: block
+          +trans
+          &:hover
+            background: $color-blue
+            color: white
+            border-left: 5px solid #000
