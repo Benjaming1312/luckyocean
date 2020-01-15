@@ -1,5 +1,5 @@
 .ads-images
-  margin-top: 117px
+  // margin-top: 117px
   @media #{$mobile}
     margin-top: 120px
   img
@@ -12,6 +12,27 @@
   @media #{$mobile}
     margin-top: 30px
     margin-bottom: 0px
+  h4.title
+    position: relative
+    &::before
+      content: ''
+      display: block
+      width: 100%
+      border-bottom: 1px solid rgba($color-blue, .3)
+      position: absolute
+      top: 55px
+      z-index: -1
+    &::after
+      content: ''
+      display: block
+      margin: 0 auto
+      $w: 20px
+      width: $w
+      height: $w
+      background: $color-blue
+      border-radius: 50%
+      margin-top: 15px
+      border: 7px solid #fff
 
 .aboutus-1
   p
