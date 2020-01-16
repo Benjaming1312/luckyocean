@@ -8,7 +8,6 @@ var gulp = require('gulp'), //gulp主程式
     gulpImagemin = require('gulp-imagemin') //img min
     pug = require('gulp-pug') //pug
     compass = require('gulp-compass') //compass
-    gulpLivereload = require('gulp-livereload') //livereload
     connect = require('gulp-connect') //connect
 
 // 監看JS
