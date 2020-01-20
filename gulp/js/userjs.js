@@ -34,6 +34,15 @@ $(function () {
   if (is('.patent')) {
     $('.module-detail').appendTo($('.append-detail'))
   }
+
+  if (is('.tec')) {
+    $('.module-rcglist').appendTo($('.tec .append'))
+    const title = $('header.mt h3').text()
+    $('.page-title h4.title').text(title)
+  }
+  if (is('#farm')) {
+    $('.module-rcglist').addClass('farm')
+  }
   // $('.hdmenu .nav.navbar-nav').appendTo('.navbar .social')
 
   // if (is('.table-responsive') && is('.module-rcglist')) {

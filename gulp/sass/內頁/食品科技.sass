@@ -1,0 +1,40 @@
+.page.tec
+  .mb
+    padding-top: 0
+  .mt
+    display: none
+  aside.col-sm-3
+    @media screen and (min-width: 768px)
+      padding-right: 60px
+    ul
+      list-style: none
+      padding-left: 0
+      li
+        a
+          display: block
+          padding-bottom: 7.5px
+          padding-left: 7.5px
+          margin-bottom: 7.5px
+          border-bottom: 1px dotted #ccc
+          +trans
+          &:hover
+            padding-left: 15px
+            color: $color-green
+        &:last-child
+          a
+            border: 0
+  .module-rcglist
+    @media #{$mobile}
+      padding: 0
+  main.col-sm-9
+    .listBS
+      &:last-child
+        .mbox
+          border: 0
+      .d-item
+        margin-bottom: 15px
+      .d-txt
+        padding-left: 0
+      .mbox
+        border-bottom: 1px dotted #ccc
+        padding-bottom: 15px
