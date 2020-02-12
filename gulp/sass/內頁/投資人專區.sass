@@ -1,0 +1,43 @@
+.page.investors
+  .info
+    p
+      margin-bottom: 15px
+      b
+        +sub-title
+        color: #007b3a
+        border-left: 5px solid $color-green
+        padding: 0
+        padding-left: 15px
+        line-height: 1.5rem
+      a
+        color: $color-green
+        border: 0
+        +trans
+        &:hover
+          opacity: 0.7
+  .module-form
+    @media #{$mobile}
+      margin-top: 30px
+    .formBS
+      border: 0!important
+    .form-group
+      border: 0!important
+      margin-bottom: 15px
+      .col-sm-3,
+      .col-sm-9
+        border: 0!important
+        @media #{$mobile}
+          padding: 0
+    .required
+      .col-sm-3
+        &::before
+          display: none
+        &::after
+          content: "*"
+          display: inline-block
+          font-size: 1.25em
+          font-weight: bold
+          font-family: arial
+          padding-right: 5px
+          position: relative
+          top: 0px
