@@ -43,7 +43,7 @@ $(function () {
     $('.appendto-news').appendTo('.append-news')
     $('.append-news .d-item').each(function () {
       const link = $(this).find('a').attr('href')
-      $(this).find('.mdetail').append(`<p class="more"><a href="${link}">了解更多</a></p>`)
+      $(this).find('.mdetail').append(`<p class="more"><a href="${link}">READ MORE</a></p>`)
     })
   }
 
