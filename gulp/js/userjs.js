@@ -40,10 +40,12 @@ function getCookie(cname) {
 
 $(function () {
   if (is('.appendto-news')) {
+    const lang = getCookie('PageLang')
+    const moreText = lang === 'en' ? 'READ MORE' : '了解更多'
     $('.appendto-news').appendTo('.append-news')
     $('.append-news .d-item').each(function () {
       const link = $(this).find('a').attr('href')
-      $(this).find('.mdetail').append(`<p class="more"><a href="${link}">READ MORE</a></p>`)
+      $(this).find('.mdetail').append(`<p class="more"><a href="${link}">${moreText}</a></p>`)
     })
   }
 
