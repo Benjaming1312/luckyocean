@@ -6,12 +6,14 @@
   border: 0
   box-shadow: none
   border-radius: 0
-  background: rgba(#fff, .62)
-  padding: 23px 30px 10px
+  background: #d1e6df
+  padding: 15px 0 18px
+  border-top: 29px solid $color-green
   // border-bottom: 1px solid rgba(#d3a500, .31)
   @media #{$mobile}
     padding-top: 0
     padding: 0
+    padding-bottom: 50px
   .social
     padding: 0px 0 15px
     position: absolute
@@ -32,77 +34,30 @@
       margin: 0
       padding: 0
       width: 100%
-    ul.list-inline
-      margin-top: 0
-      margin-left: 15px
-      @media #{$mobile}
-        width: 100%
-        display: flex
-        flex-wrap: nowrap
-        margin: 0
-        border-bottom: 1px solid rgba(#413b38, .2)
-      li
-        margin: 0
-        @media screen and (min-width: 768px)
-          padding: 0
-        @media #{$mobile}
-          width: calc(100% / 3)
-          padding: 0
-        a
-          padding: 0 4px
-          font-size: 14px
-          color: #2e2d2b
-          position: relative
-          border-bottom: 0
-          +trans
-          @media screen and (min-width: 768px)
-            padding-left: 0
-          @media #{$mobile}
-            display: block
-            border-right: 1px solid rgba(#413b38, .2)
-            text-align: center
-            padding: 5px
-          &:hover
-            color: $color-blue
-          &::after
-            content: ''
-            position: relative
-            width: 1px
-            height: 13px
-            background: #413b38
-            display: inline-block
-            right: 0
-            top: 2.5px
-            margin-left: 8px
-            @media #{$mobile}
-              display: none
-        &:last-child
-          border-right: 0
-          a::after
-            display: none
   .formBS
-    width: 147px
+    width: 219px
     @media #{$mobile}
-      width: 45%
+      width: 80%
       margin-top: 15px
       margin-left: auto
       margin-right: auto
       position: absolute
-      top: 30px
-      right: 15px
+      bottom: -40px
+      left: 7.5px
     .input-group
       position: relative
       display: block
-      // @media #{$mobile}
     input
-      border: 1px solid #251412
-      border-radius: 5px
-      height: 20px
+      border: 1px solid #707070
+      border-radius: 6px
+      height: 26px
+      background: none
+      font-size: 16px!important
     .input-group-btn
       height: 26px
       padding: 0
       position: absolute
-      right: 15px
+      right: 20px
       top: 4px
       width: 13px
       height: 13px
@@ -114,7 +69,9 @@
         background: none
   .container-fluid
     // width: calc(100% - 160px)
-    margin: 0 autom
+    max-width: 1200px
+    margin: 0 auto
+    position: relative
     @media #{$mobile}
       padding: 0
       width: 100%
@@ -124,7 +81,7 @@
     margin-left: 0px
     margin-top: 0px
     @media #{$mobile}
-      max-width: 300px
+      max-width: 250px
       max-height: 70px
       margin-top: 10px
       margin-left: 25px
@@ -133,7 +90,8 @@
       background-position: left center!important
   .navbar-toggle
     border: 0
-    margin-top: 80px
+    margin-top: 20px
+    margin-right: 0
     background: none
     border-radius: 0
     .sr-only
@@ -142,7 +100,7 @@
     //   &::after
     //     background: #000
     .icon-bar
-      background: $color-blue
+      background: $color-green
       width: 30px
       margin-bottom: .5rem
       &::before,
@@ -162,10 +120,11 @@
     @media #{$mobile}
       width: 100%
       margin: 0
-      background: #fff
-      padding-bottom: 15px
+      background: #d1e6df
+      padding-bottom: 0px
       box-shadow: none
       padding-top: 15px
+      margin-bottom: -15px
       a
         border: 0
         color: white
@@ -177,7 +136,7 @@
         display: flex
         justify-content: space-around
         align-items: center
-        margin-top: 30px
+        // margin-top: 30px
         padding-left: 30px
       @media #{$mobile}
         margin: 0
@@ -188,7 +147,7 @@
         margin-top: 0
       *
         color: $color-b
-        font-size: 16px
+        font-size: 18px
         font-weight: 300
         letter-spacing: 0.05rem
       >li
@@ -198,7 +157,7 @@
           position: relative
           overflow: hidden
           text-transform: uppercase
-          color: #2d2c2b
+          color: $color-b
           padding-bottom: 0
           font-weight: normal
           // padding-left: 8px
@@ -209,8 +168,8 @@
           @media screen and (min-width: 768px)
             margin-right: 0px
           &:hover
-            color: $color-blue
-            border: 1px solid $color-blue
+            color: $color-green
+            border: 1px solid $color-green
         // &.facebook
         //   @media screen and (min-width: 768px)
         //     margin-left: 2vw

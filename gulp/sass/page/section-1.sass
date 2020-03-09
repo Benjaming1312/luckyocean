@@ -1,21 +1,56 @@
 .idx.section-1
-  margin-top: 30px
-  margin-bottom: 35px
+  margin-top: 40px
   @media #{$mobile}
-    margin-top: 15px
-    margin-bottom: 20px
-  max-width: 911px
-  margin-left: auto
-  margin-right: auto
-  .module-title
-    +module-title
-  p
-    color: #5e5957
-    font-size: 17px
-    line-height: 45px
-    margin-bottom: 0
-  p.more
+    margin-top: 20px
+    padding: 0
+  .title
+    +title
+  .container
+    +max-width
+    margin-left:  auto
+    margin-right: auto
+    @media #{$mobile}
+      padding: 0
+    >.row:not(.content)
+      >.col-xs-12:first-child
+        @media screen and (min-width: 768px)
+          padding: 0
+        @media #{$mobile}
+          padding: 0 15px
+  .content
+    display: flex
+    flex-wrap: wrap
+    background: #e7eeee
+    padding: 63px 54px
+    margin: 0
+    @media #{$mobile}
+      padding: 15px
+  .col-sm-6
+    margin-bottom: 30px
+    padding: 0 25px
+    @media #{$mobile}
+      padding: 0 0px
+      margin-bottom: 30px
+    a
+      display: block
+      width: 100%
+      height: 100%
+      img
+        width: 100%
+        +trans
+      &:hover
+        img
+          opacity: 0.7
+    figcaption
+      border-top: 3px solid #c7e2d9
+      margin-top: 15px
+      padding-top: 20px
+      display: block
+      color: #3d705c
+      font-size: 20px
+      font-weight: 500
+  .more
     text-align: center
     margin-top: 20px
-    a.btn
+    .btn
       +btn

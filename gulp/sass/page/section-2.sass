@@ -1,64 +1,36 @@
 .idx.section-2
-  +max-width
-  padding-top: 30px
-  padding-bottom: 90px
+  background: #00a295
+  padding: 50px 0 75px
   @media #{$mobile}
-    padding-bottom: 30px
-  .d-item
-    margin: 0 25px
-    @media #{$mobile}
-      margin-bottom: 30px
-    &:last-child
+    padding: 15px
+  .container
+    +max-width
+    .row
+      margin: 0 -15px
+      display: flex
+      flex-direction: row-reverse
       @media #{$mobile}
-        margin-bottom: 0
-  .listBS
-    margin: 0 -25px
-    display: flex
+        display: block
+    .img
+      @media #{$mobile}
+        margin-bottom: 30px
+      img
+        width: 100%
+  .text
     @media screen and (min-width: 768px)
-      flex-wrap: nowrap
-    @media #{$mobile}
-      flex-wrap: wrap
-    .mdate
-      display: block
-      color: $color-blue
-      font-size: 15px
-      font-weight: 500
-      margin-bottom: 12px
-    h5
-      padding-left: 30px
-      padding-right: 30px
-      margin-bottom: 0
-      padding-bottom: 0
-      @media #{$mobile}
-        margin-top: 15px
-        padding-left: 15px
-        padding-right: 15px
-      a
-        font-size: 19px
-        color: $color-green
-        font-weight: 500
-        &::after
-          content: ''
-          display: block
-          width: 41px
-          height: 3px
-          background: $color-green
-          margin-top: 25px
-          margin-bottom: 25px
-    .mdetail
-      padding-left: 30px
-      padding-right: 30px
-      font-size: 15px
-      line-height: 30px
-      color: #5e5957
-      @media #{$mobile}
-        padding-left: 15px
-        padding-right: 15px
-  .mbox
-    padding-bottom: 80px
-  .more
-    position: absolute
-    bottom: 0
-    right: 0
-    a
-      +btn
+      padding-left: 15px
+  .title
+    +title
+    text-align: left
+    border: 0
+    padding-left: 20px
+    padding-bottom: 0
+    margin-bottom: 30px
+    span
+      color: white
+      &::before
+        background: url(#{$url}title-icon-2.svg) center center no-repeat
+  p
+    line-height: 30px
+    color: white
+    font-size: 17.5px

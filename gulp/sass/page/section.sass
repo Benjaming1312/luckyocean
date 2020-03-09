@@ -6,7 +6,7 @@ a
 html
   overflow-x: hidden
   body
-    background: #f8f9f9
+    // background: #f8f9f9
 .langbar
   display: none
 
@@ -34,35 +34,48 @@ html
   transition: $trans
 
 =btn
-  width: 109px
-  height: 30px
-  line-height: 2rem
-  font-size: 14px
+  background: #357c57
+  color: white
+  width: 145px
+  height: 32px
+  border: 0
+  font-size: 16px
+  font-weight: 500
   text-align: center
   padding: 0
   font-weight: normal
-  background: none
   display: flex
   align-items: center
   justify-content: center
   +trans
-  border: 1px solid $color-blue
+  border: 1px solid #357c57
   color: white
-  background: $color-blue
+  border-radius: 0
   &:hover
-    color: $color-blue
+    color: $color-green
     background: $color-n
 
 =title
-  // font-size: 35px
-  font-weight: bold
-  line-height: 3rem
-  color: $color-gorden
-  border-color: $color-gorden
-  padding-bottom: 15px
-  padding-left: 0
-  @media #{$mobile}
-    font-size: 22px
+  text-align: center
+  border-bottom: 1.5px solid #12804a
+  padding-bottom: 30px
+  margin-bottom: 30px
+  span
+    color: #12804a
+    font-size: 29px
+    font-weight: normal
+    position: relative
+    font-weight: 500
+    &::before
+      content: ''
+      width: 40px
+      height: 31px
+      background: url(#{$url}title-icon-1.svg) center center no-repeat
+      background-size: contain
+      display: inline-block
+      position: absolute
+      left: -20px
+      top: -10px
 =sub-title
   font-size: 23px
   font-weight: bold

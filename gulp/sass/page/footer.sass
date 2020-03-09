@@ -1,71 +1,66 @@
 footer.foot
-  background: #f8f9f9
-  .row:not(.map)
-    padding-top: 43px
-    padding-bottom: 28px
-    border-bottom: 11.5px solid #e5f4fc
+  background: #00a295
+  padding: 25px 30px
+  @media #{$mobile}
+    padding: 15px
+  .container
+    @media screen and (min-width: 768px)
+      width: 1200px
+      max-width: 1200px
+      margin-left: auto
+      margin-right: auto
     @media #{$mobile}
-      padding-top: 20px
-      padding-bottom: 15px
+      padding: 0
   .logo
-    margin-top: 23px
+    margin-top: 60px
+    @media #{$mobile}
+      margin-top: 0
+    .svg
+      @media #{$mobile}
+        max-width: 100%
+  .info
+    padding: 0
     @media #{$mobile}
       margin-bottom: 30px
-    .module-title
-      +module-title
-      margin-bottom: 42px
-      .title
-        margin-bottom: 31px
-    p
-      font-size: 26px
-      color: #3e3a39
+    .title
+      color: white
+      font-size: 20px
       font-weight: 500
-      &::after
-        content: ''
-        display: block
-        margin: 0 auto
-        background: #3e3a39
-        width: 68px
-        height: 3px
-        margin-top: 15px
-  .info
-    @media #{$mobile}
-      padding: 0 15px
-    p, a, span
-      font-size: 17px
-      color: #413b38
-      @media #{$mobile}
-        font-size: 12px
-    p
       margin-bottom: 20px
+    p
+      white-space: nowrap
+      color: white
       @media #{$mobile}
-        margin-bottom: 15px
-    .list-inline
-      margin-bottom: 0
-      @media #{$mobile}
-        display: flex
-        justify-content: center
-        width: 100%
-        margin: 0
-      li
-        margin: 0 5px
+        overflow: hidden
+        text-overflow: ellipsis
+      *
+        white-space: nowrap
+        color: white
+        font-size: 13px
         @media #{$mobile}
-          width: auto
-          text-align: center
-        &:first-child
-          margin-left: 0
-  .map
-    height: 309px
-  iframe
-    height: 309px
+          overflow: hidden
+          text-overflow: ellipsis
+      b
+        margin-left: 7.5px
+        margin-right: 7.5px
+      &.phone
+        >span
+          margin-right: 30px
+          &:last-child
+            @media #{$mobile}
+              display: block
+              margin-top: 15px
+
 div.design
-  background: #011d48
+  background: url(#{$url}section-3-bg.png) center center repeat-y
+  background-size: cover
+  padding: 12px 0
   p
     margin: 0
     padding: 10px 0
     text-align: center
     font-size: 12px
-    color: #b0afaa
+    color: #808080
     span
       @media #{$mobile}
         float: left!important
@@ -74,7 +69,7 @@ div.design
         text-align: center
     span, a
       font-size: 12px
-      color: #b0afaa
+      color: #8b8b8b
       @media #{$mobile}
         margin-bottom: 5px
     a

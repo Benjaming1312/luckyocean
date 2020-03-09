@@ -39,36 +39,6 @@ function getCookie(cname) {
 
 
 $(function () {
-  if (is('.appendto-news')) {
-    const lang = getCookie('PageLang')
-    const moreText = lang === 'en' ? 'READ MORE' : '了解更多'
-    $('.appendto-news').appendTo('.append-news')
-    $('.append-news .d-item').each(function () {
-      const link = $(this).find('a').attr('href')
-      $(this).find('.mdetail').append(`<p class="more"><a href="${link}">${moreText}</a></p>`)
-    })
-  }
-
-  if (is('.patent')) {
-    $('.module-detail').appendTo($('.append-detail'))
-  }
-
-  if (is('.tec')) {
-    $('.module-rcglist').appendTo($('.tec .append'))
-    const title = $('header.mt h3').text()
-    $('.page-title h4.title').text(title)
-  }
-  if (is('#farm')) {
-    $('.module-rcglist').addClass('farm')
-  }
-
-  const lang = getCookie('PageLang')
-  if (lang === 'en') {
-    $('body').addClass('en-page')
-  }
-  if (lang === 'zh-cn') {
-    $('body').addClass('cn-page')
-  }
   // $('.hdmenu .nav.navbar-nav').appendTo('.navbar .social')
 
   // if (is('.table-responsive') && is('.module-rcglist')) {
