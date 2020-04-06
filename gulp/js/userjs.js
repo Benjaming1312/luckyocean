@@ -37,8 +37,35 @@ function getCookie(cname) {
   return "";
 }
 
+function calcNavHeightToBanner () {
+  const navH = $('nav.navbar').innerHeight() - 1
 
+  if (is('.module-adv')) {
+    $('.module-adv').attr('style', `margin-top: ${navH}px`)
+  }
+}
 $(function () {
+  calcNavHeightToBanner()
+
+  if (is('.idx.section-4') && window.innerWidth > 768) {
+    $('.module-form .formBS').append(`<div class="group-1"></div><div class="group-2"></div>`)
+
+    $('.module-form .form-group').each(function (idx) {
+      if (idx > 4) {
+        $(this).appendTo($('.module-form .group-2'))
+      }
+      else {
+        $(this).appendTo($('.module-form .group-1'))
+      }
+    })
+
+    $('.form-btn .btn').each(function () {
+      console.log('%c (／‵Д′)／~ ╧╧ test : ', 'padding: .25rem; font-size: 14px; background: #12bdba; color: #fff', $(this).text())
+      if ($(this).text() === '送 出') {
+        $(this).appendTo($('.module-form .group-2'))
+      }
+    })
+  }
   // $('.hdmenu .nav.navbar-nav').appendTo('.navbar .social')
 
   // if (is('.table-responsive') && is('.module-rcglist')) {
@@ -190,8 +217,8 @@ $(function () {
   setTimeout(() => {
     AOS.init({
       once: true,
-      duration: 1500,
-      delay: 200
+      duration: 2000,
+      delay: 300
     })
   })
 

@@ -1,36 +1,54 @@
+$imgW: 556px
+
 .idx.section-2
-  background: #00a295
-  padding: 50px 0 75px
+  padding-left: 15px
   @media #{$mobile}
-    padding: 15px
-  .container
-    +max-width
-    .row
-      margin: 0 -15px
-      display: flex
-      flex-direction: row-reverse
-      @media #{$mobile}
-        display: block
-    .img
-      @media #{$mobile}
-        margin-bottom: 30px
-      img
-        width: 100%
-  .text
+    padding: 0 30px
+  .module-title
+    +module-title
+    margin-bottom: 35px
+    .title
+      text-align: left
+      line-height: 40px
+    &::after
+      display: none
+  .img
+    position: relative
     @media screen and (min-width: 768px)
-      padding-left: 15px
-  .title
-    +title
-    text-align: left
-    border: 0
+      width: $imgW
+    img
+      width: 100%
+  .link
+    @media screen and (min-width: 768px)
+      width: calc(100% - #{$imgW})
+    @media #{$mobile}
+      margin-bottom: 15px
+  ul
+    color: $color-b2
     padding-left: 20px
-    padding-bottom: 0
-    margin-bottom: 30px
-    span
-      color: white
-      &::before
-        background: url(#{$url}title-icon-2.svg) center center no-repeat
-  p
-    line-height: 30px
-    color: white
-    font-size: 17.5px
+    *
+      color: $color-b2
+    li
+      padding: 21px 0
+      border-bottom: 1px solid rgba(#858686, .5)
+      &:first-child
+        padding-top: 0
+      a
+        font-size: 17px
+        +trans
+        &:hover
+          color: $color-green
+          padding-left: 7.5px
+  .more
+    position: absolute
+    bottom: 60px
+    width: 100%
+    text-align: center
+    @media #{$mobile}
+      bottom: 20px
+  .btn
+    +btn(white, $color-pink)
+    width: 240px
+    border-radius: 5px
+    @media #{$mobile}
+      width: 200px

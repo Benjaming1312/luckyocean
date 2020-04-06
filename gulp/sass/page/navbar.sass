@@ -7,69 +7,86 @@
   box-shadow: none
   border-radius: 0
   background: #d1e6df
-  padding: 15px 0 18px
-  border-top: 29px solid $color-green
+  padding: 10px 0
+  border-top: 0
   // border-bottom: 1px solid rgba(#d3a500, .31)
   @media #{$mobile}
     padding-top: 0
     padding: 0
-    padding-bottom: 50px
-  .social
-    padding: 0px 0 15px
-    position: absolute
-    top: 10px
-    right: 15px
+    padding-bottom: 5px
+  .link
     display: flex
     flex-wrap: nowrap
+    @media screen and (min-width: 768px)
+      padding-left: 5vw
     @media #{$mobile}
-      width: 90%
-      max-width: 100%
-      right: 0
-      position: static
-      margin-top: 10px
-      margin-left: auto
-      margin-right: auto
-      flex-direction: column-reverse
-      flex-wrap: wrap
-      margin: 0
-      padding: 0
-      width: 100%
-  .formBS
-    width: 219px
-    @media #{$mobile}
-      width: 80%
-      margin-top: 15px
-      margin-left: auto
-      margin-right: auto
       position: absolute
-      bottom: -40px
-      left: 7.5px
-    .input-group
-      position: relative
-      display: block
-    input
-      border: 1px solid #707070
-      border-radius: 6px
-      height: 26px
-      background: none
-      font-size: 16px!important
-    .input-group-btn
-      height: 26px
-      padding: 0
-      position: absolute
-      right: 20px
-      top: 4px
-      width: 13px
-      height: 13px
-      z-index: 99999
-      .btn
-        width: 13px
-        height: 13px
-        border: 0
-        background: none
+      right: 5px
+      top: 5px
+    li
+      @media #{$mobile}
+        padding: 2.5px
+    a
+      border: 0!important
+      &:hover
+        opacity: 0.7
+
+  // .social
+  //   padding: 0px 0 15px
+  //   position: absolute
+  //   top: 10px
+  //   right: 15px
+  //   display: flex
+  //   flex-wrap: nowrap
+  //   @media #{$mobile}
+  //     width: 90%
+  //     max-width: 100%
+  //     right: 0
+  //     position: static
+  //     margin-top: 10px
+  //     margin-left: auto
+  //     margin-right: auto
+  //     flex-direction: column-reverse
+  //     flex-wrap: wrap
+  //     margin: 0
+  //     padding: 0
+  //     width: 100%
+  // .formBS
+  //   width: 219px
+  //   @media #{$mobile}
+  //     width: 80%
+  //     margin-top: 15px
+  //     margin-left: auto
+  //     margin-right: auto
+  //     position: absolute
+  //     bottom: -40px
+  //     left: 7.5px
+  //   .input-group
+  //     position: relative
+  //     display: block
+  //   input
+  //     border: 1px solid #707070
+  //     border-radius: 6px
+  //     height: 26px
+  //     background: none
+  //     font-size: 16px!important
+  //   .input-group-btn
+  //     height: 26px
+  //     padding: 0
+  //     position: absolute
+  //     right: 20px
+  //     top: 4px
+  //     width: 13px
+  //     height: 13px
+  //     z-index: 99999
+  //     .btn
+  //       width: 13px
+  //       height: 13px
+  //       border: 0
+  //       background: none
   .container-fluid
     // width: calc(100% - 160px)
-    max-width: 1200px
+    max-width: 1130px
     margin: 0 auto
     position: relative
     @media #{$mobile}
@@ -80,17 +97,19 @@
   .navbar-brand
     margin-left: 0px
     margin-top: 0px
+    @media screen and (min-width: 768px)
+      padding: 0
     @media #{$mobile}
       max-width: 250px
       max-height: 70px
-      margin-top: 10px
+      margin-top: 20px
       margin-left: 25px
       margin-bottom: 0px
       padding: 0
       background-position: left center!important
   .navbar-toggle
     border: 0
-    margin-top: 20px
+    margin-top: 50px
     margin-right: 0
     background: none
     border-radius: 0
@@ -108,10 +127,10 @@
         display: none
   .navbar
     border: 0
-    background: white
+    background: $color-green
     padding-bottom: 0px
     @media #{$mobile}
-      padding-bottom: 15px
+      padding-bottom: 0px
   // .navbar-header
   #navbar
     padding: 0
@@ -136,8 +155,8 @@
         display: flex
         justify-content: space-around
         align-items: center
-        // margin-top: 30px
-        padding-left: 30px
+        margin-top: 15px
+        padding-left: 0px
       @media #{$mobile}
         margin: 0
         float: left
@@ -147,12 +166,12 @@
         margin-top: 0
       *
         color: $color-b
-        font-size: 18px
+        font-size: 17px
         font-weight: 300
         letter-spacing: 0.05rem
       >li
         @media screen and (min-width: 768px)
-          margin-left: 30px
+          margin-left: 10px
         >a
           position: relative
           overflow: hidden
@@ -195,7 +214,7 @@
             &::before
               @media #{$mobile}
                 content: '+'
-                color: white
+                color: $color-green
                 float: right
                 font-size: 24px
         &.dropdown
@@ -204,7 +223,7 @@
             z-index: 99999999
           .dropdown-menu
             left: 0
-            background: rgba($color-blue, .7)
+            background: rgba($color-green, .7)
             border: 0
             width: 100%
             overflow: initial
@@ -215,8 +234,8 @@
           &:hover,
           &.open
             .dropdown-toggle
-              color: $color-blue
-              border: 1px solid $color-blue
+              color: $color-green
+              border: 1px solid $color-green
               &::before
                 @media #{$mobile}
                   content: '-'
@@ -226,6 +245,9 @@
               @media screen and (min-width: 768px)
                 display: flex
                 flex-wrap: wrap
+              @media #{$mobile}
+                width: calc(100% - 7px)
+                margin: 7.5px 5px
               li
                 padding-bottom: 0
                 @media screen and (min-width: 768px)
@@ -240,7 +262,7 @@
                   color: white
                   padding-left: 15px
                   &:hover
-                    color: $color-blue
+                    color: $color-green
   .navbar
     &+.search.search.search
       margin-left: 0px

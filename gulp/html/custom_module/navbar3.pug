@@ -1,22 +1,22 @@
-- var url = '/ezfiles/780/1780/img/404/'
+- var url = '/ezfiles/786/1786/img/485/'
 nav.navbar
 	.container-fluid
 		.nav-form.visible-xs
-			<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
-				<div class="input-group">
-					<span class="input-group-btn">
-						button.btn.svg(type="submit" style="background:url("+url+"search.svg); width: 19px; height: 19px;")
-					</span>
-					<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
-				</div>
-			</form>
-			//- ul.list-inline.link
-			//- 	li
-			//- 		a(href="") 繁中
-			//- 	li
-			//- 		a(href="") 簡中
-			//- 	li
-			//- 		a(href="") ENGLISH
+			//- <form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
+			//- 	<div class="input-group">
+			//- 		<span class="input-group-btn">
+			//- 			button.btn.svg(type="submit" style="background:url("+url+"search.svg); width: 19px; height: 19px;")
+			//- 		</span>
+			//- 		<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
+			//- 	</div>
+			//- </form>
+			ul.list-inline.link
+				li
+					a.svg(href="" style="background:url("+url+"lang-icon-1.svg); width: 38px; height: 38px;")
+				li
+					a.svg(href="" style="background:url("+url+"lang-icon-2.svg); width: 38px; height: 38px;")
+				li
+					a.svg(href="" style="background:url("+url+"lang-icon-3.svg); width: 38px; height: 38px;")
 		.navbar-header
 			button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
 				span.sr-only Toggle navigation
@@ -24,45 +24,62 @@ nav.navbar
 				span.icon-bar
 				span.icon-bar
 			// LOGO放置處
-			a.navbar-brand.svg(href='/' style="background: url("+url+"logo.svg); width: 261px; height: 47px;")
+			a.navbar-brand.svg(href='/' style="background: url("+url+"logo.svg); width: 161px; height: 70px;")
 		#navbar.navbar-collapse.collapse
-			ul.nav.navbar-nav
-				li(data-aos="fade-in" data-aos-delay="100")
-					a(href="") 首頁
-					//- a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 公司簡介
-					//- ul.dropdown-menu(role='menu')
-					//- 	li
-					//- 		a(href="") 關於利統
-					//- 	li
-					//- 		a(href="") 最新消息
-
+			ul.nav.navbar-nav.navbar-right
+				li.dropdown(data-aos="fade-in" data-aos-delay="100")
+					a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') Company
+					ul.dropdown-menu(role='menu')
+						li
+							a(href="") 關於我們
+						li
+							a(href="") 核心理念
+						li
+							a(href="") 妍禾優勢
+						li
+							a(href="") 工廠介紹
+						li
+							a(href="") 全球據點
 				li(data-aos-delay="200", data-aos="fade-in")
-					a(href="") 公司簡介
-					//- a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 研發團隊
-					//- ul.dropdown-menu(role='menu')
-					//- 	li
-					//- 		a(href="") -研發團隊
-					//- 	li
-					//- 		a(href="") -專利與發表
-					//- 	li
-					//- 		a(href="") -學術論文
-					//- 	li
-					//- 		a(href="") -研究設備
-				li(data-aos-delay="300", data-aos="fade-in")
-					a(href="") 最新產品
-				li(data-aos-delay="400", data-aos="fade-in")
-					a(href="") 產品資訊
+					a(href="") Service
+				li.dropdown(data-aos-delay="300", data-aos="fade-in")
+					a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') Products
+					ul.dropdown-menu(role='menu')
+						li
+							a(href="") 活性成分
+						li
+							a(href="") 基底成分
+						li
+							a(href="") 防腐系統
+				li.dropdown(data-aos-delay="400", data-aos="fade-in")
+					a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') R&D
+					ul.dropdown-menu(role='menu')
+						li
+							a(href="") 五大實驗室
+						li
+							a(href="") 核心技術
+				li.dropdown(data-aos-delay="500", data-aos="fade-in")
+					a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') News
+					ul.dropdown-menu(role='menu')
+						li
+							a(href="") 產業新訊
+						li
+							a(href="") 官方新聞
 				li(data-aos-delay="500", data-aos="fade-in")
-					a(href="") 聯繫我們
-				li.nav-form.hidden-xs(data-aos-delay="600", data-aos="fade-in")
-					<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
-						<div class="input-group">
-							<span class="input-group-btn">
-								button.btn.svg(type="submit" style="background:url("+url+"search.svg); width: 19px; height: 19px;")
-							</span>
-							<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
-						</div>
-					</form>
+					a(href="") Contact
+				li.link.hidden-xs(data-aos-delay="600", data-aos="fade-in")
+					a.svg(href="" style="background:url("+url+"lang-icon-1.svg); width: 38px; height: 38px;")
+					a.svg(href="" style="background:url("+url+"lang-icon-2.svg); width: 38px; height: 38px;")
+					a.svg(href="" style="background:url("+url+"lang-icon-3.svg); width: 38px; height: 38px;")
+				//- li.nav-form.hidden-xs(data-aos-delay="600", data-aos="fade-in")
+				//- 	<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
+				//- 		<div class="input-group">
+				//- 			<span class="input-group-btn">
+				//- 				button.btn.svg(type="submit" style="background:url("+url+"search.svg); width: 19px; height: 19px;")
+				//- 			</span>
+				//- 			<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
+				//- 		</div>
+				//- 	</form>
 				//- li(data-aos-delay="700", data-aos="fade-in")
 				//- li(data-aos-delay="800", data-aos="fade-in")
 

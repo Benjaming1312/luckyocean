@@ -1,3 +1,4 @@
+$dotW: 5px
 // .banner
 //   padding: 0
 //   width: 100%
@@ -69,15 +70,14 @@
 //       .module-ads
 //         width: 100%
 .mads-li
-  // margin-top: 112px
-  margin-top: 120px
-  @media #{$mobile}
-    margin-top: 136px
   .owl-controls
     position: absolute
     width: 100%
+    text-align: right
+    padding-right: 17px 
+    padding-bottom: 8px
     @media screen and (min-width: 768px)
-      bottom: 10px
+      bottom: $dotW
     @media #{$mobile}
       bottom: 5px
   .owl-dots
@@ -96,12 +96,12 @@
         // background: url(#{$url}dot.png) center center no-repeat
         // background-size: cover
         // background-position: center
-        width: 10px
-        height: 10px
+        width: $dotW
+        height: $dotW
         +trans
         @media #{$mobile}
-          width: 10px
-          height: 10px
+          width: $dotW
+          height: $dotW
       &.active
         span
           background: #00a194
@@ -113,6 +113,6 @@
           // position: relative
           // top: 2px
           @media #{$mobile}
-            width: 10px
-            height: 10px
+            width: $dotW
+            height: $dotW
             top: 0

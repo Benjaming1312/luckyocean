@@ -1,65 +1,61 @@
 footer.foot
-  background: #00a295
-  padding: 25px 30px
+  background: rgba(#b1d3c7, .5)
+  padding: 30px 0
   @media #{$mobile}
-    padding: 15px
+    padding: 30px 0
   .container
-    @media screen and (min-width: 768px)
-      width: 1200px
-      max-width: 1200px
-      margin-left: auto
-      margin-right: auto
-    @media #{$mobile}
-      padding: 0
+    max-width: 1200px
+    >.row
+      @media screen and (min-width: 768px)
+        display: flex
+        align-items: center
+
+  $logo: 322px
   .logo
-    margin-top: 60px
+    @media screen and (min-width: 768px)
+      width: $logo
     @media #{$mobile}
-      margin-top: 0
+      margin-bottom: 15px
     .svg
       @media #{$mobile}
         max-width: 100%
   .info
-    padding: 0
-    @media #{$mobile}
-      margin-bottom: 30px
-    .title
-      color: white
-      font-size: 20px
-      font-weight: 500
-      margin-bottom: 20px
+    position: relative
+    @media screen and (min-width: 768px)
+      width: calc(100% - #{$logo})
+      padding-left: 60px
+    &::before
+      @media screen and (min-width: 768px)
+        content: ''
+        display: block
+        position: absolute
+        width: 1px
+        height: 80%
+        left: 40px
+        top: 7.5px
+        background: $color-green
     p
-      white-space: nowrap
-      color: white
-      @media #{$mobile}
-        overflow: hidden
-        text-overflow: ellipsis
+      color: $color-b
       *
-        white-space: nowrap
-        color: white
-        font-size: 13px
-        @media #{$mobile}
-          overflow: hidden
-          text-overflow: ellipsis
-      b
-        margin-left: 7.5px
-        margin-right: 7.5px
-      &.phone
-        >span
-          margin-right: 30px
-          &:last-child
-            @media #{$mobile}
-              display: block
-              margin-top: 15px
-
+        color: $color-b
+    .col-sm-6
+      &:first-child
+        @media screen and (min-width: 768px)
+          width: 45%
+      &:lase-child
+        @media screen and (min-width: 768px)
+          width: 55%
+    
 div.design
-  background: url(#{$url}section-3-bg.png) center center repeat-y
-  background-size: cover
+  // background: url(#{$url}section-3-bg.png) center center repeat-y
+  // background-size: cover
+  background: white
   padding: 12px 0
   p
     margin: 0
     padding: 10px 0
     text-align: center
-    font-size: 12px
+    font-size: 13px
     color: #808080
     span
       @media #{$mobile}
@@ -68,11 +64,21 @@ div.design
         width: 100%
         text-align: center
     span, a
-      font-size: 12px
-      color: #8b8b8b
+      font-size: 13px
+      color: #808080
       @media #{$mobile}
         margin-bottom: 5px
-    a
+    span+a
+      &::before
+        content: ''
+        border-left: 1px solid #808080
+        height: 1.25rem
+        line-height: 0px
+        display: inline-block
+        margin: 0 7.5px
+        @media #{$mobile}
+          display: none
+    a.design-by
       position: absolute
       right: 30px
       @media #{$mobile}

@@ -1,58 +1,38 @@
-.idx.section-1
-  margin-top: 40px
+.idx.container-fluid
+  +max-width
+  margin-top: 90px
+  margin-bottom: 90px
   @media #{$mobile}
-    margin-top: 20px
-    padding: 0
-  .title
-    +title
-  .container
-    +max-width
-    margin-left:  auto
-    margin-right: auto
-    @media #{$mobile}
-      padding: 0
-    >.row:not(.content)
-      >.col-xs-12:first-child
-        @media screen and (min-width: 768px)
-          padding: 0
-        @media #{$mobile}
-          padding: 0 15px
-  .content
-    display: flex
-    flex-wrap: wrap
-    background: #e7eeee
-    padding: 63px 54px
-    margin: 0
+    margin-top: 45px
+    margin-bottom: 45px
+  .row
+    @media screen and (min-width: 768px)
+      margin: 0 -15px
+
+.idx.section-1
+  $imgW: 389px
+  .row
+    @media screen and (min-width: 768px)
+      display: flex
+  .img
+    @media screen and (min-width: 768px)
+      width: $imgW
+    img
+      width: 100%
+  .text
+    background: #ebebeb
+    padding: 30px
+    @media screen and (min-width: 768px)
+      width: calc(100% - #{$imgW})
     @media #{$mobile}
       padding: 15px
-  .col-sm-6
-    margin-bottom: 30px
-    padding: 0 25px
-    @media screen and (min-width: 768px)
-      width: 49%
-    @media #{$mobile}
-      padding: 0 0px
-      margin-bottom: 30px
-    a
-      display: block
-      width: 100%
-      height: 100%
-      img
-        width: 100%
-        +trans
-      &:hover
-        img
-          opacity: 0.7
-    figcaption
-      border-top: 3px solid #c7e2d9
       margin-top: 15px
-      padding-top: 20px
-      display: block
-      color: #3d705c
-      font-size: 20px
-      font-weight: 500
-  .more
+  .module-title
+    +module-title
+    margin-bottom: 30px
+  p
+    color: $color-b
     text-align: center
-    margin-top: 20px
-    .btn
-      +btn
+    font-size: 17px
+    line-height: 30px
+    margin-bottom: 0

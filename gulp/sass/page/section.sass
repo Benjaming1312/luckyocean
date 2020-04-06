@@ -31,29 +31,7 @@ html
 =text-shadow
   text-shadow: 1px 1px 30px rgba(#000, 1)
 =trans
-  transition: $trans
-
-=btn
-  background: #357c57
-  color: white
-  width: 145px
-  height: 32px
-  border: 0
-  font-size: 16px
-  font-weight: 500
-  text-align: center
-  padding: 0
-  font-weight: normal
-  display: flex
-  align-items: center
-  justify-content: center
-  +trans
-  border: 1px solid #357c57
-  color: white
-  border-radius: 0
-  &:hover
-    color: $color-green
-    background: $color-n
+  transition: .7s ease-in-out
 
 =title
   text-align: center
@@ -82,18 +60,7 @@ html
   line-height: 2.5rem
   @media #{$mobile}
     font-size: 18px
-=module-title
-  .title,
-  h3
-    font-size: 37px
-    color: $color-blue
-    font-weight: bold
-    margin-bottom: 20px
-  .sub-title
-    font-size: 36px
-    color: $color-blue
-    font-weight: bold
-    margin-bottom: 20px
+
 .page,
 .module-detail
   .title

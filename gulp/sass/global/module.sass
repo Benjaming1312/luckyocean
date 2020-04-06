@@ -1,0 +1,35 @@
+=max-width
+  max-width: 1080px
+  margin-left: auto
+  margin-right: auto
+
+=module-title
+  .title
+    font-size: 29px
+    letter-spacing: 0.5rem
+    color: $color-green-d
+    margin-bottom: 7.5px
+    margin-top: 0
+    line-height: 45px
+  .sub-title
+    color: #979797
+    font-size: 20px
+  &::after
+    content: ''
+    display: block
+    margin: 0 auto
+    width: 34px
+    border-bottom: 2px solid $color-green-d
+    margin-top: 18px
+
+=trans
+  transition: .3s ease-in-out
+
+=btn($textColor: 'white', $bgColor: $color-pink)
+  border-color: $bgColor
+  background: $bgColor
+  color: $textColor
+  +trans
+  &:hover
+    background: $color-n
+    color: $bgColor
