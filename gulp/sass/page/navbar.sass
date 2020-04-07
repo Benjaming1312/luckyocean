@@ -6,7 +6,7 @@
   border: 0
   box-shadow: none
   border-radius: 0
-  background: #d1e6df
+  background: rgba(#f4fff5, .9)
   padding: 10px 0
   border-top: 0
   // border-bottom: 1px solid rgba(#d3a500, .31)
@@ -19,6 +19,7 @@
     flex-wrap: nowrap
     @media screen and (min-width: 768px)
       padding-left: 5vw
+      margin-right: 10px
     @media #{$mobile}
       position: absolute
       right: 5px
@@ -86,9 +87,10 @@
   //       background: none
   .container-fluid
     // width: calc(100% - 160px)
-    max-width: 1130px
+    // max-width: 1130px
     margin: 0 auto
     position: relative
+    padding: 0 5vw
     @media #{$mobile}
       padding: 0
       width: 100%
@@ -169,6 +171,7 @@
         font-size: 17px
         font-weight: 300
         letter-spacing: 0.05rem
+        text-transform: initial!important
       >li
         @media screen and (min-width: 768px)
           margin-left: 10px
