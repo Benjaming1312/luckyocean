@@ -102,9 +102,11 @@
             position: absolute
             right: 0
             bottom: 5px
-      .form-btn
-        @media screen and (min-width: 768px)
-          display: none
+          @media #{$padV}
+            position: static
+      // .form-btn
+      //   @media screen and (min-width: 768px)
+      //     display: none
   .input-group-addon
     width: auto!important
     @media #{$mobile}
