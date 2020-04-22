@@ -215,7 +215,7 @@ $(function () {
   setTimeout(() => {
     AOS.init({
       once: true,
-      duration: 2000,
+      duration: 700,
       delay: 300
     })
   })

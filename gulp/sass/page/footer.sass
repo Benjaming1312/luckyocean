@@ -1,20 +1,24 @@
 footer.foot
   background: rgba(#b1d3c7, .5)
-  padding: 30px 0
+  padding: 15px 0 0
   @media #{$mobile}
-    padding: 30px 0
+    // padding: 30px 0
   .container
     max-width: 1200px
     >.row
       @media screen and (min-width: 768px)
         display: flex
         align-items: center
+      @media #{$padV}
+        display: block
 
   $logo: 322px
   .logo
     @media screen and (min-width: 768px)
       width: $logo
     @media #{$mobile}
+      margin-bottom: 15px
+    @media #{$padV}
       margin-bottom: 15px
     .svg
       @media #{$mobile}
@@ -24,6 +28,11 @@ footer.foot
     @media screen and (min-width: 768px)
       width: calc(100% - #{$logo})
       padding-left: 60px
+    @media #{$padV}
+      width: 100%
+      padding-left: 0
+    @media #{$padH}
+      padding-right: 0
     &::before
       @media screen and (min-width: 768px)
         content: ''
@@ -34,10 +43,14 @@ footer.foot
         left: 40px
         top: 7.5px
         background: $color-green
+      @media #{$padV}
+        display: none
     p
       color: $color-b
+      font-size: 14px
       *
         color: $color-b
+        font-size: 14px
     .col-sm-6
       &:first-child
         @media screen and (min-width: 768px)
@@ -49,22 +62,25 @@ footer.foot
 div.design
   // background: url(#{$url}section-3-bg.png) center center repeat-y
   // background-size: cover
-  background: white
-  padding: 12px 0
+  background: rgba(#b1d3c7, .5)
+  padding: 0px 0
   p
     margin: 0
     padding: 10px 0
     text-align: center
-    font-size: 13px
+    font-size: 12px
     color: #808080
+    @media #{$mobile}
+      padding-top: 0
     span
-      @media #{$mobile}
-        float: left!important
-        display: block
-        width: 100%
-        text-align: center
+      // @media #{$mobile}
+      //   float: left!important
+      //   display: block
+      //   width: 100%
+      //   text-align: center
+      //   font-size: 12px
     span, a
-      font-size: 13px
+      font-size: 12px
       color: #808080
       @media #{$mobile}
         margin-bottom: 5px

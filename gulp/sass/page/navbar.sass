@@ -21,9 +21,12 @@
       padding-left: 5vw
       margin-right: 10px
     @media #{$mobile}
-      position: absolute
-      right: 5px
-      top: 5px
+      margin-left: 10px
+    @media #{$padV}
+      padding-left: 5px
+    @media #{$padH}
+      padding-left: 5px
+      margin-right: 20px
     li
       @media #{$mobile}
         padding: 2.5px
@@ -31,6 +34,8 @@
       border: 0!important
       &:hover
         opacity: 0.7
+      @media #{$padV}
+        margin-left: 5px!important
 
   // .social
   //   padding: 0px 0 15px
@@ -90,10 +95,14 @@
     // max-width: 1130px
     margin: 0 auto
     position: relative
-    padding: 0 5vw
+    padding: 0 3vw
     @media #{$mobile}
       padding: 0
       width: 100%
+    @media #{$padV}
+      padding: 0
+    @media #{$padH}
+      padding: 0
   .header
     border: 0
   .navbar-brand
@@ -104,17 +113,21 @@
     @media #{$mobile}
       max-width: 250px
       max-height: 70px
-      margin-top: 20px
+      margin-top: 5px
       margin-left: 25px
       margin-bottom: 0px
       padding: 0
       background-position: left center!important
   .navbar-toggle
     border: 0
-    margin-top: 50px
+    margin-top: 25px
     margin-right: 0
     background: none
     border-radius: 0
+    @media #{$padV}
+      display: block
+      margin-top: 15px
+      margin-right: 15px
     .sr-only
       display: none
     //   &::before,
@@ -133,7 +146,10 @@
     padding-bottom: 0px
     @media #{$mobile}
       padding-bottom: 0px
-  // .navbar-header
+  .navbar-header
+    @media #{$padV}
+      width: 100%
+      padding: 0 15px
   #navbar
     padding: 0
     // @media screen and (min-width: 768px)
@@ -149,6 +165,9 @@
       a
         border: 0
         color: white
+    &.collapse
+      @media #{$padV}
+        display: none!important
     .navbar-nav
       float: left
       position: initial
@@ -166,6 +185,15 @@
         width: 100%
         padding: 0 5px
         margin-top: 0
+      @media #{$padV}
+        display: block
+        margin: 0
+        float: left
+        margin-top: 15px
+        width: 100%
+        padding: 0 15px
+        margin-top: 0
+        margin: 0
       *
         color: $color-b
         font-size: 17px
@@ -175,6 +203,9 @@
       >li
         @media screen and (min-width: 768px)
           margin-left: 10px
+        @media #{$padV}
+          width: 100%
+          margin-left: 0
         >a
           position: relative
           overflow: hidden
@@ -189,6 +220,10 @@
           +trans
           @media screen and (min-width: 768px)
             margin-right: 0px
+          @media #{$padV}
+            margin: 0
+          @media #{$padH}
+            padding: 5px 7.5px
           &:hover
             color: $color-green
             border: 1px solid $color-green
@@ -220,6 +255,11 @@
                 color: $color-green
                 float: right
                 font-size: 24px
+              @media #{$padV}
+                content: '+'
+                color: $color-green
+                float: right
+                font-size: 24px
         &.dropdown
           @media screen and (min-width: 768px)
             position: relative
@@ -233,7 +273,8 @@
             box-shadow: none
             @media #{$mobile}
               margin-top: 5px
-              // padding: 15px 5px
+            @media #{$padV}
+              display: none
           &:hover,
           &.open
             .dropdown-toggle
@@ -241,6 +282,8 @@
               border: 1px solid $color-green
               &::before
                 @media #{$mobile}
+                  content: '-'
+                @media #{$padV}
                   content: '-'
             .dropdown-menu
               border: 0
@@ -251,6 +294,9 @@
               @media #{$mobile}
                 width: calc(100% - 7px)
                 margin: 7.5px 5px
+              @media #{$padV}
+                position: static
+                margin: 7.5px 0px
               li
                 padding-bottom: 0
                 @media screen and (min-width: 768px)

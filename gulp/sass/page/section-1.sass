@@ -8,31 +8,65 @@
   .row
     @media screen and (min-width: 768px)
       margin: 0 -15px
+    @media #{$padV}
+      margin: 0 0px
 
 .idx.section-1
   $imgW: 389px
+  @media #{$mobile}
+    margin-top: 15px
+  @media #{$padV}
+    margin-top: 15px
+    padding: 0 15px
   .row
     @media screen and (min-width: 768px)
       display: flex
+    @media #{$padV}
+      display: block
+      margin: 0
   .img
     @media screen and (min-width: 768px)
       width: $imgW
+    @media #{$mobile}
+      display: none
+    @media #{$padV}
+      width: 100%
+      padding: 0
     img
       width: 100%
   .text
     background: #ebebeb
-    padding: 30px
+    padding: 15px 30px
     @media screen and (min-width: 768px)
       width: calc(100% - #{$imgW})
     @media #{$mobile}
       padding: 15px
+    @media #{$padV}
+      // padding: 15px
+      width: 100%
       margin-top: 15px
   .module-title
     +module-title
-    margin-bottom: 30px
+    margin-bottom: 15px
   p
     color: $color-b
-    text-align: center
-    font-size: 17px
-    line-height: 30px
+    text-align: justify
+    text-align-last: justify
+    font-size: 16px
+    line-height: 28px
     margin-bottom: 0
+    &.more
+      // position: absolute
+      // bottom: 60px
+      // width: 100%
+      text-align: center
+      text-align-last: center
+      margin-top: 7.5px
+      @media #{$mobile}
+        bottom: 20px
+  .btn
+    +btn(white, $color-pink)
+    width: 240px
+    border-radius: 5px
+    @media #{$mobile}
+      width: 200px

@@ -4,18 +4,26 @@ $imgW: 556px
   padding-left: 15px
   @media #{$mobile}
     padding: 0 30px
+  @media #{$padV}
+    padding: 0 15px
   .module-title
     +module-title
     margin-bottom: 35px
     .title
       text-align: left
       line-height: 40px
+      @media #{$mobile}
+        letter-spacing: 0
+        font-size: 24px
     &::after
       display: none
   .img
     position: relative
     @media screen and (min-width: 768px)
       width: $imgW
+    @media #{$padV}
+      width: 100%
+      padding: 0
     img
       width: 100%
   .link
@@ -23,6 +31,10 @@ $imgW: 556px
       width: calc(100% - #{$imgW})
     @media #{$mobile}
       margin-bottom: 15px
+    @media #{$padV}
+      margin-bottom: 15px
+      width: 100%
+      padding: 0
   ul
     color: $color-b2
     padding-left: 20px
