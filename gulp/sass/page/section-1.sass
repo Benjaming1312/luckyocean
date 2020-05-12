@@ -22,7 +22,8 @@
     @media screen and (min-width: 768px)
       display: flex
     @media #{$padV}
-      display: block
+      display: flex
+      flex-wrap: nowrap
       margin: 0
   .img
     @media screen and (min-width: 768px)
@@ -32,22 +33,26 @@
     @media #{$padV}
       width: 100%
       padding: 0
+      width: 50%
+      display: block
     img
       width: 100%
   .text
     background: #ebebeb
-    padding: 15px 30px
+    padding: 30px 30px
     @media screen and (min-width: 768px)
       width: calc(100% - #{$imgW})
     @media #{$mobile}
       padding: 15px
     @media #{$padV}
       // padding: 15px
-      width: 100%
+      width: 50%
       margin-top: 15px
+      margin-top: 0
+      margin-left: 15px
   .module-title
     +module-title
-    margin-bottom: 15px
+    margin-bottom: 30px
   p
     color: $color-b
     text-align: justify
@@ -57,9 +62,18 @@
     font-size: 16px
     line-height: 28px
     margin-bottom: 0
+    max-width: 500px
+    margin-left: auto
+    margin: auto
+    margin-bottom: 30px
     @media #{$mobile}
       text-align: left
       text-align-last: left
+      // text-align: justify
+      // text-align-last: justify
+      // text-align: justify-all
+      // text-align-last: justify-all
+      letter-spacing: 0.1rem
     &.more
       // position: absolute
       // bottom: 60px
@@ -67,6 +81,7 @@
       text-align: center
       text-align-last: center
       margin-top: 7.5px
+      margin-bottom: 0
       @media #{$mobile}
         bottom: 20px
   .btn

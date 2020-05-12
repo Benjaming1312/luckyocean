@@ -45,7 +45,7 @@ function calcNavHeightToBanner () {
   }
 }
 $(function () {
-  if (is('.idx.section-4') && window.innerWidth > 768) {
+  if (is('.idx.section-4') && window.innerWidth > 440) {
     $('.module-form .formBS').append(`<div class="group-1"></div><div class="group-2"></div>`)
 
     $('.module-form .form-group').each(function (idx) {

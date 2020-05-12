@@ -77,8 +77,20 @@
       .col-sm-3
         @media #{$padH}
           white-space: nowrap
+        @media #{$padV}
+          padding-left: 0
+        @media #{$mobile}
+          padding-left: 9px
+      .col-sm-9
+        @media #{$padV}
+          padding-left: 0
+        @media #{$mobile}
+          padding-left: 9px
       .formBS
         @media screen and (min-width: 768px)
+          display: flex
+          flex-wrap: wrap
+        @media #{$padV}
           display: flex
           flex-wrap: wrap
       .form-group
@@ -104,6 +116,10 @@
             bottom: 5px
           @media #{$padV}
             position: static
+            margin-top: 15px
+          @media #{$padH}
+            position: static
+            margin-top: 15px
       // .form-btn
       //   @media screen and (min-width: 768px)
       //     display: none
