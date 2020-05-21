@@ -44,6 +44,54 @@ function calcNavHeightToBanner () {
     $('.module-adv').attr('style', `margin-top: ${navH}px`)
   }
 }
+
+function companyOwl () {
+  if (!is('.company')) {
+    return
+  }
+
+  $('#factory .owl-carousel').owlCarousel({
+      items: 1,
+      autoplay: false,
+      nav: false,
+      dots: false,
+      loop: true,
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+      autoPlaySpeed: 3000,
+      autoPlayTimeout: 1500,
+      smartSpeed: 1500,
+      URLhashListener:true,
+      autoplayHoverPause: true,
+      startPosition: 'URLHash'
+  })
+  $('#certificate .owl-carousel').owlCarousel({
+      items: 1,
+      autoplay: true,
+      nav: false,
+      dots: false,
+      loop: true,
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+      autoPlaySpeed: 3000,
+      autoPlayTimeout: 1500,
+      smartSpeed: 1500,
+      margin:10,
+      responsiveClass:true,
+      responsive:{
+          0:{
+            items: 2
+          },
+          600:{
+            items: 3
+          },
+          1000:{
+            items: 8
+          }
+      }
+  })
+}
+
 $(function () {
   if (is('.idx.section-4') && window.innerWidth > 440) {
     $('.module-form .formBS').append(`<div class="group-1"></div><div class="group-2"></div>`)
@@ -64,6 +112,7 @@ $(function () {
       }
     })
   }
+  companyOwl()
   // $('.hdmenu .nav.navbar-nav').appendTo('.navbar .social')
 
   // if (is('.table-responsive') && is('.module-rcglist')) {
