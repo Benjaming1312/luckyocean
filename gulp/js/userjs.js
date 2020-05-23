@@ -4,6 +4,9 @@
 // $('test').click((e) => {
 //     return e ? true : false
 // })
+
+let navH = $('nav.navbar').innerHeight()
+
 function is (name) {
   return $(name).is(name)
 }
@@ -38,7 +41,7 @@ function getCookie(cname) {
 }
 
 function calcNavHeightToBanner () {
-  const navH = $('nav.navbar').innerHeight() - 1
+  const navH = navH - 1
 
   if (is('.module-adv')) {
     $('.module-adv').attr('style', `margin-top: ${navH}px`)
@@ -92,7 +95,42 @@ function companyOwl () {
   })
 }
 
+function bindCompanyClick () {
+  $('.company-dropdown a').click(function (e) {
+    e.preventDefault()
+    e.stopPropagation()
+    const target = $(this).attr('href').split('#')[1]
+    const link = $(this).attr('href').split('#')[0]
+    if (window.location.href.indexOf(link) >= 0) {
+      scrollToTarget(target)
+      if ($(window).width() < 768) {
+        $('.navbar-toggle').click()
+      }
+    }
+    else {
+      window.location.href = $(this).attr('href')
+    }
+  })
+}
+
+function pageScroll () {
+  const target = window.location.href.split('#')[1]
+  if (target) {
+    scrollToTarget(target)
+  }
+}
+
+function scrollToTarget (target) {
+  const targetTop = $(`#${target}`).offset().top
+  $('html, body').stop().animate({
+    scrollTop: targetTop - navH
+  }, 1000)
+}
+
+
 $(function () {
+  navH = $('nav.navbar').innerHeight()
+
   if (is('.idx.section-4') && window.innerWidth > 440) {
     $('.module-form .formBS').append(`<div class="group-1"></div><div class="group-2"></div>`)
 
@@ -113,6 +151,8 @@ $(function () {
     })
   }
   companyOwl()
+  pageScroll()
+  bindCompanyClick()
   // $('.hdmenu .nav.navbar-nav').appendTo('.navbar .social')
 
   // if (is('.table-responsive') && is('.module-rcglist')) {
