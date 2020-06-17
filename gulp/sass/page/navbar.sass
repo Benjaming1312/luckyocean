@@ -22,6 +22,7 @@
       margin-right: 10px
     @media #{$mobile}
       margin-left: 10px
+      flex-wrap: wrap
     @media #{$padV}
       padding-left: 5px
     @media #{$padH}
@@ -324,28 +325,58 @@
         margin-left: 0
       input
         width: calc(100% - 28px)
-  .search.formBS
-    position: absolute
-    top: 35px
-    right: 30px
+  .nav-form
+    position: relative
+    margin-right: 15px
     @media #{$mobile}
-      position: static
-      margin-top: 15px
+      width: 100%
+      display: flex
+      flex-wrap: nowrap
+      align-items: center
+      margin-right: 0
+      padding-left: 7.5px
       margin-bottom: 15px
-    .input-group
-      input
-        border-top: 0
-        border-left: 0
-        border-right: 0
-        border-radius: 0
-        border: 2px solid $color-red
-        border-radius: 30px
-      .input-group-btn
-        position: relative
-        z-index: 9999
-        button
-          font-size: 16px
-          color: $color-b
-          margin: 0
-          padding: 0
-          background: none!important
+    &.show
+      .formBS
+        width: 150px
+    .toggle-search
+      position: relative
+      top: 7px
+      font-size: 22px!important
+      cursor: pointer
+      @media #{$mobile}
+        top: 0
+        margin-left: 15px
+    .formBS
+      position: absolute
+      top: 0px
+      right: 30px
+      width: 150px
+      overflow: hidden
+      +trans
+      width: 0
+      @media #{$mobile}
+        position: static
+        width: calc(100% - 40px)
+        // margin-top: 15px
+        // margin-bottom: 15px
+      .input-group
+        @media #{$mobile}
+          margin-right: 0
+          display: block
+        input
+          border-top: 0
+          border-left: 0
+          border-right: 0
+          border-radius: 0
+          border: 1px solid #efefef
+          border-radius: 0px
+        .input-group-btn
+          position: relative
+          z-index: 9999
+          button
+            font-size: 16px
+            color: $color-b
+            margin: 0
+            padding: 0
+            background: none!important

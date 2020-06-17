@@ -121,12 +121,15 @@ function pageScroll () {
 }
 
 function scrollToTarget (target) {
+  console.log('%c (／‵Д′)／~ ╧╧ scroll target : ', 'padding: .25rem; font-size: 14px; background: #12bdba; color: #fff', [navH])
   const targetTop = $(`#${target}`).offset().top
   $('html, body').stop().animate({
     scrollTop: targetTop - navH
   }, 1000)
 }
 
+const cookieNotify = require('./cookie')
+const search = require('./search')
 
 $(function () {
   navH = $('nav.navbar').innerHeight()
@@ -153,6 +156,8 @@ $(function () {
   companyOwl()
   pageScroll()
   bindCompanyClick()
+  cookieNotify()
+  search()
   // $('.hdmenu .nav.navbar-nav').appendTo('.navbar .social')
 
   // if (is('.table-responsive') && is('.module-rcglist')) {

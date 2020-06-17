@@ -1,7 +1,7 @@
 - var url = '/ezfiles/786/1786/img/485/'
 nav.navbar
 	.container-fluid
-		.nav-form.visible-xs
+		//- .nav-form.hidden-xs
 			//- <form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
 			//- 	<div class="input-group">
 			//- 		<span class="input-group-btn">
@@ -29,7 +29,7 @@ nav.navbar
 			ul.nav.navbar-nav.navbar-right
 				li.dropdown(data-aos="fade-in" data-aos-delay="100")
 					a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') Company
-					ul.dropdown-menu(role='menu')
+					ul.dropdown-menu.company-dropdown(role='menu')
 						li
 							a(href="") 關於我們
 						li
@@ -67,7 +67,17 @@ nav.navbar
 							a(href="") 官方新聞
 				li(data-aos-delay="500", data-aos="fade-in")
 					a(href="") Contact
-				li.link.hidden-xs(data-aos-delay="600", data-aos="fade-in")
+				li.link(data-aos-delay="600", data-aos="fade-in")
+					.nav-form
+						<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
+							<div class="input-group">
+								<span class="input-group-btn hidden">
+									button.btn.svg(type="submit" style="background:url("+url+"search.svg); width: 19px; height: 19px;")
+								</span>
+								<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
+							</div>
+						</form>
+						a.fa.fa-search.toggle-search(type="button")
 					a.svg(href="" style="background:url("+url+"lang-icon-1.svg); width: 38px; height: 38px;")
 					a.svg(href="" style="background:url("+url+"lang-icon-2.svg); width: 38px; height: 38px;")
 					a.svg(href="" style="background:url("+url+"lang-icon-3.svg); width: 38px; height: 38px;")
