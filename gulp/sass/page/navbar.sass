@@ -17,6 +17,8 @@
   .link
     display: flex
     flex-wrap: nowrap
+    position: relative!important
+    z-index: 999999999
     @media screen and (min-width: 768px)
       padding-left: 5vw
       margin-right: 10px
@@ -25,6 +27,7 @@
       flex-wrap: wrap
     @media #{$padV}
       padding-left: 5px
+      flex-wrap: wrap
     @media #{$padH}
       padding-left: 5px
       margin-right: 20px
@@ -328,6 +331,14 @@
   .nav-form
     position: relative
     margin-right: 15px
+    @media #{$padV}
+      width: 100%
+      display: flex
+      flex-wrap: nowrap
+      align-items: center
+      margin-right: 0
+      padding-left: 7.5px
+      margin-bottom: 15px
     @media #{$mobile}
       width: 100%
       display: flex
@@ -344,6 +355,7 @@
       top: 7px
       font-size: 22px!important
       cursor: pointer
+      color: $color-green!important
       @media #{$mobile}
         top: 0
         margin-left: 15px
@@ -355,12 +367,18 @@
       overflow: hidden
       +trans
       width: 0
+      @media #{$padV}
+        position: static
+        width: calc(100% - 40px)
       @media #{$mobile}
         position: static
         width: calc(100% - 40px)
         // margin-top: 15px
         // margin-bottom: 15px
       .input-group
+        @media #{$padV}
+          margin-right: 0
+          display: block
         @media #{$mobile}
           margin-right: 0
           display: block

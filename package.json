@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "cssnano": "^3.10.0",
+    "del": "^5.1.0",
+    "gulp-browserify": "^0.5.1",
     "gulp-compass": "^2.1.0",
     "gulp-postcss": "^7.0.0",
     "gulp-pug": "^3.3.0",
