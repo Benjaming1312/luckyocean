@@ -5,4 +5,17 @@
 		//- .col-xs-12.banner-text
 		//- 	.text
 		//- 		img.img-responsive(src=url+"banner-text.svg", alt="")
-		.col-xs-12.banner-img(style="background:url("+url+"page-banner.png);")
+		//- .col-xs-12.banner-img(style="background:url("+url+"page-banner.png);")
+		.col-xs-12
+			img.img-responsive.hidden-xs(src=url + "contact-banner.png", alt="")
+			img.img-responsive.visible-xs(src=url + "contact-banner-m.png", alt="")
+
+.banner.container-fluid.page-banner
+	.row
+		//- .col-xs-12.banner-text
+		//- 	.text
+		//- 		img.img-responsive(src=url+"banner-text.svg", alt="")
+		//- .col-xs-12.banner-img(style="background:url("+url+"page-banner.png);")
+		.col-xs-12
+			img.img-responsive.hidden-xs(src=url + "page-banner.png", alt="")
+			img.img-responsive.visible-xs(src=url + "page-banner-m.png", alt="")
