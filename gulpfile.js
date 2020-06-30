@@ -42,7 +42,7 @@ gulp.task('scripts',function(){
 			presets: ['env']
 		}))
 		.pipe(concat('userjs.js')) //合併所有JS產出為userjs.js
-		.pipe(gulpUglify()) //最小化JS
+		// .pipe(gulpUglify()) //最小化JS
 		.pipe(gulp.dest('dist/js')) //輸出路徑
 		.pipe(connect.reload())
 })

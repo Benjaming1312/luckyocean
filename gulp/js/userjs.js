@@ -130,6 +130,7 @@ function scrollToTarget (target) {
 
 const cookieNotify = require('./cookie')
 const search = require('./search')
+const service = require('./service/index')
 
 $(function () {
   navH = $('nav.navbar').innerHeight()
@@ -158,6 +159,7 @@ $(function () {
   bindCompanyClick()
   cookieNotify()
   search()
+  service()
   // $('.hdmenu .nav.navbar-nav').appendTo('.navbar .social')
 
   // if (is('.table-responsive') && is('.module-rcglist')) {
