@@ -5,12 +5,8 @@ module.exports = function () {
   }
   const navH = $('nav.navbar').innerHeight()
 
-  /* Initial */
-  const directTarget = window.location.href.split('#')[1]
-  if (directTarget) {
-    const targetTop = $(`#${directTarget}`).offset().top
-    scrollTo(targetTop - navH)
-  }
+  const section1Attr = $('.page.section-1').attr('style')
+  $('.page.section-1').attr('style', `${section1Attr}; margin-top: ${navH}px;`)
 
   /* Click */
   $('.service.section-1 a').click(function () {
@@ -21,6 +17,7 @@ module.exports = function () {
 }
 
 function scrollTo (top) {
+  console.log('%c (／‵Д′)／~ ╧╧ top : ', 'padding: .25rem; font-size: 14px; background: #12bdba; color: #fff', top)
   $('html, body').animate({
     scrollTop: top
   }, 1000)

@@ -159,7 +159,9 @@ $(function () {
   bindCompanyClick()
   cookieNotify()
   search()
-  service()
+  setTimeout(() => {
+    service()
+  })
   // $('.hdmenu .nav.navbar-nav').appendTo('.navbar .social')
 
   // if (is('.table-responsive') && is('.module-rcglist')) {
