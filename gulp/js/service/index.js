@@ -9,7 +9,9 @@ module.exports = function () {
   $('.page.section-1').attr('style', `${section1Attr}; margin-top: ${navH}px;`)
 
   /* Click */
-  $('.service.section-1 a').click(function () {
+  $('.service.section-1 a').click(function (e) {
+    e.preventDefault()
+    e.stopPropagation()
     const targetName = $(this).attr('href').split('#')[1]
     const scrollTop = $(`#${targetName}`).offset().top
     scrollTo(scrollTop - navH)
@@ -17,7 +19,6 @@ module.exports = function () {
 }
 
 function scrollTo (top) {
-  console.log('%c (／‵Д′)／~ ╧╧ top : ', 'padding: .25rem; font-size: 14px; background: #12bdba; color: #fff', top)
   $('html, body').animate({
     scrollTop: top
   }, 1000)

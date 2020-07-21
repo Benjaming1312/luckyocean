@@ -124,11 +124,26 @@
         &:hover
           opacity: 0.7
     .text
-      p
+      p, li
         line-height: 20px
         margin-bottom: 12.5px
         &:first-child
+          line-height: 40px
+      .styled
+        list-style: none
+        padding-left: 0
+        @media screen and (min-width: 768px)
+          width: calc(100% / 2)
+          float: left
+        @media #{$mobile}
+          margin-bottom: 0
+        li
+          font-size: 16px
           line-height: 30px
+          margin-bottom: 38px
+          color: #545454
+          @media #{$mobile}
+            margin-bottom: 15px
   &#location
     background: #000
     max-width: 100%

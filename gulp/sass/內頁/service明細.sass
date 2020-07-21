@@ -13,6 +13,9 @@
     &:nth-child(odd)
       background: #efefef
       flex-direction: row-reverse
+      .text
+        @media screen and (min-width: 768px)
+          padding-left: 0
 
     $img: 40%
     .img
@@ -26,6 +29,7 @@
     .text
       @media screen and (min-width: 768px)
         width: calc(100% - #{$img})
+        padding-left: 10%
       p.title
         font-weight: bold
         color: $color-green-d
@@ -43,10 +47,11 @@
         font-weight: 500
         color: #e5878a
         font-weight: 400
-      ul
+      ul, ol
         display: flex
         flex-wrap: wrap
         padding-left: 25px
+        margin-bottom: 0
         li
           line-height: 30px
           font-size: 15px
@@ -54,10 +59,13 @@
             width: calc(100% / 2 - 15px)
             word-break: break-all
             white-space: pre-line
-            padding: 0 15px
+            padding: 0 10px
             padding-left: 0
           @media #{$mobile}
             width: 100%
           &:nth-child(even)
             @media screen and (min-width: 768px)
               margin-left: 30px
+      ol
+        padding-left: 25px
+        letter-spacing: .5px

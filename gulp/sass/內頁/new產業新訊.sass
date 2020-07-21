@@ -1,0 +1,49 @@
+.fix-banner
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  z-index: -1
+  padding: 0
+  .col-xs-12
+    padding: 0
+    background: white
+    img
+      width: 100%
+      opacity: 0.7
+
+body .module-rcglist.module-rcglist
+  padding-top: 120px
+  @media #{$mobile}
+    padding-top: 90px
+  .listBS
+    @media screen and (min-width: 768px)
+      margin: 0 -15px
+  .mt
+    h3
+      font-size: 36px
+      letter-spacing: 5px
+      line-height: 36px
+  .d-item
+    border: 0
+    @media #{$mobile}
+      padding-left: 0
+      padding-right: 0
+  .mbox
+    position: relative
+    +box-shadow
+  .d-img
+    width: 100%
+    img
+      width: 100%
+  .d-txt
+    width: 100%
+    padding: 0
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    background: rgba(white, .75)
+    backdrop-filter: blur(10px)
+    padding: 5px 15px
