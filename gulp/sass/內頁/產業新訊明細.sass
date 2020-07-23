@@ -29,6 +29,7 @@
     position: absolute
     right: 0
     bottom: 0
+    color: #999
   p
     line-height: 30px
     margin-bottom: 15px
@@ -49,6 +50,20 @@
       p
         font-size: 16px
         color: #e5878a
+        display: flex
+        align-items: center
+        width: 100%
+        position: relative
+        @media #{$mobile}
+          display: block
+        .pull-right
+          position: absolute
+          right: 0
+          @media #{$mobile}
+            position: static
+            width: 100%
+            display: block
+            margin-top: 15px
         a
           font-size: 16px
           color: #e5878a

@@ -121,16 +121,44 @@ function pageScroll () {
 }
 
 function scrollToTarget (target) {
-  console.log('%c (／‵Д′)／~ ╧╧ scroll target : ', 'padding: .25rem; font-size: 14px; background: #12bdba; color: #fff', [navH])
   const targetTop = $(`#${target}`).offset().top
-  $('html, body').stop().animate({
-    scrollTop: targetTop - navH
-  }, 1000)
+  if (!$(':target').offset()) {
+    $('html, body').stop()
+    setTimeout(() => {
+      scrollToTarget(target)
+      return
+    }, 100)
+  }
+  else {
+    const scrollTo = $(':target').offset().top
+    $('html, body').animate({
+      // scrollTop: targetTop - navH + 25
+      scrollTop: scrollTo - 60
+    }, 1000)
+
+    if (is('.service.section-1')) {
+      replaceMarginTop()
+    }
+  }
+}
+
+function replaceMarginTop () {
+  const curMTCSS = Number($('.service.section-1').css('margin-top').replace('px', ''))
+  const curTop = $('.service.section-1').offset().top
+  const navH = $('nav.navbar').innerHeight()
+  if (curTop< navH) {
+    $('.service.section-1').css('margin-top', navH + (curMTCSS - curTop))
+  }
 }
 
 const cookieNotify = require('./cookie')
 const search = require('./search')
 const service = require('./service/index')
+const gotop = require('./scrollTo')
+
+$(document).ready(function () {
+  pageScroll()
+})
 
 $(function () {
   navH = $('nav.navbar').innerHeight()
@@ -155,13 +183,14 @@ $(function () {
     })
   }
   companyOwl()
-  pageScroll()
   bindCompanyClick()
   cookieNotify()
   search()
   setTimeout(() => {
     service()
   })
+
+  gotop()
   // $('.hdmenu .nav.navbar-nav').appendTo('.navbar .social')
 
   // if (is('.table-responsive') && is('.module-rcglist')) {
