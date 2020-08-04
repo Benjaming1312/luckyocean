@@ -5,6 +5,10 @@
   .row
     max-width: 100%
     padding: 60px calc((100% - 1180px) / 2)
+    @media #{$padH}
+      padding-left: 15px
+    @media #{$padV}
+      padding-left: 15px
     @media #{$mobile}
       padding: 30px
     @media screen and (min-width: 768px)
@@ -30,6 +34,10 @@
       @media screen and (min-width: 768px)
         width: calc(100% - #{$img})
         padding-left: 10%
+      @media #{$padH}
+        padding-right: 0
+      @media #{$padV}
+        padding-right: 0
       p.title
         font-weight: bold
         color: $color-green-d
@@ -70,6 +78,8 @@
         padding-left: 20px
         letter-spacing: .5px
         margin-top: -30px
+        @media #{$mobile}
+          margin-top: 0
         li
           width: 100%
           line-height: 30px

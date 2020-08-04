@@ -8,10 +8,33 @@
   padding: 0
   .col-xs-12
     padding: 0
-    background: white
+    @media screen and (min-width: 768px)
+      background: none!important
+    @media #{$mobile}
+      background-size: cover!important
+      background-position: center!important
+      background-repeat: no-repeat!important
+      height: 100vh
+    @media #{$padV}
+      background-size: cover!important
+      background-position: center!important
+      background-repeat: no-repeat!important
+      height: 100vh
+    @media #{$padH}
+      background-size: cover!important
+      background-position: center!important
+      background-repeat: no-repeat!important
+      height: 100vh
+
     img
       width: 100%
       opacity: 0.7
+      @media #{$padV}
+        display: none
+      @media #{$padH}
+        display: none
+      @media #{$mobile}
+        display: none
 
 body .module-rcglist.module-rcglist,
 body .module-.module-
@@ -50,6 +73,14 @@ body .module-.module-
     padding: 5px 15px
 
 .module-.module-.module-
+  @media #{$padH}
+    padding-left: 15px
+    padding-right: 15px
+    min-height: 100vh
+  @media #{$padV}
+    padding-left: 15px
+    padding-right: 15px
+    min-height: 100vh
   .d-txt
     position: static!important
   .mbox
