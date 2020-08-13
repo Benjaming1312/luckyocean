@@ -21,11 +21,25 @@ $georgia: 'Georgia', "Noto Sans TC","微軟正黑體","sans-serif"
     height: 100%
   #prod-intro-1
     margin-top: 90px
-
   [id*="prod-intro-"]
     padding-top: 30px
     .title
       text-align: left
+      margin-bottom: 30px
+      span
+        font-size: 29px
+        letter-spacing: 0.5rem
+        color: #507f71
+        margin-bottom: 7.5px
+        margin-top: 0
+        line-height: 30px
+        border: 0
+        text-align: center
+        line-height: 30px
+        font-weight: 500
+        letter-spacing: 0
+        @media #{$mobile}
+          white-space: nowrap
       .en
         font-family: $georgia
         font-style: italic

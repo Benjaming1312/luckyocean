@@ -24,12 +24,14 @@
     position: relative
     margin-bottom: 30px
     @media #{$mobile}
-      line-height: 30px
+      line-height: 45px
   date
     position: absolute
     right: 0
     bottom: 0
     color: #999
+    @media #{$mobile}
+      bottom: -7.5px
   p
     line-height: 30px
     margin-bottom: 15px
@@ -45,6 +47,12 @@
     @media #{$mobile}
       margin-bottom: 30px
   .foot-content
+    .contact-text
+      margin-bottom: 0
+      a
+        color: #507f71!important
+        font-weight: bold
+        margin-right: 0!important
     .col-sm-12.col-xs-12
       padding: 0
       p
@@ -83,3 +91,4 @@
         &.text-right
           @media #{$mobile}
             text-align: left
+  

@@ -3,12 +3,29 @@ $georgia: 'Georgia', "Noto Sans TC","微軟正黑體","sans-serif"
 .page.container-fluid.rd.rd
   .text-georgia
     font-family: $georgia
-    display: block
-    font-size: 28px
+    display: inline-block
+    font-size: 24px
     font-weight: bold
     font-style: italic
     margin-top: 15px
     color: #507f71
+    letter-spacing: 0
+    padding: 0 7.5px
+    @media #{$mobile}
+      display: block
+  .title
+    font-size: 29px
+    letter-spacing: 0.5rem
+    color: #507f71
+    margin-bottom: 7.5px
+    margin-top: 0
+    line-height: 45px
+    border: 0
+    text-align: center
+    line-height: 40px
+    font-weight: 500
+    @media #{$mobile}
+      white-space: nowrap
   .list-inline li
     @media screen and (min-width: 768px)
       width: calc(100% / 3)
@@ -93,7 +110,8 @@ $georgia: 'Georgia', "Noto Sans TC","微軟正黑體","sans-serif"
         letter-spacing: 0
     small
       line-height: 12px
-      font-size: 16px
+      font-size: 14px
+      color: #999
     .btn-text
       color: #e4878a
       display: inline-block
@@ -141,6 +159,7 @@ $georgia: 'Georgia', "Noto Sans TC","微軟正黑體","sans-serif"
       font-size: 22px
       font-weight: 500
       letter-spacing: 5px
+      margin-bottom: 15px
     .title
       font-weight: 500
       letter-spacing: 5px
