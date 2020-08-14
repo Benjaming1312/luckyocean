@@ -46,12 +46,22 @@
     padding-right: 0
     @media #{$mobile}
       margin-bottom: 30px
+  .text
+    @media screen and (min-width: 768px)
+      padding-bottom: 60px
+  .news-detail
+    position: relative
   .foot-content
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 100%
+    @media #{$mobile}
+      position: static
     .contact-text
       margin-bottom: 0
       a
         color: #507f71!important
-        font-weight: bold
         margin-right: 0!important
     .col-sm-12.col-xs-12
       padding: 0
@@ -62,11 +72,14 @@
         align-items: center
         width: 100%
         position: relative
+        margin-bottom: 0
+        margin-top: 0px
         @media #{$mobile}
           display: block
         .pull-right
           position: absolute
           right: 0
+          bottom: 0
           @media #{$mobile}
             position: static
             width: 100%
