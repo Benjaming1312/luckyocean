@@ -156,6 +156,7 @@ const search = require('./search')
 const service = require('./service/index')
 const gotop = require('./scrollTo')
 const productIntro = require('./product-intro/index')
+const enPage = require('./en-page/index.js')
 
 $(document).ready(function () {
   pageScroll()
@@ -178,7 +179,7 @@ $(function () {
 
     $('.form-btn .btn').each(function () {
       console.log('%c (／‵Д′)／~ ╧╧ test : ', 'padding: .25rem; font-size: 14px; background: #12bdba; color: #fff', $(this).text())
-      if ($(this).text() === '送 出') {
+      if ($(this).text() === '送 出' || $(this).text() === 'Submit') {
         $(this).appendTo($('.module-form .group-2'))
       }
     })
@@ -187,6 +188,7 @@ $(function () {
   bindCompanyClick()
   cookieNotify()
   search()
+  enPage()
   setTimeout(() => {
     service()
     productIntro()
