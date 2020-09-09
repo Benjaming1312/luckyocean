@@ -157,6 +157,7 @@ const service = require('./service/index')
 const gotop = require('./scrollTo')
 const productIntro = require('./product-intro/index')
 const enPage = require('./en-page/index.js')
+const prodDetail = require('./product-detail/index')
 
 $(document).ready(function () {
   pageScroll()
@@ -189,6 +190,7 @@ $(function () {
   cookieNotify()
   search()
   enPage()
+  prodDetail()
   setTimeout(() => {
     service()
     productIntro()

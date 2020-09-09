@@ -1,0 +1,141 @@
+.module-detail.prod-detail
+  max-width: initial!important
+  margin-bottom: 0
+  padding: 0
+
+.page.prod-intro.detail
+  @media #{$mobile}
+    padding: 0 15px
+  .row
+    background: none!important
+  .title-content
+    position: relative
+    &::after
+      content: ''
+      display: block
+      background: lighten($color-green, 20%)
+      width: 95%
+      height: 150px
+      border-radius: 30px
+      position: absolute
+      left: 2.5%
+      bottom: 120px
+      @media #{$mobile}
+        display: none
+    .row
+      display: flex
+      flex-wrap: wrap
+      flex-direction: initial
+      padding-top: 0
+      position: relative
+      z-index: 1
+      padding-bottom: 30px
+      @media #{$mobile}
+        padding: 0
+      h4.title
+        font-weight: bold
+        border: 0
+        padding-left: 0
+        font-size: 32px
+        margin-bottom: 60px
+        line-height: 50px
+        @media #{$mobile}
+          margin-bottom: 30px
+      h3.title
+        text-align: left
+        border: 0
+        margin: 0
+        padding: 0
+        width: 100%
+        margin-bottom: 30px
+        font-size: 22px
+        @media #{$mobile}
+          margin-bottom: 15px
+          font-size: 18px
+      .img
+        @media #{$mobile}
+          margin-bottom: 0
+      .text
+        padding: 0
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        padding: 120px 0
+        padding-top: 0px
+        @media screen and (min-width: 768px)
+          padding-left: 30px
+        @media #{$mobile}
+          padding-top: 20px
+          padding-bottom: 0px
+      .btn
+        +btn
+        background: $color-green
+        border-color: $color-green
+        text-align: left
+        padding: 5px 15px
+        width: 200px
+        border-width: 1px
+        &:hover
+          color: $color-green
+          border-width: 1px
+        .fa
+          float: right
+          position: relative
+          top: 3px
+  >.row
+    padding-top: 0
+    @media #{$mobile}
+      padding-top: 15px
+      padding-left: 0
+      padding-right: 0
+    p.title
+      padding-bottom: 0
+      margin-bottom: 0
+      font-weight: bold
+      font-size: 22px
+      text-align: left
+      border: 0
+      color: $color-green
+      margin-bottom: 15px
+    .content
+      margin-bottom: 60px
+      @media #{$mobile}
+        margin-bottom: 30px
+      p:not(.title),
+      li
+        font-size: 16px
+        line-height: 32px
+      .svg
+        min-width: 70px
+        min-height: 70px
+      .dot-list
+        padding-left: 5px
+        margin-bottom: 0
+        li
+          &::before
+            content: ''
+            width: 10px
+            height: 10px
+            background: $color-green
+            display: inline-block
+            transform: rotate(-45deg)
+            margin-right: 15px
+      section
+        p
+          font-weight: bold
+          margin-bottom: 0
+        .dot-list
+          margin-bottom: 15px
+    .content-l
+      padding: 30px
+      @media screen and (min-width: 768px)
+        padding-right: 60px
+      @media #{$mobile}
+        padding-left: 0
+        padding-right: 0
+        padding-top: 0
+        padding-bottom: 0
+    .content-r
+      padding: 30px
+      border-radius: 30px
+      background: #ececec
