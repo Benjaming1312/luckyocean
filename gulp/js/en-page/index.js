@@ -5,4 +5,7 @@ module.exports = function () {
   if (lang === 'en') {
     $('body').addClass('en-page')
   }
+  if (lang === 'zh-cn') {
+    $('body').addClass('cn-page')
+  }
 }

@@ -101,8 +101,16 @@ function bindCompanyClick () {
     e.stopPropagation()
     const target = $(this).attr('href').split('#')[1]
     const link = $(this).attr('href').split('#')[0]
+    const navbarH = $('.navbar').innerHeight()
     if (window.location.href.indexOf(link) >= 0) {
-      scrollToTarget(target)
+      // scrollToTarget(target)
+      const scrollTo = $(`#${target}`).offset().top
+      $('html, body').animate({
+        // scrollTop: targetTop - navH + 25
+        scrollTop: scrollTo - navbarH
+      }, 1000)
+
+
       if ($(window).width() < 768) {
         $('.navbar-toggle').click()
       }
@@ -122,6 +130,7 @@ function pageScroll () {
 
 function scrollToTarget (target) {
   const targetTop = $(`#${target}`).offset().top
+  const navbarH = $('.navbar').innerHeight()
   if (!$(':target').offset()) {
     $('html, body').stop()
     setTimeout(() => {
@@ -133,7 +142,7 @@ function scrollToTarget (target) {
     const scrollTo = $(':target').offset().top
     $('html, body').animate({
       // scrollTop: targetTop - navH + 25
-      scrollTop: scrollTo - 60
+      scrollTop: scrollTo - navbarH
     }, 1000)
 
     if (is('.service.section-1')) {
@@ -179,7 +188,6 @@ $(function () {
     })
 
     $('.form-btn .btn').each(function () {
-      console.log('%c (／‵Д′)／~ ╧╧ test : ', 'padding: .25rem; font-size: 14px; background: #12bdba; color: #fff', $(this).text())
       if ($(this).text() === '送 出' || $(this).text() === 'Submit') {
         $(this).appendTo($('.module-form .group-2'))
       }
