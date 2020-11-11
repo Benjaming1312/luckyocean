@@ -141,6 +141,12 @@
         padding: 15px 15px
         width: 225px
         border-width: 1px
+        @media #{$pad-horizantal}
+          width: 150px
+          padding: 7.5px 15px
+        @media #{$pad-vertical}
+          width: 150px
+          padding: 7.5px 15px
         @media #{$mobile}
           margin-bottom: 15px
         &:hover
