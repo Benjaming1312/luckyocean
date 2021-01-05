@@ -7,94 +7,16 @@
   border: 0
   box-shadow: none
   border-radius: 0
-  background: rgba(#f4fff5, .9)
-  padding: 10px 0
+  background: rgba(#f2f2f2, 1)
+  padding: 30px 0
   border-top: 0
   // border-bottom: 1px solid rgba(#d3a500, .31)
   @media #{$mobile}
-    padding-top: 0
-    padding: 0
-    padding-bottom: 5px
-  .link
-    display: flex
-    flex-wrap: nowrap
-    position: relative!important
-    z-index: 999999999
-    @media screen and (min-width: 768px)
-      padding-left: 5vw
-      margin-right: 10px
-    @media #{$mobile}
-      margin-left: 10px
-      flex-wrap: wrap
-    @media #{$padV}
-      padding-left: 5px
-      flex-wrap: wrap
-    @media #{$padH}
-      padding-left: 5px
-      margin-right: 20px
-    li
-      @media #{$mobile}
-        padding: 2.5px
-    a
-      border: 0!important
-      &:hover
-        opacity: 0.7
-      @media #{$padV}
-        margin-left: 5px!important
-
-  // .social
-  //   padding: 0px 0 15px
-  //   position: absolute
-  //   top: 10px
-  //   right: 15px
-  //   display: flex
-  //   flex-wrap: nowrap
-  //   @media #{$mobile}
-  //     width: 90%
-  //     max-width: 100%
-  //     right: 0
-  //     position: static
-  //     margin-top: 10px
-  //     margin-left: auto
-  //     margin-right: auto
-  //     flex-direction: column-reverse
-  //     flex-wrap: wrap
-  //     margin: 0
-  //     padding: 0
-  //     width: 100%
-  // .formBS
-  //   width: 219px
-  //   @media #{$mobile}
-  //     width: 80%
-  //     margin-top: 15px
-  //     margin-left: auto
-  //     margin-right: auto
-  //     position: absolute
-  //     bottom: -40px
-  //     left: 7.5px
-  //   .input-group
-  //     position: relative
-  //     display: block
-  //   input
-  //     border: 1px solid #707070
-  //     border-radius: 6px
-  //     height: 26px
-  //     background: none
-  //     font-size: 16px!important
-  //   .input-group-btn
-  //     height: 26px
-  //     padding: 0
-  //     position: absolute
-  //     right: 20px
-  //     top: 4px
-  //     width: 13px
-  //     height: 13px
-  //     z-index: 99999
-  //     .btn
-  //       width: 13px
-  //       height: 13px
-  //       border: 0
-  //       background: none
+    padding: 7.5px 0
+  @media #{$pad-vertical}
+    padding: 15px
+  @media #{$pad-horizantal}
+    padding: 15px
   .container-fluid
     // width: calc(100% - 160px)
     // max-width: 1130px
@@ -104,10 +26,14 @@
     @media #{$mobile}
       padding: 0
       width: 100%
-    @media #{$padV}
+    @media #{$pad-vertical}
       padding: 0
-    @media #{$padH}
+    @media #{$pad-horizantal}
       padding: 0
+    // @media #{$padV}
+    //   padding: 0
+    // @media #{$padH}
+    //   padding: 0
   .header
     border: 0
   .navbar-brand
@@ -129,17 +55,14 @@
     margin-right: 0
     background: none
     border-radius: 0
-    @media #{$padV}
-      display: block
-      margin-top: 15px
-      margin-right: 15px
+    // @media #{$padV}
+    //   display: block
+    //   margin-top: 15px
+    //   margin-right: 15px
     .sr-only
       display: none
-    //   &::before,
-    //   &::after
-    //     background: #000
     .icon-bar
-      background: $color-green
+      background: $color-orange
       width: 30px
       margin-bottom: .5rem
       &::before,
@@ -147,14 +70,14 @@
         display: none
   .navbar
     border: 0
-    background: $color-green
+    background: none
     padding-bottom: 0px
     @media #{$mobile}
       padding-bottom: 0px
-  .navbar-header
-    @media #{$padV}
-      width: 100%
-      padding: 0 15px
+  // .navbar-header
+  //   @media #{$padV}
+  //     width: 100%
+  //     padding: 0 15px
   #navbar
     padding: 0
     // @media screen and (min-width: 768px)
@@ -162,7 +85,7 @@
     @media #{$mobile}
       width: 100%
       margin: 0
-      background: #d1e6df
+      background: rgba($color-orange, .25)
       padding-bottom: 0px
       box-shadow: none
       padding-top: 15px
@@ -170,18 +93,17 @@
       a
         border: 0
         color: white
-    &.collapse
-      @media #{$padV}
-        display: none!important
+    // &.collapse
+    //   @media #{$padV}
+    //     display: none!important
     .navbar-nav
       float: left
       position: initial
-      // width: 100%
       @media screen and (min-width: 768px)
         display: flex
         justify-content: space-around
         align-items: center
-        margin-top: 15px
+        margin-top: 0
         padding-left: 0px
       @media #{$mobile}
         margin: 0
@@ -190,69 +112,51 @@
         width: 100%
         padding: 0 5px
         margin-top: 0
-      @media #{$padV}
-        display: block
-        margin: 0
-        float: left
-        margin-top: 15px
-        width: 100%
-        padding: 0 15px
-        margin-top: 0
-        margin: 0
       *
-        color: $color-b
-        font-size: 17px
-        font-weight: 300
+        color: #808080
+        font-size: 17.6px
+        font-weight: Regular
         letter-spacing: 0.05rem
         text-transform: initial!important
       >li
         @media screen and (min-width: 768px)
           margin-left: 10px
-        @media #{$padH}
-          width: 100%
-          margin-left: 0
-        @media #{$padV}
-          width: 100%
-          margin-left: 0
+        @media #{$pad-vertical}
+          margin-left: 2.5px
         >a
           position: relative
-          // overflow: hidden
           text-transform: uppercase
           color: $color-b
           padding-bottom: 0
           font-weight: normal
-          // padding-left: 8px
-          border: 1px solid $color-n
-          padding: 0.5rem 1.25rem
-          border-radius: 5px
+          border: 2px solid $color-n
+          padding: 0.5rem 0
+          border-radius: 0px
           +trans
           @media screen and (min-width: 768px)
             margin-right: 0px
-          @media #{$padV}
-            margin: 0
-          @media #{$padH}
-            padding: 5px 7.5px
+          // @media #{$padV}
+          //   margin: 0
+          // @media #{$padH}
+          //   padding: 5px 7.5px
           &:hover
-            color: $color-green
-            border: 1px solid $color-n
-        // &.facebook
-        //   @media screen and (min-width: 768px)
-        //     margin-left: 2vw
-        //   a
-        //     padding-left: 23px
-        //     display: inline-block
-        //     float: left
-        //     width: auto
-        //     img
-        //       width: 23px
-        //       height: 23px
+            color: $color-orange
+            border-bottom: 2px solid $color-orange
       li
         position: initial
-        // padding-bottom: 15px
         padding-bottom: 10px
+        margin-left: 5vw
+        @media #{$pad-horizantal}
+          margin-left: 3vw
+        @media #{$pad-vertical}
+          margin-left: 2vw
+        @media #{$mobile}
+          margin-left: 0
+        &.link
+          position: relative
+          top: -5px
+          margin-left: 3vw
         a
-          // border: 0
-          // padding-bottom: 0
           transition: $trans
           &.dropdown-toggle
             @media #{$mobile}
@@ -260,12 +164,7 @@
             &::before
               @media #{$mobile}
                 content: '+'
-                color: $color-green
-                float: right
-                font-size: 24px
-              @media #{$padV}
-                content: '+'
-                color: $color-green
+                color: $color-orange
                 float: right
                 font-size: 24px
         &.dropdown
@@ -274,25 +173,25 @@
             z-index: 99999999
           .dropdown-menu
             left: 0
-            background: rgba($color-green, .7)
+            background: rgba($color-orange, .7)
             border: 0
             width: 100%
             overflow: initial
             box-shadow: none
             @media #{$mobile}
               margin-top: 5px
-            @media #{$padV}
-              display: none
+            // @media #{$padV}
+            //   display: none
           &:hover,
           &.open
             .dropdown-toggle
-              color: $color-green
-              border: 1px solid $color-n
+              color: $color-orange
+              border: 2px solid $color-n
               &::before
                 @media #{$mobile}
                   content: '-'
-                @media #{$padV}
-                  content: '-'
+                // @media #{$padV}
+                //   content: '-'
             .dropdown-menu
               border: 0
               width: 100%
@@ -302,13 +201,18 @@
               @media #{$mobile}
                 width: calc(100% - 7px)
                 margin: 7.5px 5px
-              @media #{$padV}
-                position: static
-                margin: 7.5px 0px
+              // @media #{$padV}
+              //   position: static
+              //   margin: 7.5px 0px
               li
                 padding-bottom: 0
                 @media screen and (min-width: 768px)
                   width: 100%
+                  margin-left: 0
+                @media #{$pad-horizantal}
+                  margin-left: 0
+                @media #{$pad-vertical}
+                  margin-left: 0
                 a
                   padding: 0
                   padding: 7.5px 0
@@ -319,7 +223,7 @@
                   color: white
                   padding-left: 15px
                   &:hover
-                    color: $color-green
+                    color: $color-orange
   .navbar
     &+.search.search.search
       margin-left: 0px
@@ -332,14 +236,14 @@
   .nav-form
     position: relative
     margin-right: 15px
-    @media #{$padV}
-      width: 100%
-      display: flex
-      flex-wrap: nowrap
-      align-items: center
-      margin-right: 0
-      padding-left: 7.5px
-      margin-bottom: 15px
+    // @media #{$padV}
+    //   width: 100%
+    //   display: flex
+    //   flex-wrap: nowrap
+    //   align-items: center
+    //   margin-right: 0
+    //   padding-left: 7.5px
+    //   margin-bottom: 15px
     @media #{$mobile}
       width: 100%
       display: flex
@@ -368,18 +272,15 @@
       overflow: hidden
       +trans
       width: 0
-      @media #{$padV}
-        position: static
-        width: calc(100% - 40px)
+      // @media #{$padV}
+      //   position: static
+      //   width: calc(100% - 40px)
       @media #{$mobile}
         position: static
         width: calc(100% - 40px)
         // margin-top: 15px
         // margin-bottom: 15px
       .input-group
-        @media #{$padV}
-          margin-right: 0
-          display: block
         @media #{$mobile}
           margin-right: 0
           display: block

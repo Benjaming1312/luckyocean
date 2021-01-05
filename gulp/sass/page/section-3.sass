@@ -1,60 +1,78 @@
 .idx.section-3
-  background: url(#{$url}section-3-bg.png) center center no-repeat
-  background-size: cover
-  padding: 50px 0 60px
-  max-width: 100%
-  width: 100%
-  margin-bottom: 0
+  +max-width
+  margin-top: 60px
+  margin-bottom: 90px
   @media #{$mobile}
-    padding: 25px 0px 30px
-  .container.container
-    +max-width
-    .row
-      @media screen and (min-width: 768px)
-        margin: 0 -50px
-      @media #{$padV}
-        margin: 0
-      @media #{$padH}
-        margin: 0
+    margin-bottom: 30px
+  @media #{$pad-horizantal}
+    margin-bottom: 30px
+  @media #{$pad-vertical}
+    margin-bottom: 30px
   .module-title
-    +module-title
-    margin-bottom: 46px
-  .d-item
-    @media screen and (min-width: 768px)
-      padding: 0 50px
+    margin-bottom: 50px
     @media #{$mobile}
-      padding: 0 15px 15px
-    @media #{$padV}
-      padding: 0 15px 15px
-      width: 100%
-    @media #{$padH}
-      padding: 0 15px 15px
-    .mbox
-      @media #{$padV}
-        max-width: 400px
-        margin: 0 auto
-    .d-img
-      position: relative
-      overflow: hidden
-      img
-        +trans
-        display: inline-block
-        transition-duration: 2s
-    &:hover
-      .d-img
+      margin-bottom: 30px
+    @media #{$pad-horizantal}
+      margin-bottom: 30px
+    @media #{$pad-vertical}
+      margin-bottom: 30px
+  .col-sm-12
+    text-align: center
+  .listBS
+    margin: 0 -30px
+    @media #{$mobile}
+      margin: 0
+    @media #{$pad-horizantal}
+      margin: 0
+    @media #{$pad-vertical}
+      margin: 0
+    .d-item
+      padding: 0 15px
+      overflow: initial
+      @media #{$mobile}
+        margin-bottom: 30px
+      &:hover
         img
-          transform: scale(1.1)
-          opacity: 0.9
-  .d-txt
-    h5
+          transform: scale(1.2)
+          opacity: 0.7
+      .d-img
+        border-radius: 17px
+        box-shadow: 0 0 6px rgba(#231815, .2)
+        position: relative
+        overflow: hidden
+        img
+          +trans
+    .mpro-price
+      text-align: left
+      margin-top: 15px
+      *
+        font-size: 17px
+        color: #f16b05
+  .more
+    @media #{$pad-vertical}
       text-align: center
-      &::before
-        content: ''
-        display: block
-        width: 100%
-        margin: 20px 0 15px
-        border: 1px solid rgba(#858686, .2)
-      a
-        color: $color-green-d
-        font-size: 18px
-        letter-spacing: 0.2rem
+      width: 100%
+      margin-top: 30px
+    @media #{$pad-horizantal}
+      text-align: center
+      width: 100%
+      margin-top: 30px
+    a
+      border: 0
+      border-radius: 0
+      background: url(#{$url}readmore_arrow.svg) center center no-repeat
+      width: 53px
+      height: 53px
+      position: absolute
+      right: -15px
+      top: 100px
+      +trans
+      @media #{$mobile}
+        position: static
+      @media #{$pad-horizantal}
+        position: static
+      @media #{$pad-vertical}
+        position: static
+      &:hover
+        transform: rotate(360deg)
+        opacity: 0.5

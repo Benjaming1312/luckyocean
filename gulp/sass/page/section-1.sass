@@ -1,93 +1,116 @@
-.idx.container-fluid
-  +max-width
-  margin-top: 90px
-  margin-bottom: 90px
-  @media #{$mobile}
-    margin-top: 45px
-    margin-bottom: 45px
-  .row
-    @media screen and (min-width: 768px)
-      margin: 0 -15px
-    @media #{$padV}
-      margin: 0 0px
-
 .idx.section-1
-  $imgW: 389px
+  +max-width
+  margin-top: 60px
+  margin-bottom: 60px
+  @media #{$pad-horizantal}
+    padding-left: 15px
+    padding-right: 15px
+    margin-top: 30px
+    margin-bottom: 30px
+  @media #{$pad-vertical}
+    padding-left: 15px
+    padding-right: 15px
+    margin-top: 30px
+    margin-bottom: 30px
   @media #{$mobile}
-    margin-top: 15px
-  @media #{$padV}
-    margin-top: 15px
-    padding: 0 15px
-  .row
-    @media screen and (min-width: 768px)
-      display: flex
-    @media #{$padV}
-      display: flex
-      flex-wrap: nowrap
-      margin: 0
-  .img
-    @media screen and (min-width: 768px)
-      width: $imgW
-    @media #{$mobile}
-      display: none
-    @media #{$padV}
-      width: 100%
-      padding: 0
-      width: 50%
-      display: block
-    img
-      width: 100%
-  .text
-    background: #ebebeb
-    padding: 25px 30px
-    @media screen and (min-width: 768px)
-      width: calc(100% - #{$imgW})
-    @media #{$mobile}
-      padding: 15px
-    @media #{$padV}
-      // padding: 15px
-      width: 50%
-      margin-top: 15px
-      margin-top: 0
-      margin-left: 15px
-  .module-title
-    +module-title
+    margin-top: 30px
     margin-bottom: 30px
-  p
-    color: $color-b
-    // text-align: justify
-    // text-align-last: justify
-    // text-align: justify-all
-    // text-align-last: justify-all
-    text-align: left
-    font-size: 16px
-    line-height: 28px
-    margin-bottom: 0
-    max-width: 500px
-    margin-left: auto
-    margin: auto
-    margin-bottom: 30px
-    @media #{$mobile}
-      text-align: left
-      text-align-last: left
-      // text-align: justify
-      // text-align-last: justify
-      // text-align: justify-all
-      // text-align-last: justify-all
-      letter-spacing: 0.1rem
-    &.more
-      // position: absolute
-      // bottom: 60px
-      // width: 100%
+  .col-md-3
+    @media screen and (min-width: 768px)
+      width: 20%
+    @media #{$pad-horizantal}
+      width: 100%
       text-align: center
-      text-align-last: center
-      margin-top: 7.5px
-      margin-bottom: 0
-      @media #{$mobile}
-        bottom: 20px
-  .btn
-    +btn(white, $color-pink)
-    width: 240px
-    border-radius: 5px
-    @media #{$mobile}
-      width: 200px
+    @media #{$pad-vertical}
+      width: 100%
+      text-align: center
+  .col-md-9
+    @media screen and (min-width: 768px)
+      width: 80%
+    @media #{$pad-vertical}
+      width: 100%
+    @media #{$pad-horizantal}
+      width: 100%
+    .module-special
+      .listBS
+        @media screen and (min-width: 768px)
+          margin: 0 -30px
+        @media #{$pad-horizantal}
+          margin: 0 -7.5px
+        @media #{$pad-vertical}
+          margin: 0 -7.5px
+      .d-item
+        padding: 0 30px
+        +trans
+        @media #{$pad-horizantal}
+          padding: 0 7.5px
+        @media #{$pad-vertical}
+          padding: 0 7.5px 
+        @media #{$mobile}
+          padding: 0
+          margin-bottom: 30px
+        &:hover
+          opacity: 0.5
+      .mbox
+        position: relative
+        @media #{$mobile}
+          padding-bottom: 30px
+      .mdate
+        float: right
+        font-size: 10px
+        color: #f16b05
+        margin-bottom: 7.5px
+      .d-txt
+        margin-top: 15px
+      h5
+        margin: 0
+        padding: 0
+        a
+          font-size: 14px
+          color: #666
+      .mdetail
+        color: #999999
+        font-size: 12px
+        line-height: 25px
+      .read_more
+        position: absolute
+        right: 0
+        bottom: -15px
+        color: #f16b05
+        font-size: 13px
+        @media #{$mobile}
+          right: 0
+          bottom: 0
+        .svg
+          background: url(#{$url}readmor_plus.svg) center center no-repeat
+          width: 13px
+          height: 13px
+          margin-left: 5px
+      .more
+        @media #{$pad-vertical}
+          text-align: center
+          width: 100%
+          margin-top: 60px
+        @media #{$pad-horizantal}
+          text-align: center
+          width: 100%
+          margin-top: 60px
+        a
+          border: 0
+          border-radius: 0
+          background: url(#{$url}readmore_arrow.svg) center center no-repeat
+          width: 53px
+          height: 53px
+          position: absolute
+          right: -15px
+          top: 100px
+          +trans
+          @media #{$mobile}
+            position: static
+          @media #{$pad-horizantal}
+            position: static
+          @media #{$pad-vertical}
+            position: static
+          &:hover
+            transform: rotate(360deg)
+            opacity: 0.5

@@ -1,4 +1,4 @@
-$dotW: 5px
+$dotW: 12px
 // .banner
 //   padding: 0
 //   width: 100%
@@ -73,9 +73,10 @@ $dotW: 5px
   .owl-controls
     position: absolute
     width: 100%
-    text-align: right
-    padding-right: 17px 
+    text-align: center
+    padding-right: 0px 
     padding-bottom: 8px
+    left: 0
     @media screen and (min-width: 768px)
       bottom: $dotW
     @media #{$mobile}
@@ -90,12 +91,8 @@ $dotW: 5px
       span
         opacity: 1
         border-radius: 0
-        background: white
-        border: 1px solid #fff
+        background: #cccccc
         border-radius: 50%
-        // background: url(#{$url}dot.png) center center no-repeat
-        // background-size: cover
-        // background-position: center
         width: $dotW
         height: $dotW
         +trans
@@ -104,14 +101,8 @@ $dotW: 5px
           height: $dotW
       &.active
         span
-          background: #00a194
-          border: 1px solid #00a194
+          background: rgba(#f16b05, .53)
           border-radius: 50%
-          // background: url(#{$url}dot-active.png) center center no-repeat
-          // width: 9px
-          // height: 9px
-          // position: relative
-          // top: 2px
           @media #{$mobile}
             width: $dotW
             height: $dotW

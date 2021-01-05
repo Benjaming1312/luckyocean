@@ -1,70 +1,60 @@
-$imgW: 556px
-
 .idx.section-2
-  padding-left: 15px
+  padding-top: 95px
+  padding-bottom: 60px
+  text-align: center
+  background-size: cover!important
+  background-repeat: no-repeat!important
+  background-position: center!important
+  position: relative
   @media #{$mobile}
-    padding: 0 30px
-  @media #{$padV}
-    padding: 0 15px
-  .module-title
-    +module-title
-    margin-bottom: 35px
-    .title
-      text-align: left
-      line-height: 40px
-      @media #{$mobile}
-        font-size: 24px
-        letter-spacing: 0.2rem
-    &::after
-      display: none
-  .img
-    position: relative
-    @media screen and (min-width: 768px)
-      width: $imgW
-    @media #{$padV}
-      width: 100%
-      padding: 0
-      width: calc(100% - 300px)
-      display: none
-    img
-      width: 100%
-  .link
-    @media screen and (min-width: 768px)
-      width: calc(100% - #{$imgW})
+    padding-bottom: 90px
+  *
+    color: white
+  hgroup
+    display: inline-block
+    margin-bottom: 30px
     @media #{$mobile}
       margin-bottom: 15px
-    @media #{$padV}
-      margin-bottom: 15px
-      width: 100%
-      padding: 0
-      // width: 300px
-      // padding-right: 15px
-  ul
-    color: $color-b2
-    padding-left: 20px
-    *
-      color: $color-b2
-    li
-      padding: 21px 0
-      border-bottom: 1px solid rgba(#858686, .5)
-      &:first-child
-        padding-top: 0
-      a
-        font-size: 17px
-        +trans
-        &:hover
-          color: $color-green
-          padding-left: 7.5px
-  .more
-    position: absolute
-    bottom: 60px
-    width: 100%
+    @media #{$pad-horizantal}
+      margin-bottom: 20px
+    @media #{$pad-vertical}
+      margin-bottom: 20px
+  h6
+    font-size: 14px
+    text-align: left
+    margin-bottom: 7.5px
+    font-family: 'Affogato'
+    font-weight: 300
+  h4
+    text-align: left
+    font-size: 27px
+    font-weight: bold
+    margin-top: 0
+  p
+    font-size: 16.9px
+    line-height: 32px
     text-align: center
-    @media #{$mobile}
-      bottom: 20px
+  .col-xs-12
+    position: static
   .btn
-    +btn(white, $color-pink)
-    width: 240px
-    border-radius: 5px
-    @media #{$mobile}
-      width: 200px
+    position: absolute
+    bottom: 0
+    right: 0
+    border-radius: 0
+    font-size: 15.25px
+    padding: 12px 15px
+    background: rgba(#f16b05, .55)
+    color: white
+    border: 0
+    font-weight: bold
+    letter-spacing: 0.1rem
+    +trans
+    .svg
+      position: relative
+      top: -5px
+      +trans
+    &:hover
+      color: white
+      background: rgba(#f16b05, .7)
+      .svg
+        transform: translateX(15px)
