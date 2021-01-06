@@ -31,10 +31,26 @@ footer.foot
         width: 100%
         padding-left: 7.5px
         padding-right: 7.5px
+        border: 0
       .list-inline
         margin-bottom: 0
       li
         margin: 0 7.5px
+        position: relative
+        &::after
+          content: ''
+          display: inline-block
+          width: 1px
+          height: 14px
+          background: rgba(white, .5)
+          position: absolute
+          right: -7.5px
+          top: 7px
+          @media #{$mobile}
+            display: none
+        &:last-child
+          &::after
+            display: none
       li, a
         font-size: 14px
         color: white
@@ -60,7 +76,7 @@ footer.foot
       a
         @extend .svg
   .copyright
-    margin-top: 15px
+    margin-top: 7.5px
     p
       color: white
       font-size: 13px

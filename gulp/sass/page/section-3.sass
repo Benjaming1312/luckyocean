@@ -8,6 +8,9 @@
     margin-bottom: 30px
   @media #{$pad-vertical}
     margin-bottom: 30px
+  .box
+    text-align: center
+    display: inline-block
   .module-title
     margin-bottom: 50px
     @media #{$mobile}
@@ -16,6 +19,8 @@
       margin-bottom: 30px
     @media #{$pad-vertical}
       margin-bottom: 30px
+    *
+      text-align: left
   .col-sm-12
     text-align: center
   .listBS
@@ -42,12 +47,17 @@
         overflow: hidden
         img
           +trans
+          transform: scale(1.02)
+          @media #{$mobile}
+            width: 100%
     .mpro-price
       text-align: left
       margin-top: 15px
       *
         font-size: 17px
         color: #f16b05
+        font-weight: 500
+        font-family: 'Affogato', 'serif'!important
   .more
     @media #{$pad-vertical}
       text-align: center

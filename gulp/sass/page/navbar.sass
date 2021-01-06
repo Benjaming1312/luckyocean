@@ -65,9 +65,18 @@
       background: $color-orange
       width: 30px
       margin-bottom: .5rem
+      +trans
       &::before,
       &::after
         display: none
+    &:not(.collapsed)
+      .icon-bar
+        &:nth-of-type(2)
+          opacity: 0
+        &:nth-of-type(3)
+          transform: rotate(45deg) translate(0, 0)
+        &:nth-of-type(4)
+          transform: rotate(-45deg) translate(6px, -7px)
   .navbar
     border: 0
     background: none
@@ -85,7 +94,7 @@
     @media #{$mobile}
       width: 100%
       margin: 0
-      background: rgba($color-orange, .25)
+      background: rgba(#ddd, .25)
       padding-bottom: 0px
       box-shadow: none
       padding-top: 15px
@@ -126,7 +135,7 @@
         >a
           position: relative
           text-transform: uppercase
-          color: $color-b
+          color: #808080
           padding-bottom: 0
           font-weight: normal
           border: 2px solid $color-n
@@ -145,7 +154,7 @@
       li
         position: initial
         padding-bottom: 10px
-        margin-left: 5vw
+        margin-left: 3vw
         @media #{$pad-horizantal}
           margin-left: 3vw
         @media #{$pad-vertical}
@@ -156,6 +165,8 @@
           position: relative
           top: -5px
           margin-left: 3vw
+          @media #{$mobile}
+            margin-left: 5px
         a
           transition: $trans
           &.dropdown-toggle
@@ -163,10 +174,10 @@
               display: block
             &::before
               @media #{$mobile}
-                content: '+'
+                content: '▼'
                 color: $color-orange
                 float: right
-                font-size: 24px
+                font-size: 14px
         &.dropdown
           @media screen and (min-width: 768px)
             position: relative
@@ -250,7 +261,7 @@
       flex-wrap: nowrap
       align-items: center
       margin-right: 0
-      padding-left: 7.5px
+      padding-left: 0
       margin-bottom: 15px
     &.show
       .formBS
@@ -277,7 +288,7 @@
       //   width: calc(100% - 40px)
       @media #{$mobile}
         position: static
-        width: calc(100% - 40px)
+        width: calc(100% - 30px)
         // margin-top: 15px
         // margin-bottom: 15px
       .input-group
@@ -291,6 +302,9 @@
           border-radius: 0
           border: 1px solid #efefef
           border-radius: 0px
+          @media #{$mobile}
+            font-size: 12px!important
+            position: relative
         .input-group-btn
           position: relative
           z-index: 9999
