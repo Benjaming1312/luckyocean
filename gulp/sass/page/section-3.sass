@@ -1,88 +1,51 @@
+@keyframes marqee
+  0%
+    left: 100%
+    transform: translateX(0%)
+  100%
+    left: 0%
+    transform: translateX(-100%)
+    
 .idx.section-3
-  +max-width
-  margin-top: 60px
-  margin-bottom: 90px
-  @media #{$mobile}
-    margin-bottom: 30px
-  @media #{$pad-horizantal}
-    margin-bottom: 30px
-  @media #{$pad-vertical}
-    margin-bottom: 30px
-  .box
-    text-align: center
-    display: inline-block
-  .module-title
-    margin-bottom: 50px
-    @media #{$mobile}
-      margin-bottom: 30px
-    @media #{$pad-horizantal}
-      margin-bottom: 30px
-    @media #{$pad-vertical}
-      margin-bottom: 30px
-    *
-      text-align: left
-  .col-sm-12
-    text-align: center
-  .listBS
-    margin: 0 -30px
-    @media #{$mobile}
-      margin: 0
-    @media #{$pad-horizantal}
-      margin: 0
-    @media #{$pad-vertical}
-      margin: 0
-    .d-item
-      padding: 0 15px
-      overflow: initial
-      @media #{$mobile}
-        margin-bottom: 30px
-      &:hover
-        img
-          transform: scale(1.2)
-          opacity: 0.7
-      .d-img
-        border-radius: 17px
-        box-shadow: 0 0 6px rgba(#231815, .2)
-        position: relative
-        overflow: hidden
-        img
-          +trans
-          transform: scale(1.02)
-          @media #{$mobile}
-            width: 100%
-    .mpro-price
-      text-align: left
-      margin-top: 15px
-      *
-        font-size: 17px
-        color: #f16b05
-        font-weight: 300
-        font-family: 'Affogato', 'serif'!important
-  .more
-    @media #{$pad-vertical}
-      text-align: center
-      width: 100%
-      margin-top: 30px
-    @media #{$pad-horizantal}
-      text-align: center
-      width: 100%
-      margin-top: 30px
-    a
-      border: 0
-      border-radius: 0
-      background: url(#{$url}readmore_arrow.svg) center center no-repeat
-      width: 53px
-      height: 53px
+  background: #bdd2c3
+  .d-item
+    height: 3rem
+    position: relative
+    .d-txt
       position: absolute
-      right: -15px
-      top: 100px
+      top: 5px
+      width: 100%
       +trans
-      @media #{$mobile}
-        position: static
-      @media #{$pad-horizantal}
-        position: static
-      @media #{$pad-vertical}
-        position: static
-      &:hover
-        transform: rotate(360deg)
-        opacity: 0.5
+      display: flex
+      animation: marqee 15s linear infinite
+    .mbox
+      padding: 15px
+      text-align: center
+    h5
+      margin: 0
+      background: none
+      text-align: center
+      overflow: initial
+      display: block
+      width: 100%
+      white-space: nowrap
+      .mdate,
+      a
+        font-size: 18px
+        font-weight: 400
+        color: #5b8258
+        white-space: nowrap
+      .mdate
+        margin-right: 15px
+        overflow: initial
+        &::before
+          content: ''
+          display: inline-block
+          background: url(#{$url}news.svg)center center no-repeat
+          background-size: contain
+          position: relative
+          top: 5px          
+          $w: 25px
+          width: $w
+          height: $w
+          margin-right: 15px

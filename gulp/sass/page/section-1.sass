@@ -1,118 +1,33 @@
+body
+  background: url(#{$url}body.png) center center repeat
+  background-size: cover
+  background-position: center
+
 .idx.section-1
   +max-width
-  margin-top: 60px
-  margin-bottom: 60px
-  @media #{$pad-horizantal}
-    padding-left: 15px
-    padding-right: 15px
-    margin-top: 30px
-    margin-bottom: 30px
-  @media #{$pad-vertical}
-    padding-left: 15px
-    padding-right: 15px
-    margin-top: 30px
-    margin-bottom: 30px
+  margin-top: 75px
+  margin-bottom: 75px
   @media #{$mobile}
     margin-top: 30px
-    margin-bottom: 30px
-  .col-md-3
-    @media screen and (min-width: 768px)
-      width: 20%
-    @media #{$pad-horizantal}
-      width: 100%
-      text-align: center
-    @media #{$pad-vertical}
-      width: 100%
-      text-align: center
-  .col-md-9
-    @media screen and (min-width: 768px)
-      width: 80%
-    @media #{$pad-vertical}
-      width: 100%
-    @media #{$pad-horizantal}
-      width: 100%
-    .module-special
-      .listBS
-        @media screen and (min-width: 768px)
-          margin: 0 -30px
-        @media #{$pad-horizantal}
-          margin: 0 -7.5px
-        @media #{$pad-vertical}
-          margin: 0 -7.5px
-      .d-item
-        padding: 0 27.5px
+    margin-bottom: 0px
+  .row
+    margin: 0 -30px
+  .col-sm-4.col-xs-12
+    padding: 0 30px
+    @media #{$mobile}
+      margin-bottom: 15px
+    a
+      +trans
+      display: block
+      background: white
+      overflow: hidden
+      @media #{$mobile}
+        max-width: 400px
+        margin: 0 auto
+      img
         +trans
-        @media #{$pad-horizantal}
-          padding: 0 7.5px
-        @media #{$pad-vertical}
-          padding: 0 7.5px 
-        @media #{$mobile}
-          padding: 0
-          margin-bottom: 30px
-        &:hover
-          opacity: 0.5
-      .mbox
-        position: relative
-        @media #{$mobile}
-          padding-bottom: 30px
-      .mdate
-        float: right
-        font-size: 10px
-        color: #f16b05
-        margin-bottom: 7.5px
-      .d-txt
-        margin-top: 15px
-      h5
-        margin: 0
-        padding: 0
-        a
-          font-size: 14px
-          color: #666
-      .mdetail
-        color: #999999
-        font-size: 12px
-        line-height: 25px
-      .read_more
-        position: absolute
-        right: 0
-        bottom: -15px
-        color: #f16b05
-        font-size: 13px
-        @media #{$mobile}
-          right: 0
-          bottom: 0
-        .svg
-          background: url(#{$url}readmor_plus.svg) center center no-repeat
-          width: 13px
-          height: 13px
-          margin-left: 5px
-          position: relative
-          top: 2px
-      .more
-        @media #{$pad-vertical}
-          text-align: center
-          width: 100%
-          margin-top: 60px
-        @media #{$pad-horizantal}
-          text-align: center
-          width: 100%
-          margin-top: 60px
-        a
-          border: 0
-          border-radius: 0
-          background: url(#{$url}readmore_arrow.svg) center center no-repeat
-          width: 53px
-          height: 53px
-          position: absolute
-          right: -15px
-          top: 100px
-          +trans
-          @media #{$mobile}
-            position: static
-          @media #{$pad-horizantal}
-            position: static
-          @media #{$pad-vertical}
-            position: static
-          &:hover
-            transform: rotate(360deg)
-            opacity: 0.5
+        width: 100.5%
+        max-width: 100.5%
+      &:hover
+        img
+          opacity: 0.7

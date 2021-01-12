@@ -2,17 +2,20 @@
   position: fixed
   top: 0
   margin-bottom: 0
-  z-index: 99
+  z-index: 9
   width: 100%
   border: 0
   box-shadow: none
   border-radius: 0
-  background: rgba(#f2f2f2, 1)
+  background: #bdd2c3
   padding: 30px 0
   border-top: 0
+  padding-top: 90px
+  padding-bottom: 0
   // border-bottom: 1px solid rgba(#d3a500, .31)
   @media #{$mobile}
     padding: 7.5px 0
+    padding-bottom: 0
   @media #{$pad-vertical}
     padding: 15px
   @media #{$pad-horizantal}
@@ -21,8 +24,7 @@
     // width: calc(100% - 160px)
     // max-width: 1130px
     margin: 0 auto
-    position: relative
-    padding: 0 3vw
+    padding: 0
     @media #{$mobile}
       padding: 0
       width: 100%
@@ -41,17 +43,21 @@
     margin-top: 0px
     @media screen and (min-width: 768px)
       padding: 0
+      position: absolute
+      left: 55px
+      top: 3.25px
     @media #{$mobile}
-      max-width: 250px
-      max-height: 54px
-      margin-top: 5px
-      margin-left: 25px
-      margin-bottom: 0px
       padding: 0
       background-position: left center!important
+      max-width: 80px
+      max-height: 80px
+      margin-left: 22.5px
+      position: relative
+      top: -5px
+      z-index: 9
   .navbar-toggle
     border: 0
-    margin-top: 15px
+    margin-top: 27px
     margin-right: 0
     background: none
     border-radius: 0
@@ -62,7 +68,7 @@
     .sr-only
       display: none
     .icon-bar
-      background: $color-orange
+      background: #5b8258
       width: 30px
       margin-bottom: .5rem
       +trans
@@ -83,19 +89,40 @@
     padding-bottom: 0px
     @media #{$mobile}
       padding-bottom: 0px
-  // .navbar-header
+  .navbar-header
+    @media #{$mobile}
+      position: relative
+      float: left
+      width: 100%
+      margin: 0
+    &::after
+      @media #{$mobile}
+        content: ''
+        display: block
+        width: 100%
+        height: 15px
+        background: #5b8258
+        position: absolute
+        bottom: 0
+        left: 0
+
   //   @media #{$padV}
   //     width: 100%
   //     padding: 0 15px
   #navbar
     padding: 0
-    // @media screen and (min-width: 768px)
-    //   margin-right: 60px
+    background: #5b8258
+    @media screen and (min-width: 768px)
+      width: 100%
+      padding-top: 3.25px
+      padding-bottom: 3.25px
+      display: flex!important
+      justify-content: flex-end
+      padding-right: 20px
     @media #{$mobile}
       width: 100%
       margin: 0
-      background: rgba(#ddd, .25)
-      padding-bottom: 0px
+      padding-bottom: 15px
       box-shadow: none
       padding-top: 15px
       margin-bottom: -15px
@@ -132,15 +159,20 @@
           margin-left: 10px
         @media #{$pad-vertical}
           margin-left: 2.5px
+        @media #{$mobile}
+          float: left
+          width: 100%
         >a
           position: relative
           text-transform: uppercase
-          color: #808080
+          color: #f2f0f0
           padding-bottom: 0
           font-weight: normal
-          border: 2px solid $color-n
+          border: 0
           padding: 0.5rem 0
           border-radius: 0px
+          font-size: 18px
+          font-weight: 500
           +trans
           @media screen and (min-width: 768px)
             margin-right: 0px
@@ -149,12 +181,12 @@
           // @media #{$padH}
           //   padding: 5px 7.5px
           &:hover
-            color: $color-orange
-            border-bottom: 2px solid $color-orange
+            color: #bdd2c3
+            border-bottom: 0
       li
         position: initial
-        padding-bottom: 10px
-        margin-left: 3vw
+        padding-bottom: 0px
+        margin-left: 3.5vw
         @media #{$pad-horizantal}
           margin-left: 3vw
         @media #{$pad-vertical}
@@ -175,16 +207,19 @@
             &::before
               @media #{$mobile}
                 content: '▼'
-                color: $color-orange
+                color: white
                 float: right
                 font-size: 14px
         &.dropdown
           @media screen and (min-width: 768px)
             position: relative
             z-index: 99999999
+          @media #{$mobile}
+            width: 100%
+            float: left
           .dropdown-menu
             left: 0
-            background: rgba($color-orange, .7)
+            background: rgba(#bdd2c3, .7)
             border: 0
             width: 100%
             overflow: initial
@@ -196,8 +231,8 @@
           &:hover,
           &.open
             .dropdown-toggle
-              color: $color-orange
-              border: 2px solid $color-n
+              color: #bdd2c3
+              border: 0
               &::before
                 @media #{$mobile}
                   content: '-'
@@ -231,10 +266,8 @@
                   white-space: nowrap
                   font-weight: normal
                   transition: $trans
-                  color: white
+                  color: #5b8258
                   padding-left: 15px
-                  &:hover
-                    color: $color-orange
   .navbar
     &+.search.search.search
       margin-left: 0px
@@ -244,73 +277,3 @@
         margin-left: 0
       input
         width: calc(100% - 28px)
-  .nav-form
-    position: relative
-    margin-right: 15px
-    // @media #{$padV}
-    //   width: 100%
-    //   display: flex
-    //   flex-wrap: nowrap
-    //   align-items: center
-    //   margin-right: 0
-    //   padding-left: 7.5px
-    //   margin-bottom: 15px
-    @media #{$mobile}
-      width: 100%
-      display: flex
-      flex-wrap: nowrap
-      align-items: center
-      margin-right: 0
-      padding-left: 0
-      margin-bottom: 15px
-    &.show
-      .formBS
-        width: 150px
-    .toggle-search
-      position: relative
-      top: 7px
-      font-size: 22px!important
-      cursor: pointer
-      color: $color-green!important
-      @media #{$mobile}
-        top: 0
-        margin-left: 15px
-    .formBS
-      position: absolute
-      top: 0px
-      right: 30px
-      width: 150px
-      overflow: hidden
-      +trans
-      width: 0
-      // @media #{$padV}
-      //   position: static
-      //   width: calc(100% - 40px)
-      @media #{$mobile}
-        position: static
-        width: calc(100% - 30px)
-        // margin-top: 15px
-        // margin-bottom: 15px
-      .input-group
-        @media #{$mobile}
-          margin-right: 0
-          display: block
-        input
-          border-top: 0
-          border-left: 0
-          border-right: 0
-          border-radius: 0
-          border: 1px solid #efefef
-          border-radius: 0px
-          @media #{$mobile}
-            font-size: 12px!important
-            position: relative
-        .input-group-btn
-          position: relative
-          z-index: 9999
-          button
-            font-size: 16px
-            color: $color-b
-            margin: 0
-            padding: 0
-            background: none!important

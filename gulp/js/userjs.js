@@ -1,9 +1,11 @@
 const search = require('./search')
 const index_banner = require('./index_banner')
+const append_member = require('./append_member')
 
 $(function () {
   const navH = $('nav.navbar').innerHeight()
-  search()
+  append_member()
+  // search()
   index_banner(navH)
 
   $('.d-item').each(function () {

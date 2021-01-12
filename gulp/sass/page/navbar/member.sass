@@ -1,0 +1,65 @@
+.navbar.navbar.navbar.navbar #navbar
+  .member
+    position: absolute
+    top: 35px
+    right: 360px
+    display: block
+    width: auto
+    float: left
+    margin: 0
+    padding: 0
+    @media #{$mobile}
+      position: static
+      width: 100%
+      text-align: center
+      display: flex
+      flex-wrap: nowrap
+      padding: 0 5px
+      margin-bottom: 7.5px
+    ul
+      display: flex
+      flex-wrap: nowrap
+      li
+        margin: 0
+        padding: 0
+        @media #{$mobile}
+          width: calc(100% / 3)
+          text-align: center
+        a
+          font-size: 16px
+          color: #5b8258
+          margin: 0
+          padding: 0
+          font-weight: 500
+          display: inline-block
+          width: 100%
+          position: relative
+          float: left
+          border-bottom: 0!important
+          @media #{$mobile}
+            color: white
+          +trans
+          &:hover
+            transform: translateY(-7.5px)
+            &::after
+              transform: translateY(7.5px)
+
+          &::after
+            content: ''
+            display: inline-block
+            width: 1px
+            height: 16px
+            background: #5b8258
+            position: relative
+            top: 2px
+            margin: 0 15px
+            +trans
+            @media #{$mobile}
+              position: absolute
+              right: 0
+              margin: 0
+              background: white
+        &:last-child
+          a
+            &::after
+              display: none

@@ -1,61 +1,66 @@
 .idx.section-2
-  padding-top: 95px
-  padding-bottom: 60px
-  text-align: center
-  background-size: cover!important
-  background-repeat: no-repeat!important
-  background-position: center!important
-  position: relative
+  margin-top: 75px
+  margin-bottom: 40px
+  +max-width
   @media #{$mobile}
-    padding-bottom: 90px
-  *
-    color: white
-  hgroup
-    display: inline-block
+    margin-top: 30px
     margin-bottom: 30px
+  .row
+    margin: 0 -15px
     @media #{$mobile}
-      margin-bottom: 15px
-    @media #{$pad-horizantal}
-      margin-bottom: 20px
-    @media #{$pad-vertical}
-      margin-bottom: 20px
-  h6
-    font-size: 14px
-    text-align: left
-    margin-bottom: 7.5px
-    font-family: 'Affogato', 'serif'!important
-    font-weight: 300
-  h4
-    text-align: left
-    font-size: 27px
-    font-weight: bold
-    margin-top: 0
-  p
-    font-size: 16.9px
-    line-height: 32px
-    text-align: center
-    font-weight: 300
-  .col-xs-12
-    position: static
-  .btn
-    position: absolute
-    bottom: 0
-    right: 0
-    border-radius: 0
-    font-size: 15.25px
-    padding: 12px 15px
-    background: rgba(#f16b05, .55)
-    color: white
-    border: 0
-    font-weight: bold
-    letter-spacing: 0.1rem
-    +trans
-    .svg
-      position: relative
-      top: -5px
-      +trans
-    &:hover
-      color: white
-      background: rgba(#f16b05, .7)
-      .svg
-        transform: translateX(15px)
+      padding: 0 15px
+  .title-content
+    margin-bottom: 50px
+    @media #{$mobile}
+      margin-bottom: 25px
+  .list
+    margin: 0
+    @media #{$mobile}
+      margin: 0 auto
+      max-width: 400px
+      display: flex
+      justify-content: flex-start
+      flex-wrap: wrap
+      padding: 0
+    .col-md-2
+      padding: 0 40px
+      margin-bottom: 40px
+      @media #{$mobile}
+        width: 33.3333333%
+        padding: 0 15px
+        margin-bottom: 30px
+      a
+        display: block
+        +trans
+        &:hover
+          opacity: 0.5
+      .img
+        padding-top: 100%
+        position: relative
+        margin-bottom: 7.5px
+        .svg
+          position: absolute
+          width: 100%
+          height: 100%
+          top: 0
+          left: 0
+          background-size: contain!important
+          background-position: center!important
+          background-repeat: no-repeat!important
+      .text
+        text-align: center
+        p
+          font-size: 16px
+          font-weight: 600
+          color: #231815
+          padding-bottom: 0
+          margin-bottom: 0
+          white-space: nowrap
+          @media #{$mobile}
+            font-size: 14px
+          &+p
+            font-size: 14px
+            color: #4d6f4b
+            font-weight: 500
+            @media #{$mobile}
+              font-size: 12px
