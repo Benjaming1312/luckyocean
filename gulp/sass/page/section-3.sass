@@ -1,26 +1,29 @@
-@keyframes marqee
-  0%
-    left: 100%
-    transform: translateX(0%)
-  100%
-    left: 0%
-    transform: translateX(-100%)
+// @keyframes marqee
+//   0%
+//     left: 100%
+//     transform: translateX(0%)
+//   100%
+//     left: 0%
+//     transform: translateX(-100%)
     
 .idx.section-3
   background: #bdd2c3
   .d-item
-    height: 3rem
+    // height: 3rem
     position: relative
     .d-txt
-      position: absolute
-      top: 5px
+      // position: absolute
+      // top: 5px
       width: 100%
       +trans
       display: flex
-      animation: marqee 15s linear infinite
+      // animation: marqee 20s linear infinite
     .mbox
-      padding: 15px
+      height: 3rem
+      padding-bottom: 0
       text-align: center
+      display: flex
+      align-items: center
     h5
       margin: 0
       background: none
@@ -29,6 +32,7 @@
       display: block
       width: 100%
       white-space: nowrap
+      padding: 0
       .mdate,
       a
         font-size: 18px

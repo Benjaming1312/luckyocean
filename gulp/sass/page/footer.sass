@@ -1,11 +1,14 @@
 footer.foot
-  background: none
+  background: #f0ede6
   padding-top: 26px
-  +max-width
   position: relative
   padding-bottom: 70px
   @media #{$mobile}
     padding-bottom: 40px
+  .row
+    +max-width
+    margin: 0 auto
+    position: relative
   p.title
     font-size: 17px
     font-weight: 500
@@ -14,7 +17,7 @@ footer.foot
   .social
     position: absolute
     right: 0
-    top: 80px
+    top: 60px
     @media #{$mobile}
       position: static
       margin-bottom: 0
@@ -24,7 +27,7 @@ footer.foot
         opacity: 0.5
   .list-inline:not(.social)
     margin: 0
-    margin-bottom: 7.5px
+    margin-bottom: 0px
     li
       padding: 0
       color: #5b8258
@@ -46,6 +49,7 @@ footer.foot
         color: #5b8258
         font-size: 15px
   p:not(.title)
+    position: relative
     color: #727171
     font-size: 13.5px
     line-height: 26px
@@ -53,6 +57,17 @@ footer.foot
     margin-top: 15px
     @media #{$mobile}
       margin-top: 15px
+    &::before
+      content: ''
+      width: calc(100% + 60px)
+      height: 1px
+      background: rgba(#5b8258, .5)
+      position: absolute
+      top: -7.5px
+      left: -30px
+      @media #{$mobile}
+        width: 100%
+        left: 0
 .fix-bottom
   position: fixed
   bottom: 0

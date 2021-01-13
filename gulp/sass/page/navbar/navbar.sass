@@ -115,7 +115,7 @@
     @media screen and (min-width: 768px)
       width: 100%
       padding-top: 3.25px
-      padding-bottom: 3.25px
+      padding-bottom: 0px
       display: flex!important
       justify-content: flex-end
       padding-right: 20px
@@ -150,10 +150,11 @@
         margin-top: 0
       *
         color: #808080
-        font-size: 17.6px
-        font-weight: Regular
+        font-size: 17px
         letter-spacing: 0.05rem
         text-transform: initial!important
+        font-family: 'Noto Serif TC'!important
+        font-weight: 500!important
       >li
         @media screen and (min-width: 768px)
           margin-left: 10px
@@ -162,6 +163,7 @@
         @media #{$mobile}
           float: left
           width: 100%
+          margin-bottom: 8px
         >a
           position: relative
           text-transform: uppercase
@@ -187,6 +189,7 @@
         position: initial
         padding-bottom: 0px
         margin-left: 3.5vw
+        padding-bottom: 3.25px
         @media #{$pad-horizantal}
           margin-left: 3vw
         @media #{$pad-vertical}
@@ -223,7 +226,6 @@
             border: 0
             width: 100%
             overflow: initial
-            box-shadow: none
             @media #{$mobile}
               margin-top: 5px
             // @media #{$padV}
