@@ -7,15 +7,23 @@ body
   +max-width
   margin-top: 75px
   margin-bottom: 75px
+  @media #{$pad-horizantal}
+    padding: 0 30px
+  @media #{$pad-vertical}
+    padding: 0 30px
   @media #{$mobile}
     margin-top: 30px
     margin-bottom: 0px
   .row
     margin: 0 -30px
+    @media #{$mobile}
+      margin: 0 -7.5px
   .col-sm-4.col-xs-12
     padding: 0 30px
     @media #{$mobile}
       margin-bottom: 15px
+      width: 33.3333333%
+      padding: 0 7.5px
     a
       +trans
       display: block

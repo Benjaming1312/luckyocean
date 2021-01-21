@@ -6,16 +6,16 @@ module.exports = function (navH) {
 	}
 
 	$('.module-adv').css('margin-top', navH)
-	$(window).on('scroll', function () {
-		setTimeout(() => {
-			const top = $(window).scrollTop()
-			if (top > 200) {
-				$('.fix-bottom').css('opacity', 0.5)
-			} else {
-				$('.fix-bottom').css('opacity', 1)
-			}
-		})
-	})
+	// $(window).on('scroll', function () {
+	// 	setTimeout(() => {
+	// 		const top = $(window).scrollTop()
+	// 		if (top > 200) {
+	// 			$('.fix-bottom').css('opacity', 1)
+	// 		} else {
+	// 			$('.fix-bottom').css('opacity', 1)
+	// 		}
+	// 	})
+	// })
 
 	$('.section-3 .mbox').marquee({
 		duration: 15000

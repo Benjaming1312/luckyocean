@@ -10,6 +10,9 @@
       margin: 0 10px
       cursor: pointer
       +trans
+      @media #{$pad-vertical}
+        max-width: 25px
+        max-height: 25px
       &:first-child
         @media #{$mobile}
           margin-left: 0
