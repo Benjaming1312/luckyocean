@@ -38,6 +38,9 @@ footer.foot
       margin-top: 7.5px
     .svg
       +trans
+      @media #{$mobile}
+        max-width: 25px
+        max-height: 25px
       &:hover
         opacity: 0.5
   .list-inline:not(.social)
@@ -47,11 +50,20 @@ footer.foot
       padding: 0
       color: #5b8258
       font-size: 15px
+      @media #{$pad-horizantal}
+        font-size: 12px
+      @media #{$pad-vertical}
+        font-size: 12px
       @media #{$mobile}
         line-height: 26px
+        font-size: 10px
       &:last-child
         &::after
           display: none
+      &:nth-child(even)
+        &::after
+          @media #{$mobile}
+            display: none
       &::after
         content: ''
         display: inline-block
@@ -61,17 +73,34 @@ footer.foot
         position: relative
         top: 2px
         margin: 0 15px
+        @media #{$pad-horizantal}
+          margin: 0 7.5px
+        @media #{$pad-vertical}
+          margin: 0 7.5px
+        @media #{$mobile}
+          margin: 0 5px
       *
         color: #5b8258
         font-size: 15px
+        @media #{$pad-horizantal}
+          font-size: 12px
+        @media #{$pad-vertical}
+          font-size: 12px
+        @media #{$mobile}
+          font-size: 10px
   p:not(.title)
     position: relative
     color: #727171
     font-size: 12px
     line-height: 18px
-    letter-spacing: 0.01rem
+    letter-spacing: 0.2rem
     margin-top: 15px
+    @media #{$pad-horizantal}
+      letter-spacing: 0.1rem
+    @media #{$pad-vertical}
+      letter-spacing: 0.1rem
     @media #{$mobile}
+      letter-spacing: 0.1rem
       margin-top: 15px
     &::before
       content: ''
