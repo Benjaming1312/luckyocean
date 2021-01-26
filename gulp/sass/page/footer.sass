@@ -20,6 +20,15 @@ footer.foot
     font-weight: 500
     margin-bottom: 5px
     color: #5b8258
+  .info-social-append
+    .social
+      @media #{$mobile}
+        max-height: 25px
+        position: relative
+        top: 5px
+      li
+        @media #{$mobile}
+          max-height: 25px
   .social
     position: absolute
     right: 0
@@ -35,7 +44,12 @@ footer.foot
     @media #{$mobile}
       position: static
       margin-bottom: 0
-      margin-top: 7.5px
+      margin-top: 0
+    li
+      @media #{$mobile}
+        margin: 0 7.5px
+        &::after
+          display: none!important
     .svg
       +trans
       @media #{$mobile}
@@ -79,6 +93,7 @@ footer.foot
           margin: 0 7.5px
         @media #{$mobile}
           margin: 0 5px
+          height: 12px
       *
         color: #5b8258
         font-size: 15px
