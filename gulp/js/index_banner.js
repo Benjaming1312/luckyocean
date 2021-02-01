@@ -17,14 +17,6 @@ module.exports = function (navH) {
 	// 	})
 	// })
 
-	$('.section-3 .mbox').marquee({
-		duration: 15000
-	})
-
-	if ($(window).width() < 768) {
-		$('.info-content .list-inline').eq(1).append(`<li class="info-social-append"></li>`)
-		$('.info-content .social').appendTo($('.info-social-append'))
-	}
 	//   $('.idx.section-1 .module-special .d-item').each(function () {
 	//     $(this).find('.mdate').prependTo($(this).find('.mbox'))
 

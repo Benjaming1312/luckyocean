@@ -4,19 +4,32 @@
   margin-right: auto
 
 =module-title
-  border-bottom: 1px solid #72926e
-  text-align: center
-  h4
-    margin: 0
-    display: inline-block
-    background: url(#{$url}module-title-bg.svg) center center no-repeat
-    background-size: 100%
-    background-position: bottom center
-    padding: 0px 50px
-    font-weight: 300
+  .title
+    text-align: center
     font-size: 22px
-    line-height: 40px
-    color: white
+    letter-spacing: 0.2rem
+    color: #000000
+    margin-top: 0
+    &::after
+      content: ''
+      display: block
+      margin: 0 auto
+      width: 311px
+      height: 31px
+      background: url(#{$url}title-mask.svg) center center no-repeat
+      margin-top: 7.5px
+      position: relative
+      left: -9px
+      @media #{$mobile}
+        max-width: calc(100% - 10px)
+        left: -5px
+  .sub-title
+    font-size: 18px
+    color: #000000
+    letter-spacing: 0.2rem
+    text-align: center
+    margin-top: 7.5px
+
 
 =trans
   transition: .3s ease-in-out

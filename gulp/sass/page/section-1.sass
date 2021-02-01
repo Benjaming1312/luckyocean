@@ -1,41 +1,75 @@
-body
-  background: url(#{$url}body.png) center center repeat
-  background-size: cover
-  background-position: center
-
 .idx.section-1
   +max-width
-  margin-top: 75px
-  margin-bottom: 75px
-  @media #{$pad-horizantal}
-    padding: 0 30px
-  @media #{$pad-vertical}
-    padding: 0 30px
   @media #{$mobile}
-    margin-top: 30px
-    margin-bottom: 0px
-  .row
-    margin: 0 -30px
-    @media #{$mobile}
-      margin: 0 -7.5px
-  .col-sm-4.col-xs-12
     padding: 0 30px
+  .row
+    display: flex
+    flex-wrap: nowrap
     @media #{$mobile}
-      margin-bottom: 15px
-      width: 33.3333333%
-      padding: 0 7.5px
-    a
-      +trans
+      flex-direction: column-reverse
+  .img
+    position: relative
+    @media #{$mobile}
+      margin-bottom: 30px
+    img
+      position: relative
+      z-index: 2
+      width: 100%
+    &::after
+      content: ''
       display: block
-      background: white
-      overflow: hidden
-      @media #{$mobile}
-        max-width: 400px
-        margin: 0 auto
-      img
-        +trans
-        width: 100.5%
-        max-width: 100.5%
+      width: 100%
+      height: 100%
+      position: absolute
+      background: #DEDFE3
+      right: -15px
+      bottom: -18px
+  .title
+    text-align: center
+    font-size: 22px
+    color: #000
+    letter-spacing: 0.2rem
+    margin-top: 0
+    &::after
+      content: ''
+      display: block
+      width: 90%
+      margin: 0 auto
+      height: 1px
+      background: rgba(#D0D2D3, .5)
+      margin-top: 25px
+      margin-bottom: 25px
+  p
+    text-align: center
+    font-size: 18px
+    line-height: 37px
+    color: #000
+    letter-spacing: 0
+    margin-bottom: 30px
+    @media #{$mobile}
+      margin-bottom: 30px
+  p.more
+    margin-bottom: 0
+    a.btn
+      border: 1px solid rgba(#000000, .5)
+      width: 247px
+      height: 33px
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      background: none
+      font-size: 18px
+      letter-spacing: 0.2rem
+      color: #3C2415
+      +trans
+      border-radius: 0
       &:hover
-        img
-          opacity: 0.7
+        background: #3C2415
+        color: white
+  span.svg
+    margin: 0 auto
+    display: block
+    margin-top: 30px
+    @media #{$mobile}
+      max-width: 100%
+      margin-top: 15px

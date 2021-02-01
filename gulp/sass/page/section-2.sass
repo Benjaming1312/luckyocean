@@ -1,90 +1,59 @@
 .idx.section-2
-  margin-top: 75px
-  margin-bottom: 40px
-  +max-width
-  @media #{$pad-horizantal}
-    padding: 0 30px
-  @media #{$pad-vertical}
-    padding: 0 30px
+  +max-width  
+  margin: 0 auto
+  margin-top: 55px
   @media #{$mobile}
     margin-top: 30px
-    margin-bottom: 30px
-  .row
-    margin: 0 -15px
-    @media #{$mobile}
-      padding: 0 15px
-  .title-content
-    margin-bottom: 50px
-    @media #{$mobile}
-      margin-bottom: 25px
+    padding: 0 30px
   .list
-    margin: 0
-    @media #{$pad-horizantal}
-      display: flex
-      justify-content: flex-start
-      flex-wrap: wrap
-    @media #{$pad-vertical}
-      display: flex
-      justify-content: flex-start
-      flex-wrap: wrap
+    margin: 0 -30px
+    margin-top: 60px
     @media #{$mobile}
-      margin: 0 auto
-      max-width: 400px
-      display: flex
-      justify-content: flex-start
-      flex-wrap: wrap
-      padding: 0
-    .col-md-2
-      padding: 0 30px
-      margin-bottom: 40px
-      @media #{$pad-horizantal}
-        width: calc((100% / 6) - 1px)
-        padding: 0 15px
-        margin-bottom: 30px
-      @media #{$pad-vertical}
-        width: calc((100% / 6) - 1px)
-        padding: 0 15px
-        margin-bottom: 30px
+      margin: 0
+      margin-top: 30px
+    .col-sm-3
       @media #{$mobile}
-        width: 25%
-        padding: 0 0px
+        width: calc(100% / 2 - 15px)
+        margin: 0 7.5px
         margin-bottom: 30px
+    .img
+      background: #FFFFFF
+      filter: drop-shadow(7px 7px 5px rgba(#000, .25))
       a
-        display: block
-        +trans
-        &:hover
-          opacity: 0.5
-      .img
-        padding-top: 145%
+        display: flex
         position: relative
-        margin-bottom: 7.5px
-        .svg
-          position: absolute
-          width: 100%
-          height: 100%
-          // padding-top: 100%
-          top: 0
-          left: 0
-          background-size: contain!important
-          background-position: center!important
-          background-repeat: no-repeat!important
-      .text
-        text-align: center
-        p
-          font-size: 16px
-          font-weight: 600
-          color: #231815
-          padding-bottom: 0
-          margin-bottom: 0
-          white-space: nowrap
-          @media #{$pad-vertical}
-            white-space: break-spaces
-          @media #{$mobile}
-            font-size: 14px
-            white-space: break-spaces
-          &+p
-            font-size: 14px
-            color: #4d6f4b
-            font-weight: 500
-            @media #{$mobile}
-              font-size: 12px
+        overflow: hidden
+        align-items: center
+        justify-content: center
+        width: 100%
+        height: 100%
+        img
+          +trans
+        &:hover
+          img
+            transform: scale(1.1)
+            opacity: 0.6
+  p.more
+    margin-bottom: 0
+    text-align: center
+    margin-top: 40px
+    margin-bottom: 40px
+    @media #{$mobile}
+      margin-top: 15px
+      margin-bottom: 30px
+    a.btn
+      border: 1px solid rgba(#000000, .5)
+      width: 247px
+      height: 33px
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      background: none
+      font-size: 18px
+      letter-spacing: 0.2rem
+      color: #3C2415
+      +trans
+      border-radius: 0
+      &:hover
+        background: #3C2415
+        color: white

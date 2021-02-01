@@ -1,55 +1,32 @@
-// @keyframes marqee
-//   0%
-//     left: 100%
-//     transform: translateX(0%)
-//   100%
-//     left: 0%
-//     transform: translateX(-100%)
-    
 .idx.section-3
-  background: #bdd2c3
-  .d-item
-    // height: 3rem
-    position: relative
-    .d-txt
-      // position: absolute
-      // top: 5px
-      width: 100%
-      +trans
-      display: flex
-      // animation: marqee 20s linear infinite
-    .mbox
-      height: 3rem
-      padding-bottom: 0
-      text-align: center
-      display: flex
-      align-items: center
-    h5
+  +max-width  
+  margin: 0 auto
+  margin-top: 55px
+  @media #{$mobile}
+    margin-top: 30px
+    padding: 0 30px
+  .svg
+    display: block
+    margin: 0 auto
+  .list
+    margin: 0 -30px
+    margin-top: 45px
+    @media #{$mobile}
       margin: 0
-      background: none
-      text-align: center
-      overflow: initial
-      display: block
+      margin-top: 30px
+  .col-sm-4
+    margin-bottom: 30px
+    a
+      display: flex
+      position: relative
+      overflow: hidden
+      align-items: center
+      justify-content: center
       width: 100%
-      white-space: nowrap
-      padding: 0
-      .mdate,
-      a
-        font-size: 18px
-        font-weight: 400
-        color: #5b8258
-        white-space: nowrap
-      .mdate
-        margin-right: 15px
-        overflow: initial
-        &::before
-          content: ''
-          display: inline-block
-          background: url(#{$url}news.svg)center center no-repeat
-          background-size: contain
-          position: relative
-          top: 5px          
-          $w: 25px
-          width: $w
-          height: $w
-          margin-right: 15px
+      height: 100%
+      img
+        +trans
+      &:hover
+        img
+          transform: scale(1.1)
+          opacity: 0.6

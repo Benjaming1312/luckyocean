@@ -1,11 +1,11 @@
-- var url = '/ezfiles/853/1853/img/1414/'
+- var url = '/ezfiles/858/1858/img/1517/'
 nav.navbar
-	.navbar2
-		.content
-			.lang
-				a.svg(style="background:url("+url+"lang-1.svg); width: 29px; height: 29px;")
-				a.svg(style="background:url("+url+"lang-2.svg); width: 29px; height: 29px;")
-				a.svg(style="background:url("+url+"lang-3.svg); width: 29px; height: 29px;")
+	//- .navbar2
+	//- 	.content
+	//- 		.lang
+	//- 			a.svg(style="background:url("+url+"lang-1.svg); width: 29px; height: 29px;")
+	//- 			a.svg(style="background:url("+url+"lang-2.svg); width: 29px; height: 29px;")
+	//- 			a.svg(style="background:url("+url+"lang-3.svg); width: 29px; height: 29px;")
 	.container-fluid
 		.navbar-header
 			button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
@@ -14,64 +14,79 @@ nav.navbar
 				span.icon-bar
 				span.icon-bar
 			// LOGO放置處
-			a.navbar-brand.svg(href='/' style="background: url("+url+"logo.svg); width: 123px; height: 123px;")
+			a.navbar-brand.svg.visible-xs(href='/' style="background: url("+url+"logo.svg); width: 153px; height: 32px;")
 		#navbar.navbar-collapse.collapse
 			ul.nav.navbar-nav
-				li.search
-					.nav-form
-						//- a.toggle-search(type="button" style="background:url("+url+"search.svg); width: 20px; height: 20px;")
-						<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mobile&amp;Action=mobileptsearch/bin/index.php?Plugin=mobile&amp;Action=mobileptsearch&amp;Lang=zh-tw">
-							<div class="input-group">
-								<span class="input-group-btn">
-									button.btn.svg.hidden-xs(type="submit" style="background:url("+url+"search.svg); width: 20px; height: 20px;")
-									button.btn.svg.visible-xs(type="submit" style="background:url("+url+"search-w.svg); width: 20px; height: 20px;")
-								</span>
-								<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
-							</div>
-						</form>
-				li.member
-				li.dropdown(data-aos="fade-in" data-aos-delay="100")
-					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 酒  品
-					ul.dropdown-menu.company-dropdown(role='menu')
-						li
-							a(href="") 清酒
-						li
-							a(href="") 利口酒
-						li
-							a(href="") 烈酒
-						li
-							a(href="") 無酒精商品
-				li(data-aos-delay="200", data-aos="fade-in")
-					a(href="") 酒造介紹
-				li.dropdown(data-aos="fade-in" data-aos-delay="300")
-					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 愛酒日常
-					ul.dropdown-menu.company-dropdown(role='menu')
-						li
-							a(href="") 知識
-						li
-							a(href="") 搭食
-						li
-							a(href="") 影片
-						li
-							a(href="") 文章
-						li
-							a(href="") 活動
-				li(data-aos-delay="400", data-aos="fade-in")
-					a(href="") 綠芽生活販
-				li.dropdown(data-aos="fade-in" data-aos-delay="500")
-					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 關於綠芽
-					ul.dropdown-menu.company-dropdown(role='menu')
-						li
-							a(href="") 求提拔
-						li
-							a(href="") 曙酒吧
-						li
-							a(href="") 綠芽創意
-				li(data-aos-delay="600", data-aos="fade-in")
-					a(href="") 綠芽消息
-				li(data-aos-delay="700", data-aos="fade-in")
-					a(href="") 聯絡綠芽
-				li.social(data-aos-delay="800", data-aos="fade-in")
-					a.svg(href="https://reurl.cc/v53lMe" target="_blank" style="background:url("+url+"nav-social-1.svg); width: 32px; height: 32px;")
-					a.svg(href="https://lin.ee/z6AQUrM" target="_blank" style="background:url("+url+"nav-social-2.svg); width: 32px; height: 32px;")
-					a.svg(href="https://reurl.cc/KxKmG9" target="_blank" style="background:url("+url+"nav-social-3.svg); width: 32px; height: 32px;")
+				//- li.search
+				//- 	.nav-form
+				//- 		//- a.toggle-search(type="button" style="background:url("+url+"search.svg); width: 20px; height: 20px;")
+				//- 		<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mobile&amp;Action=mobileptsearch/bin/index.php?Plugin=mobile&amp;Action=mobileptsearch&amp;Lang=zh-tw">
+				//- 			<div class="input-group">
+				//- 				<span class="input-group-btn">
+				//- 					button.btn.svg.hidden-xs(type="submit" style="background:url("+url+"search.svg); width: 20px; height: 20px;")
+				//- 					button.btn.svg.visible-xs(type="submit" style="background:url("+url+"search-w.svg); width: 20px; height: 20px;")
+				//- 				</span>
+				//- 				<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
+				//- 			</div>
+				//- 		</form>
+				//- li.member
+				li(data-aos="fade-in", data-aos-delay="100")
+					a(href="") 生產流程
+				li(data-aos="fade-in", data-aos-delay="200")
+					a(href="") 服務項目
+				li(data-aos="fade-in", data-aos-delay="300")
+					a(href="") 產&nbsp;&nbsp;&nbsp;品
+				li.logo.hidden-xs
+					a.svg(href='/' style="background: url("+url+"logo.svg); width: 153px; height: 32px;")
+				li(data-aos="fade-in", data-aos-delay="400")
+					a(href="") 訂製流程
+				li(data-aos="fade-in", data-aos-delay="500")
+					a(href="") Q&A
+				li(data-aos="fade-in", data-aos-delay="600")
+					a(href="") 聯絡我們
+
+				//- li.dropdown(data-aos="fade-in" data-aos-delay="100")
+				//- 	a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 酒  品
+				//- 	ul.dropdown-menu.company-dropdown(role='menu')
+				//- 		li
+				//- 			a(href="") 清酒
+				//- 		li
+				//- 			a(href="") 利口酒
+				//- 		li
+				//- 			a(href="") 烈酒
+				//- 		li
+				//- 			a(href="") 無酒精商品
+				//- li(data-aos-delay="200", data-aos="fade-in")
+				//- 	a(href="") 酒造介紹
+				//- li.dropdown(data-aos="fade-in" data-aos-delay="300")
+				//- 	a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 愛酒日常
+				//- 	ul.dropdown-menu.company-dropdown(role='menu')
+				//- 		li
+				//- 			a(href="") 知識
+				//- 		li
+				//- 			a(href="") 搭食
+				//- 		li
+				//- 			a(href="") 影片
+				//- 		li
+				//- 			a(href="") 文章
+				//- 		li
+				//- 			a(href="") 活動
+				//- li(data-aos-delay="400", data-aos="fade-in")
+				//- 	a(href="") 綠芽生活販
+				//- li.dropdown(data-aos="fade-in" data-aos-delay="500")
+				//- 	a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 關於綠芽
+				//- 	ul.dropdown-menu.company-dropdown(role='menu')
+				//- 		li
+				//- 			a(href="") 求提拔
+				//- 		li
+				//- 			a(href="") 曙酒吧
+				//- 		li
+				//- 			a(href="") 綠芽創意
+				//- li(data-aos-delay="600", data-aos="fade-in")
+				//- 	a(href="") 綠芽消息
+				//- li(data-aos-delay="700", data-aos="fade-in")
+				//- 	a(href="") 聯絡綠芽
+				//- li.social(data-aos-delay="800", data-aos="fade-in")
+				//- 	a.svg(href="https://reurl.cc/v53lMe" target="_blank" style="background:url("+url+"nav-social-1.svg); width: 32px; height: 32px;")
+				//- 	a.svg(href="https://lin.ee/z6AQUrM" target="_blank" style="background:url("+url+"nav-social-2.svg); width: 32px; height: 32px;")
+				//- 	a.svg(href="https://reurl.cc/KxKmG9" target="_blank" style="background:url("+url+"nav-social-3.svg); width: 32px; height: 32px;")

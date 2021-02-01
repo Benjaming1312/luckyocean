@@ -1,4 +1,4 @@
-$dotW: 8px
+$dotW: 10px
 // .banner
 //   padding: 0
 //   width: 100%
@@ -70,6 +70,9 @@ $dotW: 8px
 //       .module-ads
 //         width: 100%
 .mads-li
+  margin-bottom: 60px
+  @media #{$mobile}
+    margin-bottom: 30px
   img
     width: 100%
   .owl-controls
@@ -92,8 +95,8 @@ $dotW: 8px
         margin-right: 0
       span
         opacity: 1
-        border-radius: 0
-        background: #5b8258
+        border-radius: 0        
+        background: rgba(#E7E8EC, .5)
         border-radius: 50%
         width: $dotW
         height: $dotW
@@ -103,7 +106,7 @@ $dotW: 8px
           height: $dotW
       &.active
         span
-          background: #f7f9f7
+          background: #FFFFFF
           border-radius: 50%
           @media #{$mobile}
             width: $dotW

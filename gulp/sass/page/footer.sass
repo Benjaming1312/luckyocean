@@ -1,8 +1,12 @@
 footer.foot
-  background: #f0ede6
-  padding-top: 15px
+  background: #EBE8E2
+  padding-top: 25px
   position: relative
-  padding-bottom: 70px
+  padding-bottom: 0px
+  margin-top: 120px
+  display: flex
+  width: 100%
+  justify-content: center
   @media #{$pad-horizantal}
     padding-left: 30px
     padding-right: 30px
@@ -10,148 +14,99 @@ footer.foot
     padding-left: 30px
     padding-right: 30px
   @media #{$mobile}
-    padding-bottom: 40px
+    padding: 30px
+    padding-bottom: 15px
+    margin-top: 30px
   .row
+    +max-width
+    margin: 0 -30px
+    position: relative
+    width: 100%
+    @media screen and (min-width: 768px)
+      display: flex
+  .col-sm-4
+    padding: 0 30px
+    &.img-content
+      margin-top: 0px
+      position: relative
+      top: 30px
+      @media #{$mobile}
+        margin-bottom: 15px
+      img
+        @media screen and (min-width: 768px)
+          position: relative
+          left: -30px
+    &.info-content
+      .title
+        margin-bottom: 25px
+        &::after
+          background: url(#{$url}title-mask-2.svg)center center no-repeat
+      p
+        font-size: 18px
+        letter-spacing: 0.1rem
+        color: #414042
+        white-space: nowrap
+        @media screen and (min-width: 768px)
+          position: relative
+          left: -30px
+        @media #{$mobile}
+          font-size: 14px
+          letter-spacing: 0
+          position: relative
+          left: -30px
+        &:last-child
+          padding-bottom: 0
+          margin-bottom: 0
+        *
+          font-size: 18px
+          letter-spacing: 0.1rem
+          color: #414042
+          @media #{$mobile}
+            font-size: 14px
+            letter-spacing: 0
+        .svg
+          max-width: 18px
+          max-height: 18px
+          margin-right: 15px
+    &.social-content
+      .list-inline
+        margin: 0
+        position: absolute
+        right: 0
+        bottom: 0
+        @media #{$mobile}
+          position: static
+          width: 100%
+          display: flex
+          justify-content: center
+          margin-top: 15px
+    
+div.design
+  background: #EBE8E2
+  padding-bottom: 7.5px
+  p
     +max-width
     margin: 0 auto
     position: relative
-  p.title
-    font-size: 17px
-    font-weight: 500
-    margin-bottom: 5px
-    color: #5b8258
-  .info-social-append
-    .social
+    span
+      color: #A6A8AB
+      font-size: 14px
+      margin-left: 7.5px
       @media #{$mobile}
-        max-height: 25px
-        position: relative
-        top: 5px
-      li
-        @media #{$mobile}
-          max-height: 25px
-  .social
-    position: absolute
-    right: 0
-    top: 40px
-    @media #{$pad-horizantal}
-      position: static
-      margin-bottom: 0
-      margin-top: 7.5px
-    @media #{$pad-vertical}
-      position: static
-      margin-bottom: 0
-      margin-top: 7.5px
-    @media #{$mobile}
-      position: static
-      margin-bottom: 0
-      margin-top: 0
-    li
-      @media #{$mobile}
-        margin: 0 7.5px
-        &::after
-          display: none!important
-    .svg
-      +trans
-      @media #{$mobile}
-        max-width: 25px
-        max-height: 25px
-      &:hover
-        opacity: 0.5
-  .list-inline:not(.social)
-    margin: 0
-    margin-bottom: 0px
-    li
-      padding: 0
-      color: #5b8258
-      font-size: 15px
-      @media #{$pad-horizantal}
-        font-size: 12px
-      @media #{$pad-vertical}
-        font-size: 12px
-      @media #{$mobile}
-        line-height: 26px
-        font-size: 10px
-      &:last-child
-        &::after
-          display: none
-      &:nth-child(even)
-        &::after
-          @media #{$mobile}
-            display: none
-      &::after
-        content: ''
-        display: inline-block
-        width: 1px
-        height: 16px
-        background: #5b8258
-        position: relative
-        top: 2px
-        margin: 0 15px
-        @media #{$pad-horizantal}
-          margin: 0 7.5px
-        @media #{$pad-vertical}
-          margin: 0 7.5px
-        @media #{$mobile}
-          margin: 0 5px
-          height: 12px
-      *
-        color: #5b8258
-        font-size: 15px
-        @media #{$pad-horizantal}
-          font-size: 12px
-        @media #{$pad-vertical}
-          font-size: 12px
-        @media #{$mobile}
-          font-size: 10px
-  p:not(.title)
-    position: relative
-    color: #727171
-    font-size: 12px
-    line-height: 18px
-    letter-spacing: 0.2rem
-    margin-top: 15px
-    @media #{$pad-horizantal}
-      letter-spacing: 0.1rem
-    @media #{$pad-vertical}
-      letter-spacing: 0.1rem
-    @media #{$mobile}
-      letter-spacing: 0.1rem
-      margin-top: 15px
-    &::before
-      content: ''
-      width: calc(100% + 60px)
-      height: 1px
-      background: rgba(#5b8258, .5)
+        display: block
+        text-align: center
+    a
+      color: #A6A8AB
+      font-size: 14px
       position: absolute
-      top: -7.5px
-      left: -30px
-      @media #{$pad-vertical}
-        width: 100%
-        left: 0
-      @media #{$pad-horizantal}
-        width: 100%
-        left: 0
+      right: 0
+      bottom: 0
       @media #{$mobile}
+        position: static
+        display: block
         width: 100%
-        left: 0
-.fix-bottom
-  position: fixed
-  bottom: 0
-  left: 0
-  width: 100%
-  background: rgba(#5b8258, 1)
-  padding: 7.5px 0
-  text-align: center
-  +trans
-  img
-    margin: 0 auto
-    @media #{$pad-vertical}
-      width: 90%
-    @media #{$pad-horizantal}
-      width: 90%
-    @media #{$mobile}
-      width: 90%
-// div.design
+        text-align: center
+        margin-top: 7.5px
 //   // background: url(#{$url}section-3-bg.png) center center repeat-y
 //   // background-size: cover
 //   // background: rgba(#b1d3c7, .5)
@@ -199,20 +154,29 @@ footer.foot
 //         width: 100%
 //         margin-top: 5px
 
-// .right
-//   position: fixed
-//   bottom: 30%
-//   width: 35px
-//   right: 15px
-//   z-index: 9999
-//   @media #{$mobile}
-//     $w: 50px
-//     text-align: right
-//     right: 15px
-//   .gotop
-//     +trans
-//     &:hover
-//       opacity: 0.3
+.right
+  position: fixed
+  bottom: 30%
+  width: 70px
+  right: 15px
+  z-index: 9999
+  @media #{$mobile}
+    $w: 70px
+    text-align: right
+    right: 15px
+  .svg
+    max-width: 70px
+    max-height: 70px
+    margin-bottom: 7.5px
+    filter: drop-shadow(7px 7px 5px rgba(#000, .15))
+    +trans
+    &:hover
+      filter: drop-shadow(0px 0px 5px rgba(#000, .15))
+      opacity: 0.7
+  // .gotop
+  //   +trans
+  //   &:hover
+  //     opacity: 0.3
 //   img
 //     max-width: 35px
   // .svg

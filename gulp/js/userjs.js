@@ -1,18 +1,23 @@
-const search = require('./search')
+// const search = require('./search')
 const index_banner = require('./index_banner')
-const append_member = require('./append_member')
+// const append_member = require('./append_member')
+const gotop = require('./gotop')
+
 
 $(function () {
   const navH = $('nav.navbar').innerHeight()
-  append_member()
+  // append_member()
   // search()
-  index_banner(navH)
+
 
   $('.d-item').each(function () {
     $(this).attr('data-aos', 'fade-up')
   })
   
+  gotop()
   setTimeout(() => {
+    index_banner(navH)
+
     AOS.init({
       once: true,
       duration: 700,

@@ -7,15 +7,13 @@
   border: 0
   box-shadow: none
   border-radius: 0
-  background: #bdd2c3
-  padding: 30px 0
+  background: white
+  padding: 25px 0 15px
   border-top: 0
-  padding-top: 90px
-  padding-bottom: 0
   // border-bottom: 1px solid rgba(#d3a500, .31)
   @media #{$mobile}
-    padding: 7.5px 0
-    padding-bottom: 0
+    padding: 15px 0
+    padding-top: 20px
   // @media #{$pad-vertical}
   //   padding: 15px
   // @media #{$pad-horizantal}
@@ -49,15 +47,15 @@
     @media #{$mobile}
       padding: 0
       background-position: left center!important
-      max-width: 80px
-      max-height: 80px
+      // max-width: 80px
+      // max-height: 80px
       margin-left: 22.5px
       position: relative
       top: -5px
       z-index: 9
   .navbar-toggle
     border: 0
-    margin-top: 27px
+    margin-top: -5px
     margin-right: 0
     background: none
     border-radius: 0
@@ -68,7 +66,7 @@
     .sr-only
       display: none
     .icon-bar
-      background: #5b8258
+      background: #D9CBBC
       width: 30px
       margin-bottom: .5rem
       +trans
@@ -95,36 +93,24 @@
       float: left
       width: 100%
       margin: 0
-    &::after
-      @media #{$mobile}
-        content: ''
-        display: block
-        width: 100%
-        height: 15px
-        background: #5b8258
-        position: absolute
-        bottom: 0
-        left: 0
 
   //   @media #{$padV}
   //     width: 100%
   //     padding: 0 15px
   #navbar
     padding: 0
-    background: #5b8258
     @media screen and (min-width: 768px)
       width: 100%
-      padding-top: 3.25px
+      padding-top: 0px
       padding-bottom: 0px
       display: flex!important
-      justify-content: flex-end
-      padding-right: 20px
+      justify-content: center
     @media #{$mobile}
       width: 100%
       margin: 0
       padding-bottom: 15px
       box-shadow: none
-      padding-top: 15px
+      padding-top: 7.5px
       margin-bottom: -15px
       a
         border: 0
@@ -148,11 +134,10 @@
         width: 100%
         padding: 0 5px
         margin-top: 0
-      *
-        color: #808080
-        font-size: 17px
-        letter-spacing: 0.05rem
-        font-weight: 400!important
+      // *
+      //   color: #808080
+      //   font-size: 17px
+      //   letter-spacing: 0.05rem
       >li
         @media screen and (min-width: 768px)
           margin-left: 10px
@@ -165,28 +150,49 @@
         >a
           position: relative
           text-transform: uppercase
-          color: #f2f0f0
+          color: #6D6E71
           padding-bottom: 0
-          font-weight: normal
+          font-weight: 300
           border: 0
           padding: 0.5rem 0
           border-radius: 0px
           font-size: 18px
-          font-weight: 500
+          letter-spacing: 0.15rem
           +trans
           @media screen and (min-width: 768px)
             margin-right: 0px
+            padding-bottom: 0
+            padding-top: 0
           @media #{$pad-vertical}
             font-size: 13px
           // @media #{$padH}
           //   padding: 5px 7.5px
           &:hover
-            color: #bdd2c3
+            color: #303030
             border-bottom: 0
+            @media #{$mobile}
+              padding-left: 15px
+              color: #D9CBBC
+            &::after
+              transform: translateY(0)
+              opacity: 1
+          &::after
+            content: ''
+            display: block
+            margin: 0 auto
+            width: 13px
+            height: 11px
+            background: url(#{$url}nav-arrow.svg)center center no-repeat
+            margin-top: 7.5px
+            transform: translateY(30px)
+            opacity: 0
+            +trans
+            @media #{$mobile}
+              display: none
       li
         position: initial
         padding-bottom: 0px
-        margin-left: 3.5vw
+        margin: 0 3vw
         padding-bottom: 3.25px
         @media #{$pad-horizantal}
           margin-left: 3vw
@@ -194,6 +200,13 @@
           margin-left: 1vw
         @media #{$mobile}
           margin-left: 0
+        &.logo
+          margin: 0 0vw
+          position: relative
+          top: -7.5px
+          a
+            &::after
+              display: none
         &.link
           position: relative
           top: -5px
