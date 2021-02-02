@@ -10,6 +10,7 @@
   background: white
   padding: 25px 0 15px
   border-top: 0
+  filter: drop-shadow(7px 7px 5px rgba(#000, .5))
   // border-bottom: 1px solid rgba(#d3a500, .31)
   @media #{$mobile}
     padding: 15px 0
@@ -112,6 +113,7 @@
       box-shadow: none
       padding-top: 7.5px
       margin-bottom: -15px
+      padding-left: 15px
       a
         border: 0
         color: white
@@ -163,8 +165,9 @@
             margin-right: 0px
             padding-bottom: 0
             padding-top: 0
-          @media #{$pad-vertical}
-            font-size: 13px
+          @media #{$mobile}
+            font-size: 20px
+            letter-spacing: 0.25rem
           // @media #{$padH}
           //   padding: 5px 7.5px
           &:hover

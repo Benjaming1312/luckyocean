@@ -42,7 +42,7 @@ footer.foot
         &::after
           background: url(#{$url}title-mask-2.svg)center center no-repeat
       p
-        font-size: 18px
+        font-size: 16px
         letter-spacing: 0.1rem
         color: #414042
         white-space: nowrap
@@ -58,7 +58,7 @@ footer.foot
           padding-bottom: 0
           margin-bottom: 0
         *
-          font-size: 18px
+          font-size: 16px
           letter-spacing: 0.1rem
           color: #414042
           @media #{$mobile}
@@ -90,14 +90,14 @@ div.design
     position: relative
     span
       color: #A6A8AB
-      font-size: 14px
+      font-size: 12px
       margin-left: 7.5px
       @media #{$mobile}
         display: block
         text-align: center
     a
       color: #A6A8AB
-      font-size: 14px
+      font-size: 12px
       position: absolute
       right: 0
       bottom: 0
@@ -170,6 +170,9 @@ div.design
     margin-bottom: 7.5px
     filter: drop-shadow(7px 7px 5px rgba(#000, .15))
     +trans
+    @media #{$mobile}
+      max-width: 50px
+      max-height: 50px
     &:hover
       filter: drop-shadow(0px 0px 5px rgba(#000, .15))
       opacity: 0.7
