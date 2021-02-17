@@ -1,7 +1,7 @@
 const is = require('./is')
 
 module.exports = function (navH) {
-	if (!is('.idx')) {
+	if (!is('.module-adv')) {
 		return
 	}
 

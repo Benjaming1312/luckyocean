@@ -1,0 +1,69 @@
+@keyframes down
+ 0%
+   transform: translateY(-15px)
+100%
+   transform: translateY(10px)
+
+.module-cglist
+  +max-width
+  margin-left: auto
+  margin-right: auto
+  .mt
+    display: none
+
+.page.custom
+  .module-title
+    .title
+      border: 0
+      margin-bottom: 30px
+      padding-bottom: 0
+  .col-sm-6
+    margin-bottom: 30px
+    @media #{$mobile}
+      margin-bottom: 30px
+  h3.title
+    font-weight: bold
+    font-size: 26px
+    letter-spacing: 0.25rem
+    @media #{$mobile}
+      letter-spacing: 0.1rem
+      font-size: 20px
+      text-align: center
+
+.service.process
+  .col-xs-12
+    text-align: center
+    margin-bottom: 15px
+    &:first-child,
+    &:nth-child(2),
+    &:nth-last-child(1)
+      &::before
+        display: none
+    &::before
+      content: ''
+      display: block
+      margin: 0 auto
+      width: 15px
+      +tr3(#000, $color-n, $color-n, $color-n)
+      border-width: 15px 10px 0 10px
+      margin-bottom: 20px
+      -webkit-animation-duration: 1s
+      animation-duration: 1s
+      -webkit-animation-fill-mode: both
+      animation-fill-mode: both
+      -webkit-animation-iteration-count: infinite
+      animation-iteration-count: infinite
+      animation-name: down
+      +trans
+      transform: translateY(10px)
+    h4.title
+      margin-top: 15px
+      margin-bottom: 15px
+      font-size: 20px
+      letter-spacing: 1px
+      padding: 7.5px
+      background: #ddd
+      border: 0
+      @media #{$mobile}
+        font-size: 16px
+        line-height: 30px

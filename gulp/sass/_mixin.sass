@@ -71,7 +71,7 @@ $fm-cn: "Microsoft YaHei","SimHei","LiHei Pro Medium","SimHei","sans-serif"
 
 
 // 三角形（上·右·下·左）
-@mixin tr3($color_1,$color_2,$color_3,$color_4) 
+@mixin tr3($color_1,$color_2: $color-n,$color_3: $color-n,$color_4: $color-n) 
 	border-width: .5em
 	border-style: solid solid solid solid
 	border-color: $color_1 $color_2 $color_3 $color_4
