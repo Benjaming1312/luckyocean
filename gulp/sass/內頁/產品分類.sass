@@ -1,0 +1,331 @@
+
+.product-list
+  +max-width
+  @media screen and (min-width: 768px)
+    margin-bottom: 30px
+
+  @media #{$pad-vertical}
+    padding-left: 30px
+    padding-right: 30px
+  @media #{$pad-horizantal}
+    padding-left: 30px
+    padding-right: 30px
+  @media #{$mobile}
+    padding: 0 15px
+
+  .product-banner
+    margin-bottom: 30px
+  >.row
+    @media screen and (min-width: 768px)
+      margin: 0px
+    @media #{$mobile}
+      display: flex
+      flex-wrap: wrap
+  #pageptlist
+    @media screen and (min-width: 768px)
+      margin: 0 -5px
+  .module-ptlist
+    @media #{$pad-horizantal}
+      padding: 0
+    @media #{$pad-vertical}
+      padding: 0
+  .mpgdetail
+    @media #{$mobile}
+      padding: 0
+  $aside: 200px
+  aside
+    padding-left: 0
+    padding-right: 0
+    @media screen and (min-width: 768px)
+      width: $aside
+    @media #{$mobile}
+      padding: 0 15px
+      margin-bottom: 15px
+    *
+      color: #666
+    .title
+      font-size: 16px
+      font-weight: bold
+      border-bottom: 1px solid #666
+      padding-bottom: 7.5px
+      margin-bottom: 15px
+      color: #666
+    // .panel:nth-last-of-type(2)
+    //   margin-bottom: 20px
+    .dm-content
+      margin-bottom: 15px
+      @media #{$mobile}
+        margin-bottom: 30px
+      figcaption
+        margin-top: 7.5px
+        font-size: 14px
+        line-height: 25px
+        margin-bottom: 0
+        span, b
+          font-size: 14px
+        a
+          border: 0
+          color: #303030
+          font-weight: bold
+          font-size: 14px
+    .panel
+      border: 0
+      box-shadow: none
+      background: none
+      border-radius: 0
+    .panel-heading
+      background: none
+      border: 0
+      padding-left: 0
+      padding-right: 0
+      color: #666
+      border-bottom: 1px solid #ccc
+      @media #{$mobile}
+        padding-top: 5px
+        padding-bottom: 5px
+      .panel-title
+        +trans
+        padding-left: 0
+        a
+          font-size: 16px
+          border: 0
+          &.active
+            color: #000
+            &+a
+              .fa
+                color: #000
+        a:first-child
+          &.active
+            &::before
+              margin-right: 22.5px
+          &+a
+            margin-left: 7.5px
+            float: right
+            .fa
+              &::before
+                content: '\f068'
+            &.collapsed
+              .fa
+                &::before
+                  content: '\f067'
+
+        &:hover
+          a:first-child
+            &::before
+              margin-right: 22.5px
+    >p
+      padding: 10px 15px
+      padding-left: 0
+      margin-bottom: 0
+      border-bottom: 1px solid #666
+      a
+        font-size: 16px
+        color: #666
+      +trans
+      &:hover
+        padding-left: 15px
+    .panel-body
+      padding-left: 15px
+      padding-bottom: 0
+      @media #{$mobile}
+        padding-top: 7.5px
+      ul
+        padding-left: 10px
+        @media #{$mobile}
+          margin-bottom: 0
+      li
+        margin-bottom: 15px
+        @media #{$mobile}
+          margin-bottom: 7.5px
+        a
+          font-size: 16px
+          border: 0
+          display: block
+          +trans
+          &:hover, &.active
+            padding-left: 7.5px
+            color: #303030
+            font-weight: bold
+  main.col-sm-9
+    @media screen and (min-width: 768px)
+      width: calc(100% - #{$aside})
+      padding-left: 60px
+    .mb
+      padding-top: 0
+  .d-img
+    a
+      display: block
+      width: 100%
+      height: 100%
+      position: relative
+      padding-top: 100%
+      background-size: cover!important
+      background-position: center!important
+      background-repeat: no-repeat!important
+      @media #{$mobile}
+        margin-bottom: 15px
+      img
+        display: none
+      &:hover
+        span.box
+          &::after
+            background: rgba(#000, .3)
+          i
+            opacity: 1
+    span.box
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      height: 100%
+      position: absolute
+      left: 0
+      top: 0
+      &::after
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        background: rgba(#000, 0)
+        position: absolute
+        left: 0
+        top: 0
+        +trans
+      i
+        font-size: 26px
+        color: white
+        position: relative
+        z-index: 3
+        +trans
+        opacity: 0
+// .module-meccglist,
+// .module-
+//   .mt
+//     h3
+//       color: $color-green
+//       border-color: #ccc
+//       border-width: 1px
+//       font-weight: bold
+//       padding-left: 0px
+//       margin-bottom: 15px
+//       font-weight: 500
+//       @media #{$mobile}
+//         padding-right: 0
+// .module-ptlist,
+// .module-
+//   @media #{$pad-vertical}
+//     padding: 0 30px
+//   @media #{$pad-horizantal}
+//     padding: 0 30px
+//   .mb
+//     padding-top: 0
+//   .listBS
+//     display: flex
+//     flex-wrap: wrap
+//     margin: 0 -15px
+//     @media #{$pad-vertical}
+//       flex-wrap: wrap
+//     @media #{$pad-horizantal}
+//       flex-wrap: nowrap
+//   .d-item
+//     margin-bottom: 7.5px
+//     cursor: pointer
+//     background: none
+//     @media screen and (min-width: 768px)
+//       margin-bottom: 30px
+//     @media #{$pad-vertical}
+//       width: 49%
+//     @media #{$pad-horizantal}
+//       width: 33.3333%
+//     @media #{$mobile}
+//       margin-bottom: 30px
+//       padding-left: 0
+//       padding-right: 0
+//       width: 50%
+//     img
+//       display: none
+//     &:hover
+//       .d-txt
+//         a
+//           color: #666
+//       .d-img
+//         opacity: 0.5
+//         img
+//           transform: scale(1.1)
+//           opacity: 0.7
+//     .mbox
+//       position: relative
+//       height: 100%
+//       padding: 0 7.5px
+//       padding-bottom: 15px
+//       @media #{$mobile}
+//         padding: 0 15px
+//     a
+//       border: 0
+//     .d-img
+//       position: relative
+//       overflow: hidden
+//       +trans
+//       a
+//         padding-top: 100%
+//         background-size: contain!important
+//         background-position: center!important
+//         background-repeat: no-repeat!important
+//         +trans
+//       img
+//         +trans
+//     .d-txt
+//       h5
+//         padding-left: 0
+//         text-align: center
+//         margin-top: 15px
+//         margin-bottom: 0px
+//         a
+//           color: #666
+//           font-size: 17px
+//           font-weight: bold
+//           font-family: sans-serif!important
+//           color: $color-green-d
+//           +trans
+//           @media #{$mobile}
+//             font-size: 15px
+//       .mdetail
+//         font-size: 14px
+//         text-align: center
+//         color: #7d7d7d
+//         @media #{$mobile}
+//           font-size: 12px
+//     .mpro-price
+//       text-align: center
+//       margin-top: 7.5px
+//       .oriprice
+//         display: none
+//       span
+//         color: $color-b
+//         font-size: 14px
+//         font-weight: bold
+//         &.mpri-val
+//           color: $color-red
+//           font-size: 17px
+//     .mpro-btns
+//       margin-top: 15px
+//       text-align: center
+//       .mbtn
+//         white-space: nowrap
+//         @media #{$pad-horizantal}
+//           padding-left: 15px
+//           padding-right: 15px
+//         @media #{$pad-vertical}
+//           padding-left: 15px
+//           padding-right: 15px
+//         @media #{$mobile}
+//           white-space: nowrap
+//           padding-left: 15px
+//           padding-right: 15px
+.module-sublist
+  display: none
+.fancybox-container
+  *
+    color: white!important
+  svg
+    fill: white!important

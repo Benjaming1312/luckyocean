@@ -1,0 +1,87 @@
+- var url = '/ezfiles/814/1814/img/864/'
+include ./prodData.pug
+
+mixin panel(propList, path)
+  each item, idx in propList
+    if item.children
+      .panel.panel-default
+        .panel-heading
+          .panel-title
+            a(href=item.link)=item.label
+            a.collapsed(
+              data-toggle="collapse"
+              data-parent="#accordion-" + path
+              href="#collapse-" + path + "-" + item.id)
+              .fa.fa-plus
+        .panel-collapse.collapse(id="collapse-" + path + "-" + item.id)
+          .panel-body
+            .panel-group(id="accordion-" + path + "-" + item.id)
+              +panel(item.children, path + "-" + item.id)
+    else
+      li
+        a(href=item.link)=item.label
+
+
+
+.page.container-fluid.shop-list.product-list
+  .row
+    aside.col-sm-3.col-xs-12
+      .panel-group(id="accordion-1")
+        each parent, pidx in list
+          .panel.panel-default
+            .panel-heading
+              .panel-title
+                a(href=parent.link)=parent.label
+                if (parent.children)
+                  a.collapsed(
+                    data-toggle="collapse"
+                    data-parent="#accordion-1"
+                    href="#collapse-" + parent.id)
+                    .fa.fa-plus
+            if (parent.children)
+              .panel-collapse.collapse(id="collapse-" + parent.id)
+                .panel-body
+                  ul.panel-group(id="accordion-1-" + parent.id)
+                    +panel(parent.children, "1-" + parent.id)
+    main.col-sm-9.col-xs-12.append
+
+.prod-info.img
+  a(href=url + "menu-2.jpg" data-fancybox="gallery")
+    img.img-responsive(src=url + "menu-2.jpg", alt="")
+    span.box
+      i.fa.fa-search
+
+//-   p
+//-     | Borsalini 義大利真皮斜背包
+//-     br
+//-     | 義大利製造，超輕質粗顆粒牛皮，不易刮傷，
+//-     br
+//-     | 獨特粗車線縫飾，張顯率性特色。
+//-   ul.nav.nav-tabs.list-inline
+//-     li.active
+//-       a(href="#prod-1" data-toggle="tab") 商品描述
+//-     li
+//-       a(href="#prod-2" data-toggle="tab") 商品資訊
+//-   .tab-content
+//-     #prod-1.tab-pane.fade.in.active
+//-       p
+//-         | 品號 : BS20FICBLT583
+//-         br
+//-         | 材質 : 牛皮
+//-         br
+//-         | 尺寸 : 31x30x17/cm
+//-         br
+//-         | 顏色 : 藍/黑
+//-         br
+//-         | 產地 : 義大利
+//-     #prod-2.tab-pane.fade
+//-       p
+//-         | ※本賣場不提供換貨服務，但均享有商品到貨7天猶豫期之權益，可辦理退貨。
+//-         br
+//-         | ※商品圖片顏色因攝影棚打光效果及顯示器會略有不同，以實際商品顏色為準。
+//-         br
+//-         | ※商品尺寸會因測量方式不同而約略有少數值的誤差。
+//-         br
+//-         | ※訂單成立後，約3-5個工作天內送達(不含週六日及國定假日)。
+//-         br
+//-         | ※賣場中所有文字、圖片及網頁設計均有智慧財產權，未經同意請勿任意竄改使用。

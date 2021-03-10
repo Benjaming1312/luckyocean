@@ -1,0 +1,91 @@
+- var url = '/ezfiles/853/1853/img/1414/'
+- 
+  var list = [
+    {
+      id: 1,
+      label: '刺繡',
+      link: '/m/412-1858-1872.php',
+      children: [
+        {
+          id: 1,
+          label: '刺繡臂章',
+          link: '/m/412-1858-1873.php'
+        },
+        {
+          id: 2,
+          label: '刺繡鑰匙圈',
+          link: '/m/412-1858-1874.php'
+        },
+        {
+          id: 3,
+          label: '刺繡別針款',
+          link: '/m/412-1858-1875.php'
+        }
+      ]
+    }
+  ]
+
+//- =panel(propList, idx, path)
+  //- each item, idx in propList
+  //-   .panel-group(id="#accordion" + idx)
+        //- .panel.panel-default
+        //-   .panel-heading
+        //-     .panel-title
+        //-       a(href="/m/2000-1813-1240.php") HEAD
+        //-       a.collapsed(data-toggle="collapse" data-parent="#accordion" + idx href="#collapse-1")
+        //-         .fa.fa-plus
+        //-   #collapse-1.panel-collapse.collapse
+        //-     .panel-body
+
+
+//- .page.container-fluid.product-list
+//-   .row
+//-     aside.col-sm-3.col-xs-12
+//-       each parent, pidx in list
+
+
+//-         //- .panel-group(id="#accordion" + pidx)
+//-         //-   .panel.panel-default
+//-         //-     .panel-heading
+//-         //-       .panel-title
+//-         //-         a(href="/m/2000-1813-1240.php") HEAD
+//-         //-         a.collapsed(data-toggle="collapse" data-parent="#accordion-1" href="#collapse-1")
+//-         //-           .fa.fa-plus
+//-         //-     #collapse-1.panel-collapse.collapse
+//-         //-       .panel-body
+//-         //-         ul
+//-         //-           li
+//-         //-             a(href="/m/2000-1813-1242.php") 網球拍
+//-         //-           li
+//-         //-             a(href="/m/2000-1813-1243.php") 壁球拍
+//-         //-           li
+//-         //-             a(href="/m/2000-1813-1244.php") 球拍袋
+//-         //-           li
+//-         //-             a(href="/m/2000-1813-1245.php") 運動鞋子
+//-         //-           li
+//-         //-             a(href="/m/2000-1813-1246.php") 運動服飾
+//-         //-           li
+//-                     a(href="/m/2000-1813-1247.php") 耗材&道具
+//-         //- .panel.panel-default
+//-         //-   .panel-heading
+//-         //-     .panel-title
+//-         //-       a(href="/m/2000-1813-1241.php") INFIN
+//-         //-       a.collapsed(data-toggle="collapse" data-parent="#accordion-1" href="#collapse-2")
+//-         //-         .fa.fa-plus
+//-         //-   #collapse-2.panel-collapse.collapse
+//-         //-     .panel-body
+//-         //-       ul
+//-         //-         li
+//-         //-           a(href="/m/2000-1813-1248.php") 戶外休閒/運動商品
+//-         //-         li
+//-         //-           a(href="/m/2000-1813-1249.php") 電腦包/後揹包/行李箱
+//-         //-         li
+//-         //-           a(href="/m/2000-1813-1250.php") 餐廚刀具
+//-         //-         li
+//-         //-           a(href="/m/2000-1813-1251.php") 護膚保養/沐浴洗髮
+//-         //-         li
+//-         //-           a(href="/m/2000-1813-1252.php") 時尚墨鏡/手錶
+//-         //-         li
+//-         //-           a(href="/m/2000-1813-1253.php") 居家香氛
+//-     main.col-sm-9.col-xs-12.append
+//-       | ===MODULE===
