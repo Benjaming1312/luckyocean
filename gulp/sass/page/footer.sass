@@ -1,112 +1,53 @@
 footer.foot
-  background: #EBE8E2
-  padding-top: 25px
-  position: relative
-  padding-bottom: 0px
-  margin-top: 120px
-  display: flex
-  width: 100%
-  justify-content: center
-  @media #{$pad-horizantal}
-    padding-left: 30px
-    padding-right: 30px
-  @media #{$pad-vertical}
-    padding-left: 30px
-    padding-right: 30px
+  background: #f1f3f3
+  margin-top: 30px
+  padding-top: 60px
   @media #{$mobile}
-    padding: 30px
-    padding-bottom: 15px
-    margin-top: 30px
-  .row
-    +max-width
-    margin: 0 -30px
-    position: relative
-    width: 100%
-    @media screen and (min-width: 768px)
-      display: flex
-  .col-sm-4
-    padding: 0 30px
-    &.img-content
-      margin-top: 0px
-      position: relative
-      top: 30px
-      @media #{$mobile}
-        margin-bottom: 15px
-      img
-        @media screen and (min-width: 768px)
-          position: relative
-          left: -30px
-    &.info-content
-      .title
-        margin-bottom: 25px
-        &::after
-          background: url(#{$url}title-mask-2.svg)center center no-repeat
-      p
-        font-size: 16px
-        letter-spacing: 0.1rem
-        color: #414042
-        white-space: nowrap
-        @media screen and (min-width: 768px)
-          position: relative
-          left: -30px
-        @media #{$mobile}
-          font-size: 14px
-          letter-spacing: 0
-          position: relative
-          left: -30px
-        &:last-child
-          padding-bottom: 0
-          margin-bottom: 0
-        *
-          font-size: 16px
-          letter-spacing: 0.1rem
-          color: #414042
-          @media #{$mobile}
-            font-size: 14px
-            letter-spacing: 0
-        .svg
-          max-width: 18px
-          max-height: 18px
-          margin-right: 15px
-    &.social-content
-      .list-inline
-        margin: 0
-        position: absolute
-        right: 0
-        bottom: 0
-        @media #{$mobile}
-          position: static
-          width: 100%
-          display: flex
-          justify-content: center
-          margin-top: 15px
-    
-div.design
-  background: #EBE8E2
-  padding-bottom: 7.5px
+    padding-top: 30px
+    margin-bottom: 15px
+  .logo
+    margin-bottom: 40px
   p
-    +max-width
-    margin: 0 auto
-    position: relative
-    span
-      color: #A6A8AB
-      font-size: 12px
-      margin-left: 7.5px
+    text-align: center
+    color: #000000
+    font-family: Arial, Helvetica, "Noto Sans TC","微軟正黑體", sans-serif
+    margin-bottom: 20px
+    font-size: 16px
+    @media #{$mobile}
+      white-space: nowrap
+    *
+      color: #000000
+      font-size: 16px
       @media #{$mobile}
-        display: block
-        text-align: center
-    a
-      color: #A6A8AB
-      font-size: 12px
-      position: absolute
-      right: 0
-      bottom: 0
-      @media #{$mobile}
-        position: static
-        display: block
-        width: 100%
-        text-align: center
-        margin-top: 7.5px
+        white-space: nowrap
+  
+    
+// div.design
+//   background: #EBE8E2
+//   padding-bottom: 7.5px
+//   p
+//     +max-width
+//     margin: 0 auto
+//     position: relative
+//     span
+//       color: #A6A8AB
+//       font-size: 12px
+//       margin-left: 7.5px
+//       @media #{$mobile}
+//         display: block
+//         text-align: center
+//     a
+//       color: #A6A8AB
+//       font-size: 12px
+//       position: absolute
+//       right: 0
+//       bottom: 0
+//       @media #{$mobile}
+//         position: static
+//         display: block
+//         width: 100%
+//         text-align: center
+//         margin-top: 7.5px
 //   // background: url(#{$url}section-3-bg.png) center center repeat-y
 //   // background-size: cover
 //   // background: rgba(#b1d3c7, .5)

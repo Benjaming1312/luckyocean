@@ -1,4 +1,4 @@
-- var url = '/ezfiles/858/1858/img/1517/'
+- var url = '/ezfiles/872/1872/img/1681/'
 nav.navbar
 	//- .navbar2
 	//- 	.content
@@ -14,36 +14,42 @@ nav.navbar
 				span.icon-bar
 				span.icon-bar
 			// LOGO放置處
-			a.navbar-brand.svg.visible-xs(href='/' style="background: url("+url+"logo.svg); width: 153px; height: 32px;")
+			a.navbar-brand.svg(href='/' style="background: url("+url+"logo.svg); width: 109px; height: 27px;")
 		#navbar.navbar-collapse.collapse
+			div.visible-xs.menu-bg
 			ul.nav.navbar-nav
-				//- li.search
-				//- 	.nav-form
-				//- 		//- a.toggle-search(type="button" style="background:url("+url+"search.svg); width: 20px; height: 20px;")
-				//- 		<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mobile&amp;Action=mobileptsearch/bin/index.php?Plugin=mobile&amp;Action=mobileptsearch&amp;Lang=zh-tw">
-				//- 			<div class="input-group">
-				//- 				<span class="input-group-btn">
-				//- 					button.btn.svg.hidden-xs(type="submit" style="background:url("+url+"search.svg); width: 20px; height: 20px;")
-				//- 					button.btn.svg.visible-xs(type="submit" style="background:url("+url+"search-w.svg); width: 20px; height: 20px;")
-				//- 				</span>
-				//- 				<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
-				//- 			</div>
-				//- 		</form>
-				//- li.member
+				li.search
+					.nav-form
+						//- a.toggle-search(type="button" style="background:url("+url+"search.svg); width: 20px; height: 20px;")
+						<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mobile&amp;Action=mobileptsearch/bin/index.php?Plugin=mobile&amp;Action=mobileptsearch&amp;Lang=zh-tw">
+							<div class="input-group">
+								<span class="input-group-btn">
+									button.btn.svg(type="submit" style="background:url("+url+"search.svg); width: 20px; height: 20px;")
+								</span>
+								<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
+							</div>
+						</form>
 				li(data-aos="fade-in", data-aos-delay="100")
-					a(href="") 生產流程
+					a(href="") About US
 				li(data-aos="fade-in", data-aos-delay="200")
-					a(href="") 服務項目
-				li(data-aos="fade-in", data-aos-delay="300")
-					a(href="") 產&nbsp;&nbsp;&nbsp;品
-				li.logo.hidden-xs
-					a.svg(href='/' style="background: url("+url+"logo.svg); width: 153px; height: 32px;")
+					a(href="") New Collection
+				li.dropdown(data-aos="fade-in" data-aos-delay="300")
+					a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') Store
+					ul.dropdown-menu.company-dropdown(role='menu')
+						li
+							a(href="") 所有商品
+						li
+							a(href="") OCEAN系列
+						li
+							a(href="") CITY系列
 				li(data-aos="fade-in", data-aos-delay="400")
-					a(href="") 訂製流程
-				li(data-aos="fade-in", data-aos-delay="500")
-					a(href="") Q&A
-				li(data-aos="fade-in", data-aos-delay="600")
-					a(href="") 聯絡我們
+					a(href="") Contact
+				li.ig
+					a.svg(href="" style="background:url("+url+"ig.svg); width: 20px; height: 20px;")
+				li.social
+					a.svg(href="" style="background:url("+url+"social-1.svg); width: 22px; height: 22px;") 
+					a.svg(href="" style="background:url("+url+"social-2.svg); width: 22px; height: 22px;") 
+					a.svg(href="" style="background:url("+url+"social-3.svg); width: 22px; height: 22px;") 
 
 				//- li.dropdown(data-aos="fade-in" data-aos-delay="100")
 				//- 	a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 酒  品

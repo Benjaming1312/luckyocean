@@ -1,13 +1,13 @@
 // const search = require('./search')
-const index_banner = require('./index_banner')
+// const index_banner = require('./index_banner')
 // const append_member = require('./append_member')
-const gotop = require('./gotop')
-const prod_side = require('./prod_side')
-const img_fancybox = require('./img_fancybox')
+// const gotop = require('./gotop')
+// const prod_side = require('./prod_side')
+// const img_fancybox = require('./img_fancybox')
 
 
 $(function () {
-  const navH = $('nav.navbar').innerHeight()
+  // const navH = $('nav.navbar').innerHeight()
   // append_member()
   // search()
 
@@ -16,11 +16,11 @@ $(function () {
     $(this).attr('data-aos', 'fade-up')
   })
   
-  gotop()
+  // gotop()
   setTimeout(() => {
-    index_banner(navH)
-    prod_side()
-    img_fancybox()
+    // index_banner(navH)
+    // prod_side()
+    // img_fancybox()
 
     AOS.init({
       once: true,
