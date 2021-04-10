@@ -1,0 +1,127 @@
+$pcolor: #0a1e25
+
+.page_mobile_mecrcglist,
+.page_mobile_meccg,
+.page_mobilelogin,
+.page_mobileacctinfo,
+.page_mobilecmhome,
+.page_mobilechgpasswd,
+.page_mobilepostedform,
+.page_mobile_mecorderlist,
+.page_mobile_mecdeliveraddrlist,
+.page_mobile_meccart,
+.page_mobile_mecbillto,
+.page_mobileforgetpass
+  padding-top: 180px
+  @media #{$mobile}
+    padding-top: 100px
+  .navbar-brand
+    background-image: url(#{$url}prod-logo.svg)!important
+    background-repeat: no-repeat!important
+    background-position: center!important
+    background-size: contain!important
+  .navbar-header
+    border-color: rgba($pcolor, .3)!important
+  #navbar
+    *
+      @media screen and (min-width: 768px)
+        color: $pcolor!important
+        text-shadow: none!important
+  .navbar.navbar.navbar
+    filter: none
+    .navbar-toggle
+      .icon-bar
+        background: $pcolor!important
+    .ig
+      .svg
+        @media screen and (min-width: 768px)
+          background-image: url(#{$url}prod-ig.svg)!important
+          background-repeat: no-repeat!important
+          background-position: center!important
+          background-size: contain!important
+    .social
+      .svg
+        &:nth-of-type(1)
+          @media screen and (min-width: 768px)
+            background-image: url(#{$url}prod-social-1.svg)!important
+            background-repeat: no-repeat!important
+            background-position: center!important
+            background-size: contain!important
+        &:nth-of-type(2)
+          @media screen and (min-width: 768px)
+            background-image: url(#{$url}prod-social-2.svg)!important
+            background-repeat: no-repeat!important
+            background-position: center!important
+            background-size: contain!important
+        &:nth-of-type(3)
+          @media screen and (min-width: 768px)
+            background-image: url(#{$url}prod-social-3.svg)!important
+            background-repeat: no-repeat!important
+            background-position: center!important
+            background-size: contain!important
+    .nav-form
+      .btn.svg
+        @media screen and (min-width: 768px)
+          background-image: url(#{$url}prod-search.svg)!important
+          background-repeat: no-repeat!important
+          background-position: center!important
+          background-size: contain!important
+      input
+        @media screen and (min-width: 768px)
+          border-color: $pcolor!important
+        &::placeholder
+          @media screen and (min-width: 768px)
+            color: $pcolor!important
+
+
+.page.prod-text
+  padding-top: 50px
+  padding-bottom: 50px
+  @media #{$mobile}
+    padding-top: 25px
+    padding-bottom: 25px
+  p
+    text-align: center
+    font-size: 17px
+    color: #0a1e25
+    line-height: 40px
+
+.module-rcglist,
+.module-ptlist
+  padding-top: 40px
+  padding-bottom: 40px
+  @media #{$mobile}
+    padding-top: 15px
+    padding-bottom: 15px
+  +max-width
+  .listBS
+    margin: 0 -30px
+    @media #{$mobile}
+      margin: 0
+    .d-item
+      padding: 0 30px
+      margin-bottom: 30px
+      @media #{$mobile}
+        padding: 0 15px
+      .mdetail
+        font-size: 17px
+        color: #0a1e25
+        text-align: center
+        line-height: 30px
+        margin-bottom: 15px
+      .mpro-price
+        text-align: center
+        *
+          color: #231815
+          font-size: 17px
+          font-weight: bold
+      .mpro-btns
+        margin-top: 15px
+        text-align: center
+        .mbtn
+          border-color: #0a1e25
+          background: none
+          color: #0a1e25
+          &:hover
+            background: #0a1e25
+            color: white

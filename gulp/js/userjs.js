@@ -4,6 +4,7 @@
 // const gotop = require('./gotop')
 // const prod_side = require('./prod_side')
 // const img_fancybox = require('./img_fancybox')
+const logout = require('./logout')
 
 
 $(function () {
@@ -21,6 +22,7 @@ $(function () {
     // index_banner(navH)
     // prod_side()
     // img_fancybox()
+    logout()
 
     AOS.init({
       once: true,

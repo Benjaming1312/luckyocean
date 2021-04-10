@@ -3,17 +3,30 @@
 .module-register,
 .module-memmenu,
 .module-changepwd,
-.module-viewcart
-  max-width: 500px!important
+.module-viewcart,
+.module-formlist,
+.module-orderlist,
+.module-consignee,
+.module-billto
+  max-width: 750px!important
   margin-left: auto
   margin-right: auto
   padding-bottom: 60px
+  margin-top: 60px
   @media #{$mobile}
+    margin-top: 30px
     padding-bottom: 30px
     margin: 30px
   .mt
+    border-color: #0a1e25
     h3
-      +title
+      border-color: #0a1e25
+      color: #0a1e25
+      text-align: center
+      font-weight: bold
+      font-size: 26px
+  .btn
+    margin-top: 30px
 
 .btn
   +btn
@@ -37,4 +50,17 @@
     margin-bottom: 30px
 
 .hdmenu
+  display: none
+
+.list-group-item 
+  a
+    +trans
+    &:hover
+      background: #0a1e25
+
+.mecmemcouponlist,
+.mecrequirerecord
+  display: none
+
+.module-sublist
   display: none

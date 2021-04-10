@@ -1,0 +1,31 @@
+.page.container-fluid
+  +max-width
+
+.page.aboutus
+  padding-top: 40px
+  padding-bottom: 50px
+  @media #{$mobile}
+    padding-top: 20px
+    padding-bottom: 25px
+  p
+    text-align: center
+    color: #0a1e25
+    font-size: 17px
+    line-height: 40px
+    *
+      font-size: 17px
+      color: #0a1e25
+  .btn
+    letter-spacing: 0
+    border-color: #231815
+    border-width: 2px
+    padding: 20px 40px
+    width: auto
+    min-width: initial
+    font-size: 17px
+    margin-top: 40px
+    @media #{$mobile}
+      margin-top: 20px
+    &:hover
+      background: #231815
+      color: white

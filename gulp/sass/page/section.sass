@@ -3,13 +3,6 @@ a
   &:focus
     outline: 0
     text-decoration: none
-html
-  overflow-x: hidden
-  body,
-  .wrap,
-  .main
-    // background: #f8f9f9
-    min-height: calc(100vh - 30px)
 .langbar
   display: none
 
@@ -28,6 +21,8 @@ html
   background: #f2f2f3
 =max-width
   max-width: 1100px
+  margin-left: auto
+  margin-right: auto
 
 =box-shadow
   box-shadow: 4px 4px 30px -5px rgba(0, 0, 0, .5)
@@ -91,21 +86,18 @@ html
   small
     font-size: 16px
 
-.mbtn, .btn
-  +btn
-  border-color: $color-blue
-  margin-left: auto
-  margin-right: auto
-  background: $color-blue
-  color: white
-  span
-    color: white
-    +trans
+.mbtn.mbtn,
+.btn.btn
+  background: none!important
+  border-color: #0a1e25
+  color: #0a1e25!important
+  +trans
   &:hover
-    background: none
-    color: $color-blue
-    span
-      color: $color-blue
+    background: #0a1e25!important
+    color: white!important
+  span
+    color: #0a1e25!important
+
 
 body:not(.page_mobilehome)
   background: url(#{$url}section-4-bg.png) center center repeat-y
