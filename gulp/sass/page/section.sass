@@ -86,15 +86,20 @@ a
   small
     font-size: 16px
 
-.mbtn.mbtn,
-.btn.btn
+.mbtn.mbtn:not(.svg),
+.btn.btn:not(.svg)
   background: none!important
   border-color: #0a1e25
   color: #0a1e25!important
   +trans
+  display: inline-flex
+  align-items: center
+  justify-content: center
   &:hover
     background: #0a1e25!important
     color: white!important
+    span
+      color: white!important
   span
     color: #0a1e25!important
 
@@ -129,3 +134,68 @@ body:not(.page_mobilehome)
       color: $color-blue
 .module-title
   +module-title
+
+
+.ecorder-form.ecorder-form .showother > .mbox > div[class$="-add"] .form-btn .mbtn-top
+  white-space: nowrap
+
+#mecbillto .module-ecconsignee .consignee-btn-add
+  display: inline-flex!important
+  align-items: center
+  justify-content: center
+  letter-spacing: 0
+  background: #0a1e25!important
+  span
+    color: white!important
+  &:hover
+    background: white!important
+    span
+      color: #0a1e25!important
+
+.ecconsignee-list li.active .consignee-info .mfield.eccons-name
+  +btn
+  background: none
+  width: auto
+  letter-spacing: 0
+  height: auto
+  background: #0a1e25
+  *
+    color: white!important
+
+.showother ul > li.active,
+.ecpay-list ul > li.active > div
+  border-color: #0a1e25
+
+.ecbtn-addr-edit.ecbtn-addr-edit.ecbtn-addr-edit
+  background: url(/plugin/mec/mobilestyle/images/edit.png)!important
+  background-repeat: no-repeat!important
+  background-position: center!important
+  background-size: 16px 16px!important
+  &:hover
+    background: url(/plugin/mec/mobilestyle/images/edit.png)!important
+    background-repeat: no-repeat!important
+    background-position: center!important
+    background-size: 16px 16px!important
+.mremove.mremove.mremove.mremove
+  background: url(/plugin/mec/mobilestyle/images/delete.png)!important
+  background-repeat: no-repeat!important
+  background-position: center!important
+  background-size: 16px 16px!important
+  &:hover
+    background: url(/plugin/mec/mobilestyle/images/delete.png)!important
+    background-repeat: no-repeat!important
+    background-position: center!important
+    background-size: 16px 16px!important
+
+.mpopdiv
+  .mbox
+    width: 90%
+    top: 15%
+    left: 5%
+    height: auto
+
+.mpopdiv .mt h4
+  color: #0a1e25
+
+.ok span:before, .ok span:after, .close span:before, .close span:after
+  background: #0a1e25
