@@ -5,6 +5,7 @@
 // const prod_side = require('./prod_side')
 // const img_fancybox = require('./img_fancybox')
 const logout = require('./logout')
+const replaceCart = require('./replaceCart')
 
 
 $(function () {
@@ -23,6 +24,7 @@ $(function () {
     // prod_side()
     // img_fancybox()
     logout()
+    replaceCart()
 
     AOS.init({
       once: true,
