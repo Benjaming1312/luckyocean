@@ -6,6 +6,7 @@
 // const img_fancybox = require('./img_fancybox')
 const logout = require('./logout')
 const replaceCart = require('./replaceCart')
+const prod_detail = require('./prod_detail')
 
 
 $(function () {
@@ -23,6 +24,7 @@ $(function () {
     // index_banner(navH)
     // prod_side()
     // img_fancybox()
+    prod_detail()
     logout()
     replaceCart()
 

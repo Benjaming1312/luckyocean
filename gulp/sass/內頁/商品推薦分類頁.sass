@@ -13,7 +13,8 @@ $pcolor: #0a1e25
 .page_mobile_mecbillto,
 .page_mobileforgetpass,
 .page_mobile_mecsearch,
-.page_mobile_meccheckout
+.page_mobile_meccheckout,
+.page_mobile_mecprod
   padding-top: 180px
   @media #{$mobile}
     padding-top: 100px
@@ -90,13 +91,14 @@ $pcolor: #0a1e25
 
 .module-rcglist,
 .module-ptlist,
-.module-.module-
+.module-.module-,
+.module-relation
   padding-top: 40px
   padding-bottom: 40px
+  +max-width
   @media #{$mobile}
     padding-top: 15px
     padding-bottom: 15px
-  +max-width
   .listBS
     margin: 0 -30px
     @media #{$mobile}

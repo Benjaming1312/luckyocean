@@ -1,0 +1,179 @@
+.page_mobile_mecprod.page_mobile_mecprod
+  position: relative
+  @media #{$mobile}
+    margin-top: 0
+  &::before
+    content: ''
+    display: block
+    width: 100vw
+    height: 100%
+    background: url(#{$url}prod-bg.png)
+    background-position: center -400px
+    background-repeat: repeat-y
+    background-size: cover
+    position: absolute
+    left: 0
+    top: 0
+    z-index: -9999
+  .module-ecptdetail
+    max-width: 1100px!important
+    margin: 0 auto
+  .mpro-preview
+    width: 50%
+    max-width: inherit
+    @media #{$mobile}
+      width: 100%
+    .owl-stage-outer
+      min-height: inherit
+      max-height: inherit
+    .owl-item
+      img
+        max-height: inherit
+    .owl-controls
+      margin-top: 15px
+      .owl-dot
+        span
+          background: #a0a0a0
+          width: 8px
+          height: 8px
+        &.active
+          span
+            background: #4f4f4e
+  .mpro-panel
+    width: 50%
+    max-width: inherit
+    @media #{$mobile}
+      width: 100%
+    .mpro-name
+      border: 0
+      background: none
+      h3
+        padding-left: 0
+        padding-top: 0
+        font-weight: bold
+        // white-space: nowrap
+        line-height: 25px
+        border-bottom: 1px solid #ccc
+        color: #0a1e25
+  .mpro-price
+    margin-bottom: 1rem
+    span
+      font-weight: bold
+      font-size: 17px
+      color: $color-red
+  .input-group-btn
+    background: none
+    color: white
+    border-radius: 0
+    button
+      border-radius: 0
+      color: white
+      transition: .3s ease-in-out
+      height: 36px
+      &:hover
+        background: #ccc
+  .cart-num-control .form-control
+    border-color: #0a1e25
+  .ad-pro-btns
+    border-top: 1px solid #ccc
+    padding-top: 1rem
+    margin-top: 1rem
+    button
+      border: 0
+      background: #000
+      color: white
+      border-radius: 0
+  .maddopt
+    dt
+      white-space: nowrap
+  .prod-info
+    p
+      font-size: 14px
+      line-height: 20px
+  .maddtocart .mopt-item .mval a.selected,
+  .maddtocart .mopt-item .mval a:hover
+    border-color: #0a1e25
+    color: #0a1e25
+  .maddtocart .mopt-item .mval a.selected:after
+    background: url(#{$url}selected.png) center center no-repeat
+    background-size: 16px 16px
+    right: -1px
+    bottom: -1px
+    background-position: right bottom
+    background-repeat: no-repeat
+  .ad-pro-btns
+    .mbtn
+      border: 1px solid #0a1e25
+  .module-complex
+    @media #{$mobile}
+      padding: 0 15px
+    .tab-pane
+      padding: 0
+    .nav-tabs
+      display: none
+    .row.row
+      margin: 0 -15px
+      .col-sm-4
+        padding: 0 15px
+        @media #{$mobile}
+          margin-bottom: 15px
+        .title
+          font-weight: bold
+          color: #0a1e25
+          font-size: 16px
+          letter-spacing: 0.1rem
+        p
+          font-size: 16px
+          color: #231815
+          font-size: 15px
+          line-height: 25px
+  footer.foot.foot
+    background: none
+.module-relation.module-relation.module-relation
+  padding-top: 30px
+  @media #{$mobile}
+    padding: 0 15px
+  .mt
+    h3
+      padding-left: 0
+      border-color: #ccc
+      color: #0a1e25
+      font-weight: normal
+      border-width: 1px
+  .owl-nav
+    position: absolute
+    top: 50%
+    width: 100%
+    padding: 0 30px
+    z-index: 9
+    @media #{$mobile}
+      top: 60%
+    div
+      border-radius: 0
+      &:active
+        @media #{$mobile}
+          background-color: $color-n
+    .owl-prev
+      background: url(#{$url}arrow-grey-l.svg)center center no-repeat
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
+      filter: drop-shadow(3px 3px 3px rgba(#000, .21))
+      overflow: initial
+      left: -35px
+      width: 9px
+      height: 18px
+      @media #{$mobile}
+        left: 15px
+    .owl-next
+      background: url(#{$url}arrow-grey-r.svg)center center no-repeat
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
+      filter: drop-shadow(3px 3px 3px rgba(#000, .21))
+      overflow: initial
+      right: -35px
+      width: 9px
+      height: 18px
+      @media #{$mobile}
+        right: 15px
