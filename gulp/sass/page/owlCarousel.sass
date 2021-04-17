@@ -1,4 +1,4 @@
-$dotW: 10px
+$dotW: 8px
 // .banner
 //   padding: 0
 //   width: 100%
@@ -70,43 +70,43 @@ $dotW: 10px
 //       .module-ads
 //         width: 100%
 .mads-li
-  margin-bottom: 60px
-  @media #{$mobile}
-    margin-bottom: 0px
   img
     width: 100%
   .owl-controls
     position: absolute
-    width: 100%
     text-align: center
     padding-right: 0px 
     padding-bottom: 8px
-    left: 0
-    @media screen and (min-width: 768px)
-      bottom: $dotW
+    right: 25px
+    width: 15px
+    line-height: 15px
+    bottom: 15px
     @media #{$mobile}
       bottom: 5px
+      right: 15px
   .owl-dots
     .owl-dot
       opacity: 1
       border-radius: 0
-      margin-right: 5px
+      margin: 0
       @media #{$mobile}
         margin-right: 0
       span
         opacity: 1
         border-radius: 0        
-        background: rgba(#E7E8EC, .5)
         border-radius: 50%
         width: $dotW
         height: $dotW
+        border: 1px solid white
+        background: white
+        margin: 0
         +trans
         @media #{$mobile}
           width: $dotW
           height: $dotW
       &.active
         span
-          background: #FFFFFF
+          background: $color-orange
           border-radius: 50%
           @media #{$mobile}
             width: $dotW
@@ -114,9 +114,7 @@ $dotW: 10px
             top: 0
 
 .module-adv
-  margin-bottom: 30px
   @media #{$mobile}
-    margin-bottom: 15px
     margin-top: -1px
   img
     width: 100%

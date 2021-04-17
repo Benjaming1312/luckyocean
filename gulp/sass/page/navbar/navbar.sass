@@ -1,62 +1,73 @@
-.header
-  border: 0
 .navbar.navbar.navbar
-  position: absolute
+  position: fixed
   top: 0
   margin-bottom: 0
-  z-index: 9
+  z-index: 99
   width: 100%
   border: 0
   box-shadow: none
   border-radius: 0
-  background: none
-  padding: 50px 0 0px
-  border-top: 0
-  // filter: drop-shadow(7px 7px 5px rgba(#000, .5))
-  box-shadow: none
+  padding: 0px 32px 0px
+  padding-right: 0
+  z-index: 9999
   border: 0
-  // border-bottom: 1px solid rgba(#d3a500, .31)
+  left: 0
+  background: rgba(#333232, .85)
+  border-bottom: 1px solid #ef6343
+  +trans
   @media #{$mobile}
-    margin-top: -1px
-    padding: 15px 0
-    padding-top: 20px
+    padding-top: 33px
+    padding-left: 0
+    padding-bottom: 0
+  @media #{$pad-vertical}
+    padding-left: 0
+  &.shadow
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,1.0)
   .container-fluid
     // width: calc(100% - 160px)
-    // max-width: 1130px
-    max-width: 1000px
+    padding: 0 0px
     margin: 0 auto
-    padding: 0
-    position: relative
     @media #{$mobile}
-      padding: 0 15px
+      padding: 0
       width: 100%
-    @media #{$pad-vertical}
-      padding: 0
     @media #{$pad-horizantal}
-      padding: 0
-    // @media #{$padV}
-    //   padding: 0
-    // @media #{$padH}
-    //   padding: 0
+      max-width: 100%
+      padding-right: 15px
   .header
     border: 0
   .navbar-brand
     margin-left: 0px
-    margin-top: 0px
+    margin-top: 30px
+    // max-width: 20vw
+    @media screen and (min-width: 768px)
+      padding: 0
+    @media #{$mobile}
+      max-width: 280px
+      max-height: 60px
+      margin-top: 10px
+      margin-left: 30px
+      margin-bottom: 0px
+      padding: 0
+      background-position: left center!important
+      max-width: 65%
+    @media #{$pad-vertical}
+      margin-left: 30px
   .navbar-toggle
     border: 0
-    margin-top: 0px
-    margin-right: 0
+    margin-top: 55px
     background: none
     border-radius: 0
-    // @media #{$padV}
-    //   display: block
-    //   margin-top: 15px
-    //   margin-right: 15px
+    @media #{$pad-vertical}
+      display: block
+    @media #{$pad-vertical}
+      margin-top: 50px
     .sr-only
       display: none
+    //   &::before,
+    //   &::after
+    //     background: #000
     .icon-bar
-      background: white
+      background: $color-orange
       width: 30px
       margin-bottom: .5rem
       +trans
@@ -73,57 +84,52 @@
           transform: rotate(-45deg) translate(6px, -7px)
   .navbar
     border: 0
-    background: none
+    background: white
     padding-bottom: 0px
     @media #{$mobile}
-      padding-bottom: 0px
+      padding-bottom: 15px
   .navbar-header
-    display: flex
-    justify-content: center
-    width: 100%
-    padding-bottom: 40px
-    border-bottom: 1px solid rgba(#ffffff, .3)
-    margin-bottom: 20px
     @media #{$mobile}
-      position: relative
-      float: left
-      width: 100%
-      margin: 0
-      padding-bottom: 20px
-
-  //   @media #{$padV}
-  //     width: 100%
-  //     padding: 0 15px
+      padding-bottom: 15px
+    @media #{$pad-vertical}
+      float: initial
+      padding-bottom: 15px
   #navbar
     padding: 0
     @media screen and (min-width: 768px)
-      width: 100%
-      padding-top: 0px
-      padding-bottom: 0px
-      display: flex!important
-      justify-content: center
+      margin: 0
     @media #{$mobile}
       width: 100%
       margin: 0
-      padding: 7.5px
+      padding-bottom: 15px
       box-shadow: none
-      margin-bottom: -15px
-      background: rgba(#000, .75)
-      a
-        border: 0
-        color: white
-    // &.collapse
-    //   @media #{$padV}
-    //     display: none!important
+      background: url(#{$url}nav-bg.png) center center no-repeat
+      background-size: cover
+    @media #{$pad-vertical}
+      height: 0
+      overflow: hidden
+    @media #{$pad-vertical}
+      width: 100%
+      margin: 0
+      padding-bottom: 15px
+      box-shadow: none
+      background: url(#{$url}nav-bg.png) center center no-repeat
+      background-size: cover
+    &.collapse
+      @media #{$pad-vertical}
+        display: none!important
+    &.collapse.in
+      @media #{$pad-vertical}
+        display: block!important
     .navbar-nav
       float: left
       position: initial
+      // width: 100%
       @media screen and (min-width: 768px)
         display: flex
-        justify-content: space-around
-        align-items: center
-        margin-top: 0
-        padding-left: 0px
+        flex-wrap: nowrap
+        justify-content: flex-end
+        margin: 0
       @media #{$mobile}
         margin: 0
         float: left
@@ -131,161 +137,290 @@
         width: 100%
         padding: 0 5px
         margin-top: 0
-      // *
-      //   color: #808080
-      //   font-size: 17px
-      //   letter-spacing: 0.05rem
+      @media #{$pad-vertical}
+        flex-wrap: wrap
+      *
+        color: white
+        font-size: 16.15px
+        font-weight: 300
+        letter-spacing: 0.05rem
+        white-space: nowrap
+        text-transform: initial
+        letter-spacing: 0.1rem
+        @media #{$pad-horizantal}
+          font-size: 14px
       >li
         @media screen and (min-width: 768px)
-          margin-left: 10px
-        @media #{$mobile}
-          float: left
+          margin-right: 3vw
+          padding-bottom: 0
+        @media #{$pad-vertical}
           width: 100%
-          margin: 0
-        &.social
-          @media screen and (min-width: 768px)
-            position: absolute
-            top: 7.5px
-            right: 0
-            display: flex
-            flex-wrap: nowrap
-          @media #{$mobile}
-            display: flex
-            flex-wrap: nowrap
-            width: 100%
-            justify-content: space-around
-            margin-bottom: 7.5px
-            margin-top: 15px
-            border-top: 1px solid rgba(white, .5)
-            padding-top: 15px
-          a
-            margin: 0 20px
-            @media #{$mobile}
-              margin: 0 15px!important
-        .svg
-          +trans
-          &:hover
-            opacity: 0.6
         >a
           position: relative
-          text-transform: initial
-          font-weight: 500
-          color: white
+          overflow: hidden
+          text-transform: uppercase
+          color: $color-b
           padding-bottom: 0
-          border: 0
-          padding: 0.5rem 0
-          font-size: 16px
-          letter-spacing: 0.1rem
-          font-family: Arial, Helvetica, sans-serif
-          +trans
+          font-weight: normal
+          font-size: 17px
+          font-weight: normal
           @media screen and (min-width: 768px)
-            margin-right: 0px
-            padding-bottom: 0
-            padding-top: 0
+            padding-top: 62px
+            padding-bottom: 20px
+            margin: 0
+            padding-left: 7.5px
+            padding-right: 7.5px
           @media #{$mobile}
-            font-size: 18px
-            letter-spacing: 0.1rem
-          // @media #{$padH}
-          //   padding: 5px 7.5px
+            margin: 0
+            padding-bottom: 15px
+          @media #{$pad-horizantal}
+            padding-left: 1px
+            padding-right: 1px
+          @media #{$pad-vertical}
+            padding-top: 7.5px
+            padding-bottom: 7.5px
+          span
+            display: block
+            text-align: center
+            font-weight: 500
+            letter-spacing: 1px
+            font-size: 17px
           &:hover
-            color: rgba(white, .5)
-            border-bottom: 0
-            text-shadow: 1px 1px 3px rgba(#fff, .5)
-            &::after
-              transform: translateY(0)
-              opacity: 1
+            background: none
+            opacity: 0.3
+        &.facebook
+          @media screen and (min-width: 768px)
+            margin-left: 2vw
+          a
+            padding-left: 23px
+            display: inline-block
+            float: left
+            width: auto
+            img
+              width: 23px
+              height: 23px
       li
         position: initial
-        padding-bottom: 0px
-        margin: 0 3vw
-        padding-bottom: 3.25px
-        @media #{$mobile}
-          margin: 0
         a
+          border: 0
           transition: $trans
           &.dropdown-toggle
             @media #{$mobile}
               display: block
             &::before
               @media #{$mobile}
-                content: '▼'
+                content: '+'
                 color: white
                 float: right
-                font-size: 14px
-        &.ig
-          @media #{$mobile}
-            margin-top: 15px
+                font-size: 24px
         &.dropdown
           @media screen and (min-width: 768px)
             position: relative
             z-index: 99999999
-          @media #{$mobile}
-            width: 100%
-            float: left
           .dropdown-menu
             left: 0
-            background: rgba(white, .9)
+            background: rgba(#fff, .7)
             border: 0
             width: 100%
             overflow: initial
+            box-shadow: none
             @media #{$mobile}
               margin-top: 5px
-            // @media #{$padV}
-            //   display: none
+              // padding: 15px 5px
           &:hover,
           &.open
             .dropdown-toggle
-              color: rgba(white, .5)
-              border-bottom: 0
-              text-shadow: 1px 1px 3px rgba(#fff, .5)
               &::before
                 @media #{$mobile}
                   content: '-'
-                // @media #{$padV}
-                //   content: '-'
             .dropdown-menu
               border: 0
               width: 100%
-              border-radius: 0
               @media screen and (min-width: 768px)
                 display: flex
                 flex-wrap: wrap
               @media #{$mobile}
-                width: calc(100% - 7px)
-                margin: 7.5px 5px
-              // @media #{$padV}
-              //   position: static
-              //   margin: 7.5px 0px
+                padding-left: 15px
               li
                 padding-bottom: 0
-                margin: 0
                 @media screen and (min-width: 768px)
                   width: 100%
-                  margin-left: 0
-                @media #{$pad-horizantal}
-                  margin-left: 0
-                @media #{$pad-vertical}
-                  margin-left: 0
                 a
-                  font-weight: 500
-                  color: #0a1e25
-                  text-transform: initial
-                  font-size: 14px
-                  letter-spacing: 0.1rem
+                  padding: 0
+                  padding: 7.5px 0
+                  font-size: 16px
                   white-space: nowrap
-                  font-family: Arial, Helvetica, sans-serif
-                  display: block
-                  width: 100%
-                  @media #{$pad-vertical}
-                    font-size: 13px
+                  font-weight: normal
+                  transition: $trans
+                  color: #444243
+                  padding-left: 15px
                   &:hover
-                    background: rgba(white, .15)
-  .navbar
-    &+.search.search.search
-      margin-left: 0px
-      background: #000
-      padding: 15px
-      .input-group
-        margin-left: 0
+                    color: $color-blue
+
+  .lang.lang.lang.lang.lang.lang.lang
+    a
+      font-size: 13px!important
+      color: $color-b
+      font-weight: 500!important
+      &:last-child
+        &::before
+          content: '|'
+          font-size: 13px
+          display: inlinb-block
+          margin: 0 7.5px
+          font-weight: 500
+  .social
+    float: left
+    display: inline-flex
+    flex-wrap: nowrap
+    align-items: flex-end
+    margin-bottom: 20px
+    @media #{$mobile}
+      display: flex
+      justify-content: center
+      text-align: center
+      width: 100%
+      flex-wrap: wrap
+      margin-bottom: 0
+  li+.social
+    @media #{$pad-vertical}
+      display: flex
+      justify-content: center
+      text-align: center
+      width: 100%
+      flex-wrap: wrap
+      margin-bottom: 0
+      margin-right: 0
+      margin-top: 0
+  .formBS
+    top: 35px
+    right: 30px
+    padding: 5px
+    padding-top: 0
+    padding-bottom: 0
+    border-radius: 6px
+    @media screen and (min-width: 768px)
+      margin-right: 5vw
+      min-width: 204px
+    @media #{$mobile}
+      position: static
+      margin-top: 15px
+      margin-bottom: 0px
+      width: 80%
+    @media #{$pad-horizantal}
+      margin-right: 0
+      max-width: 150px
+      min-width: initial
+    @media #{$pad-vertical}
+      position: static
+      margin-top: 15px
+      margin-bottom: 0px
+      width: 80%
+      margin-right: 0
+    .input-group
+      // border-bottom: 1.1px solid #727171
+      border: 0
+      @media screen and (min-width: 768px)
+        display: flex
+        flex-wrap: nowrap
+        align-items: center
+      @media #{$mobile}
+        width: 100%
+      @media #{$pad-horizantal}
+        width: 100%
       input
-        width: calc(100% - 28px)
+        width: 100%
+        border-top: 0
+        border-left: 0
+        border-right: 0
+        border-radius: 0
+        border: 0
+        border-radius: 0px
+        height: 30px
+        padding: 0
+        font-size: 12px
+        background: none
+        border: 0
+        border-bottom: 1px solid white
+        &::placeholder
+          color: white
+          font-weight: bold
+          font-size: 14px
+          text-transform: initial
+      .input-group-btn
+        position: relative
+        top: -2.5px
+        z-index: 9999
+        width: 20px
+        height: 20px
+        margin-right: 5px
+        margin-bottom: 0
+        button
+          font-size: 16px
+          color: $color-b
+          margin: 0
+          padding: 0
+          border: 0
+          $w: 20px
+          width: $w!important
+          height: $w!important
+          margin-bottom: 0px
+          margin-right: 5px
+  
+
+  .tel
+    display: flex
+    position: absolute
+    text-align: right
+    align-items: center
+    top: 0
+    right: 0
+    z-index: 2
+    @media screen and (min-width: 768px)
+      // width: calc(100% - 243px - 120px - 20px)
+    @media #{$mobile}
+      width: 100%
+      flex-wrap: nowrap
+    .svg
+      position: relative
+      top: 5px
+      margin-right: 7.5px
+    *
+      font-size: 21.5px
+      color: #ef6343
+      font-weight: bold
+      letter-spacing: 0.1rem
+      @media screen and (min-width: 768px)
+        margin-right: 0x
+      @media #{$mobile}
+        font-size: 15px
+        margin-right: 0px
+        font-weight: bold
+    .content
+      padding: 12px 24px
+      display: inline-block 
+      margin-right: 0
+      padding-top: 6px
+      @media #{$mobile}
+        padding: 7.5px 0
+        display: block
+        text-align: center
+        margin: 0
+        width: 100%
+      @media #{$pad-vertical}
+        padding: 6px 12px
+    .social
+      margin-bottom: 0
+      height: 100%
+      align-items: center
+      @media #{$mobile}
+        width: 120px
+        flex-wrap: nowrap
+        margin: 0
+      .svg
+        width: 26px
+        height: 26px
+        margin-right: 25px
+        @media #{$mobile}
+          margin-right: 7.5px
+          margin-left: 7.5px

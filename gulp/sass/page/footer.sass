@@ -1,177 +1,102 @@
 footer.foot
-  background: #f1f3f3
-  margin-top: 30px
-  padding-top: 60px
+  background: url(#{$url}foot-bg.png) center center no-repeat
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  padding-top: 45px
+  padding-bottom: 57px
   @media #{$mobile}
+    padding-left: 15px
+    padding-right: 15px
+    padding-bottom: 15px
     padding-top: 30px
-    margin-bottom: 15px
-  .logo
-    margin-bottom: 40px
-  p
-    text-align: center
-    color: #000000
-    font-family: Arial, Helvetica, "Noto Sans TC","微軟正黑體", sans-serif
-    margin-bottom: 20px
-    font-size: 16px
+  >.row
+    +max-width
+    margin-left: auto
+    margin-right: auto
+  .module-title
+    margin-bottom: 30px
     @media #{$mobile}
-      white-space: nowrap
-    *
-      color: #000000
-      font-size: 16px
-      @media #{$mobile}
-        white-space: nowrap
-  
+      margin-bottom: 15px
+  .map-content
+    @media #{$mobile}
+      padding: 0
     
-// div.design
-//   background: #EBE8E2
-//   padding-bottom: 7.5px
-//   p
-//     +max-width
-//     margin: 0 auto
-//     position: relative
-//     span
-//       color: #A6A8AB
-//       font-size: 12px
-//       margin-left: 7.5px
-//       @media #{$mobile}
-//         display: block
-//         text-align: center
-//     a
-//       color: #A6A8AB
-//       font-size: 12px
-//       position: absolute
-//       right: 0
-//       bottom: 0
-//       @media #{$mobile}
-//         position: static
-//         display: block
-//         width: 100%
-//         text-align: center
-//         margin-top: 7.5px
-//   // background: url(#{$url}section-3-bg.png) center center repeat-y
-//   // background-size: cover
-//   // background: rgba(#b1d3c7, .5)
-//   background: #507f71
-//   padding: 0px 0
-//   p
-//     margin: 0
-//     padding: 10px 0
-//     text-align: center
-//     font-size: 12px
-//     // color: #808080
-//     color: whihte
-//     @media #{$mobile}
-//       // padding-top: 0
-//     span
-//       // @media #{$mobile}
-//       //   float: left!important
-//       //   display: block
-//       //   width: 100%
-//       //   text-align: center
-//       //   font-size: 12px
-//     span, a
-//       font-size: 12px
-//       color: white
-//       @media #{$mobile}
-//         margin-bottom: 5px
-//     span+a
-//       &::before
-//         content: ''
-//         border-left: 1px solid white
-//         height: 15px
-//         line-height: 0px
-//         display: inline-block
-//         margin: 0 7.5px
-//         position: relative
-//         top: 2px
-//         // @media #{$mobile}
-//         //   display: none
-//     a.design-by
-//       position: absolute
-//       right: 30px
-//       @media #{$mobile}
-//         position: static
-//         display: block
-//         width: 100%
-//         margin-top: 5px
+  .info-content
+    @media screen and (min-width: 768px)
+      padding-left: 60px
+    @media #{$mobile}
+      padding: 0
+    table
+      tbody
+        tr
+          td
+            color: #4a4747
+            font-size: 17px
+            font-weight: 500
+            letter-spacing: 0.1rem
+            padding: 7.5px
+            vertical-align: text-top
+            @media screen and (min-width: 768px)
+              white-space: nowrap
+            @media #{$mobile}
+              padding-left: 0
+              padding-right: 0
+            &:first-child
+              white-space: nowrap
+            &:last-child
+              span
+                font-size: 15px
+                margin-top: 15px
+            *
+              color: #4a4747
+              font-size: 17px
+              font-weight: 500
+              letter-spacing: 0.1rem
+            .svg
+              $w: 25px
+              max-width: $w
+              max-height: $w
+              position: relative
+              top: 5px
+              margin-right: 7.5px
+  iframe
+    height: 245px
+div.design
+  background: #444444
+  opacity: 1!important
+  p
+    margin: 0
+    padding: 10px 0
+    text-align: center
+    font-size: 12px
+    color: white
+    span
+      margin-right: 15px
+      @media #{$mobile}
+        float: left!important
+        display: block
+        width: 100%
+        text-align: center
+        margin-bottom: 7.5px
+        margin-left: 0
+    span, a
+      font-size: 12px
+      color: white
+    a
+      position: absolute
+      right: 30px
+      @media #{$mobile}
+        position: static
+        display: block
+        width: 100%
+        margin-top: 5px
 
 .right
   position: fixed
-  bottom: 30%
-  width: 70px
+  bottom: 35%
   right: 15px
-  z-index: 9999
-  @media #{$mobile}
-    $w: 70px
-    text-align: right
-    right: 15px
-  .svg
-    max-width: 70px
-    max-height: 70px
-    margin-bottom: 7.5px
-    filter: drop-shadow(7px 7px 5px rgba(#000, .15))
-    +trans
-    @media #{$mobile}
-      max-width: 50px
-      max-height: 50px
-    &:hover
-      filter: drop-shadow(0px 0px 5px rgba(#000, .15))
-      opacity: 0.7
-  // .gotop
-  //   +trans
-  //   &:hover
-  //     opacity: 0.3
-//   img
-//     max-width: 35px
-  // .svg
-  //   box-shadow: 7px 7px 10px -3px rgba(#231815, .19)
-  //   border-radius: 50%
-  //   margin-bottom: 15px
-  //   @media #{$mobile}
-  //     $w: 50px
-  //     width: $w!important
-  //     height: $w!important
-
-// .cookie-notify
-//   position: fixed
-//   bottom: 0
-//   width: 100%
-//   z-index: 3
-//   background: $color-green
-//   padding: 15px
-//   opacity: 0
-//   min-height: 80px
-//   padding-top: 20px
-//   p
-//     margin-bottom: 0
-//     color: white
-//     padding-right: 150px
-//     line-height: 25px
-//     font-size: 14px
-//     font-weight: normal
-//     @media #{$mobile}
-//       padding-right: 0
-//       padding-bottom: 20px
-//     a
-//       font-size: 14px
-//       line-height: 25px
-//       color: #3d71b3
-//       +trans
-//       &:not(.gotIt):hover
-//         opacity: 0.7
-//     a.gotIt
-//       position: absolute
-//       right: 15px
-//       +btn
-//       padding: 7.5px
-//       bottom: 15px
-//       border: 1px solid white
-//       font-size: 18px
-//       cursor: pointer
-//       color: white
-//       @media #{$mobile}
-//         font-size: 14px
-//         padding: 5px
-//       &:hover
-//         background: none
-//         color: white
+  z-index: 9
+  +trans
+  &:hover
+    opacity: 0.6

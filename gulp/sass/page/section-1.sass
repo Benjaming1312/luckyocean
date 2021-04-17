@@ -1,68 +1,72 @@
 .idx.section-1
-  +max-width
+  background: url(#{$url}section-1-bg.png) center center no-repeat
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  padding-top: 90px
+  padding-bottom: 66px
   @media #{$mobile}
-    padding: 0 15px
+    padding-top: 30px
+    padding-bottom: 30px
   .row
-    margin: 0 -30px
-  .col-sm-6
-    padding: 0 30px
+    +max-width
+    margin-left: auto
+    margin-right: auto
+    display: flex
+    flex-wrap: nowrap
     @media #{$mobile}
-      margin-bottom: 15px
+      flex-wrap: wrap
+  [class*="col"]
+    padding: 0
   .img
-    position: relative
-    overflow: hidden
-    display: block
-    width: 100%
-    height: 100%
-    img
-      width: 100%
-      +trans
-      transition-duration: 3s
-  a
-    display: block
-    width: 100%
-    height: 100%
-    .text
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      display: flex
-      align-items: center
-      justify-content: center
-    h4
-      font-size: 14px
-      border-bottom: 1px solid rgba(#ffffff, .3)
-      padding-bottom: 15px
-    h5
-      font-size: 18px
-      margin-bottom: 20px
-    h4,
-    h5
-      font-family: Arial, Helvetica, sans-serif
+    display: flex
+    align-items: center
+    @media #{$mobile}
+      width: calc(100% - 30px)
+      margin: 0 15px
+      margin-bottom: 30px
+  .text
+    padding: 30px 60px 0
+    padding-right: 0
+    padding-left: 15px
+    @media screen and (min-width: 768px)
+      width: calc(100% - 478px)
+    @media #{$mobile}
+      padding: 15px
+      padding-left: 0
+      padding-right: 0
+    .module-title
+      margin-bottom: 30px
+      &::before
+        display: none
+      .title
+        margin-bottom: 10px
+      .title,
+      .sub-title
+        display: block
+        text-align: center
+      &::after
+        content: ''
+        display: block
+        width: 18px
+        height: 3px
+        background: #494949
+        margin: 0 auto
+        margin-top: 15px
+
+    .text-orange
+      color: $color-orange
+    p
+      color: $color-b
+      font-size: 16px
+      line-height: 32px
       font-weight: 500
-      color: white
-      display: block
-      text-align: center
-      +trans
-    .svg
-      margin: 0 auto
-      margin-top: 80px
-      +trans
+      letter-spacing: 0.1rem
+      margin-bottom: 30px
       @media #{$mobile}
-        margin-top: 40px
-    .content
-      text-align: center
-  a
-    &:hover
-      img
-        transform: scale(1.2)
-        opacity: 0.9
-      .svg
-        transform: translateY(10px)
-        opacity: 0
-      h4,
-      h5
-        transform: translateY(-10px)
-        opacity: 0
+        letter-spacing: 0
+    span
+      font-weight: 500
+      letter-spacing: 0.1rem
+      @media #{$mobile}
+        letter-spacing: 0

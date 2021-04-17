@@ -1,7 +1,7 @@
 const is = require('./is')
 
 module.exports = function (navH) {
-	if (!is('.module-adv')) {
+	if (!is('.module-adv') || $(window).width() > 768) {
 		return
 	}
 
