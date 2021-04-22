@@ -58,7 +58,7 @@ gulp.task('styles',function(){
 			includeContent: false,
 			sourceRoot: 'gulp/sass'
 		})) //sourceMap寫入在一樣的地方  
-		.pipe(gulp.dest('dist/css/localhost/dist/css/')) //翻譯後的路徑
+		.pipe(gulp.dest('dist/css/benjaming1312.github.io/luckyocean/dist/css/')) //翻譯後的路徑
 		.pipe(gulp.dest('dist/css/')) //翻譯後的路徑
 		.pipe(connect.reload())
 })
@@ -75,6 +75,6 @@ gulp.task('views',function(){
 	gulp.src('gulp/html/page/**.pug')
 		.pipe(pug({pretty: true}))
 		.pipe(gulp.dest('./'))
-		// .pipe(connect.reload())
+		.pipe(connect.reload())
 })
 

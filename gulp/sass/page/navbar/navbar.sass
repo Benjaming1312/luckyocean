@@ -12,11 +12,11 @@
   left: 0
   background: rgba(white, .78)
   filter: drop-shadow(7px 0 5px rgba(#000, .15))
+  padding: 22px 0
   +trans
   @media #{$mobile}
     padding-top: 0px
     padding-left: 0
-    padding-bottom: 0
   .container-fluid
     // width: calc(100% - 160px)
     padding: 0 0px
@@ -36,46 +36,35 @@
     @media screen and (min-width: 768px)
       padding: 0
     @media #{$mobile}
-      max-width: 280px
-      max-height: 60px
-      margin-top: 10px
-      margin-left: 30px
-      margin-bottom: 0px
-      padding: 0
-      background-position: left center!important
-      max-width: 65%
-    @media #{$pad-vertical}
-      margin-left: 30px
+      margin: 0
   .navbar-toggle
-    border: 0
-    margin-top: 55px
-    background: none
-    border-radius: 0
-    @media #{$pad-vertical}
-      display: block
-    @media #{$pad-vertical}
-      margin-top: 50px
-    .sr-only
-      display: none
-    //   &::before,
-    //   &::after
-    //     background: #000
-    .icon-bar
-      background: $color-orange
-      width: 30px
-      margin-bottom: .5rem
-      +trans
-      &::before,
-      &::after
-        display: none
-    &:not(.collapsed)
-      .icon-bar
-        &:nth-of-type(2)
-          opacity: 0
-        &:nth-of-type(3)
-          transform: rotate(45deg) translate(0, 0)
-        &:nth-of-type(4)
-          transform: rotate(-45deg) translate(6px, -7px)
+    display: none
+  //   border: 0
+  //   margin-top: 55px
+  //   background: none
+  //   border-radius: 0
+  //   display: none
+  //   .sr-only
+  //     display: none
+  //   //   &::before,
+  //   //   &::after
+  //   //     background: #000
+  //   .icon-bar
+  //     background: $color-orange
+  //     width: 30px
+  //     margin-bottom: .5rem
+  //     +trans
+  //     &::before,
+  //     &::after
+  //       display: none
+  //   &:not(.collapsed)
+  //     .icon-bar
+  //       &:nth-of-type(2)
+  //         opacity: 0
+  //       &:nth-of-type(3)
+  //         transform: rotate(45deg) translate(0, 0)
+  //       &:nth-of-type(4)
+  //         transform: rotate(-45deg) translate(6px, -7px)
   .navbar
     border: 0
     background: white
@@ -88,16 +77,27 @@
       justify-content: center
       width: 100%
     @media #{$mobile}
-      padding-bottom: 15px
+      display: flex
+      justify-content: center
+      width: 100%
+      margin: 0
+      margin-top: 15px
   .social
     @media screen and (min-width: 768px)
       position: absolute
       right: 60px
-      top: 20px
+      top: 30px
     @media #{$mobile}
       width: 100%
       display: flex
-      justify-content: space-between
+      margin-top: 7.5px
+      justify-content: space-around
+    .svg
+      +trans
+      margin: 0 7.5px
+      &:hover
+        transform: scale(1.05)
+        opacity: 0.7
 
   // #navbar
   //   padding: 0
