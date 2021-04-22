@@ -1,5 +1,38 @@
 .idx.section-3
   padding-top: 25px
   padding-bottom: 25px
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
   .module-title
     +module-title
+    margin-bottom: 70px
+    @media #{$mobile}
+      margin-bottom: 35px
+  .row:first-child
+    width: 100%
+  .list
+    +max-width
+    margin: 0 -60px
+    @media #{$mobile}
+      margin: 0
+  .col-sm-6
+    width: calc((100% / 2) - 30px * 2)
+    margin: 0 30px
+    border-bottom: 1px solid #e6e7e8
+    margin-bottom: 30px
+    @media #{$mobile}
+      width: 100%
+      margin: 0px
+      margin-bottom: 30px
+      padding-bottom: 15px
+  span.date
+    color: #58595b
+    font-size: 15px
+    letter-spacing: 0.05rem
+    margin-bottom: 12px
+    display: block
+  p
+    font-size: 20px
+    color: #58595b
+    letter-spacing: 0.05rem

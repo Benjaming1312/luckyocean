@@ -1,96 +1,67 @@
 .idx.section-4
-  $col-3: 250px
-  >.row
-    display: flex
+  background: #f5f5f5
+  padding: 50px 0
+  padding-bottom: 50px
+  @media #{$mobile}
+    padding: 25px 15px
+  .module-title
+    margin-bottom: 70px
     @media #{$mobile}
+      margin-bottom: 35px
+  .row
+    +max-width
+  .img
+    position: relative
+    @media screen and (min-width: 768px)
+      width: 622px
+    img
+      +shadow
+      position: relative
+      z-index: 1
+    &::after
+      content: ''
       display: block
-    @media #{$pad-horizantal}
-      display: block
-    @media #{$pad-vertical}
-      display: block
-  .col-md-3
-    width: $col-3
-    background: url(#{$url}section-4-mask.svg) center center no-repeat
-    background-size: cover
-    background-position: right center
-    min-height: 250px
-    display: flex
-    align-items: center
-    padding-left: 50px
-    @media #{$mobile}
-      width: 100%
-      text-align: center
-      margin-bottom: 30px
-      background: none
-      min-height: initial
-      justify-content: center
-      padding-left: 0
-    @media #{$pad-horizantal}
-      width: 100%
-      text-align: center
-      background: none
-      min-height: initial
-      justify-content: center
-      padding-left: 0
-      margin-bottom: 30px
-    @media #{$pad-vertical}
-      width: 100%
-      text-align: center
-      background: none
-      min-height: initial
-      justify-content: center
-      padding-left: 0
-      margin-bottom: 30px
-  .col-md-9
-    width: calc(100% - #{$col-3})
-    display: flex
-    align-items: center
-    padding-left: 100px
-    padding-right: 170px
-    @media #{$mobile}
-      width: 100%
-      padding-left: 50px
-      padding-right: 50px
-    @media #{$pad-horizantal}
-      width: 100%
+      width: 98%
+      height: 100%
+      background: #dae5ed
+      position: absolute
+      right: -15px
+      bottom: -10px
+  .text
+    @media screen and (min-width: 768px)
+      width: calc(100% - 622px)
       padding-left: 60px
-      padding-right: 60px
-    @media #{$pad-vertical}
-      width: 100%
-      padding-left: 60px
-      padding-right: 60px
-  .owl-carousel
-    .item
-      padding-top: 100%
-      a
-        position: absolute
-        top: 0
-        left: 0
+  .text
+    @media #{$mobile}
+      margin-top: 30px
+    .title
+      font-size: 30px
+      font-weight: 500
+      letter-spacing: 0.05rem
+      color: #0d80b2
+      position: relative
+      @media #{$mobile}
+        font-size: 22px
+      &::after
+        content: ''
         width: 100%
-        height: 100%
-        display: flex
-        align-items: center
-        justify-content: center
-        &::after
-          content: ''
-          display: block
-          width: 1.5px
-          height: 80px
-          background: #cccccc
-          position: absolute
-          right: -10px
-          top: calc((100% - 80px) / 2)
-    .owl-controls
-      .owl-nav
-        .owl-prev
-          background: url(#{$url}arrow_l.svg) center center no-repeat
-          left: -50px
-          top: 55%
-          @media #{$mobile}
-            top: 60%
-        .owl-next
-          background: url(#{$url}arrow_r.svg) center center no-repeat
-          right: -50px
-          top: 55%
-          @media #{$mobile}
-            top: 60%
+        height: 2px
+        background-image: linear-gradient(to right, #726658 0%, #726658 40%, transparent 50%)
+        background-size: 10px 100% 
+        background-repeat: repeat-x
+        display: block
+        margin: 15px 0 7.5px
+    p
+      background: #fff
+      border-radius: 22px
+      padding: 7.5px 15px
+      margin-bottom: 7.5px
+      &::before
+        content: ''
+        display: inline-block
+        background: white
+        border: 1px solid #ff6699
+        border-radius: 50%
+        width: 12px
+        height: 12px
+        margin-right: 15px

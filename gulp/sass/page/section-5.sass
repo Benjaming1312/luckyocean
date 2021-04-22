@@ -1,0 +1,70 @@
+.idx.section-5
+  padding-top: 30px
+  padding-bottom: 30px
+  .module-title
+    +module-title
+    margin-bottom: 70px
+    @media #{$mobile}
+      margin-bottom: 35pxv
+  .row.content
+    display: flex
+    align-items: center
+    flex-wrap: nowrap
+    margin-bottom: 40px
+    +max-width
+    @media #{$mobile}
+      margin-bottom: 30px
+      flex-wrap: wrap
+
+    &.reverse
+      flex-direction: row-reverse
+      .img
+        &::after
+          right: initial
+          left: -15px
+      .text
+        @media screen and (min-width: 768px)
+          padding-right: 60px
+          padding-left: 15px
+    img
+      @extend .fit
+      +shadow
+  .img
+    position: relative
+    @media #{$mobile}
+      margin-bottom: 15px
+    &::after
+      content: ''
+      width: 1px
+      height: 90%
+      background-image: linear-gradient(to bottom, #b0c7d5 0%, #b0c7d5 40%, transparent 50%)
+      background-size: 100% 10px
+      background-repeat: repeat-y
+      display: block
+      position: absolute
+      top: 5%
+      right: -15px
+      opacity: 0.75
+      @media #{$mobile}
+        display: none
+  .text
+    @media screen and (min-width: 768px)
+      padding-left: 60px
+    p
+      font-size: 21px
+      line-height: 46px
+      color: #414042
+      letter-spacing: 0.05rem
+    .more
+      .btn
+        border: 0
+        font-size: 18px
+        letter-spacing: 0.05rem
+        color: #e09641
+        &:hover
+          background: none
+          .svg
+            transform: translateX(15px)
+      .svg
+        position: relative
+        +trans
