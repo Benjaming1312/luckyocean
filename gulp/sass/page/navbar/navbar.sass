@@ -7,22 +7,16 @@
   border: 0
   box-shadow: none
   border-radius: 0
-  padding: 0px 32px 0px
-  padding-right: 0
   z-index: 9999
   border: 0
   left: 0
-  background: rgba(#333232, .85)
-  border-bottom: 1px solid #ef6343
+  background: rgba(white, .78)
+  filter: drop-shadow(7px 0 5px rgba(#000, .15))
   +trans
   @media #{$mobile}
-    padding-top: 33px
+    padding-top: 0px
     padding-left: 0
     padding-bottom: 0
-  @media #{$pad-vertical}
-    padding-left: 0
-  &.shadow
-    box-shadow: 0px 0px 4px 0px rgba(0,0,0,1.0)
   .container-fluid
     // width: calc(100% - 160px)
     padding: 0 0px
@@ -37,7 +31,7 @@
     border: 0
   .navbar-brand
     margin-left: 0px
-    margin-top: 30px
+    margin-top: 0px
     // max-width: 20vw
     @media screen and (min-width: 768px)
       padding: 0
@@ -89,338 +83,349 @@
     @media #{$mobile}
       padding-bottom: 15px
   .navbar-header
-    @media #{$mobile}
-      padding-bottom: 15px
-    @media #{$pad-vertical}
-      float: initial
-      padding-bottom: 15px
-  #navbar
-    padding: 0
     @media screen and (min-width: 768px)
-      margin: 0
+      display: flex
+      justify-content: center
+      width: 100%
     @media #{$mobile}
-      width: 100%
-      margin: 0
       padding-bottom: 15px
-      box-shadow: none
-      background: url(#{$url}nav-bg.png) center center no-repeat
-      background-size: cover
-    @media #{$pad-vertical}
-      height: 0
-      overflow: hidden
-    @media #{$pad-vertical}
-      width: 100%
-      margin: 0
-      padding-bottom: 15px
-      box-shadow: none
-      background: url(#{$url}nav-bg.png) center center no-repeat
-      background-size: cover
-    &.collapse
-      @media #{$pad-vertical}
-        display: none!important
-    &.collapse.in
-      @media #{$pad-vertical}
-        display: block!important
-    .navbar-nav
-      float: left
-      position: initial
-      // width: 100%
-      @media screen and (min-width: 768px)
-        display: flex
-        flex-wrap: nowrap
-        justify-content: flex-end
-        margin: 0
-      @media #{$mobile}
-        margin: 0
-        float: left
-        margin-top: 15px
-        width: 100%
-        padding: 0 5px
-        margin-top: 0
-      @media #{$pad-vertical}
-        flex-wrap: wrap
-      *
-        color: white
-        font-size: 16.15px
-        font-weight: 300
-        letter-spacing: 0.05rem
-        white-space: nowrap
-        text-transform: initial
-        letter-spacing: 0.1rem
-        @media #{$pad-horizantal}
-          font-size: 14px
-      >li
-        @media screen and (min-width: 768px)
-          margin-right: 3vw
-          padding-bottom: 0
-        @media #{$pad-vertical}
-          width: 100%
-        >a
-          position: relative
-          overflow: hidden
-          text-transform: uppercase
-          color: $color-b
-          padding-bottom: 0
-          font-weight: normal
-          font-size: 17px
-          font-weight: normal
-          @media screen and (min-width: 768px)
-            padding-top: 62px
-            padding-bottom: 20px
-            margin: 0
-            padding-left: 7.5px
-            padding-right: 7.5px
-          @media #{$mobile}
-            margin: 0
-            padding-bottom: 15px
-          @media #{$pad-horizantal}
-            padding-left: 1px
-            padding-right: 1px
-          @media #{$pad-vertical}
-            padding-top: 7.5px
-            padding-bottom: 7.5px
-          span
-            display: block
-            text-align: center
-            font-weight: 500
-            letter-spacing: 1px
-            font-size: 17px
-          &:hover
-            background: none
-            opacity: 0.3
-        &.facebook
-          @media screen and (min-width: 768px)
-            margin-left: 2vw
-          a
-            padding-left: 23px
-            display: inline-block
-            float: left
-            width: auto
-            img
-              width: 23px
-              height: 23px
-      li
-        position: initial
-        a
-          border: 0
-          transition: $trans
-          &.dropdown-toggle
-            @media #{$mobile}
-              display: block
-            &::before
-              @media #{$mobile}
-                content: '+'
-                color: white
-                float: right
-                font-size: 24px
-        &.dropdown
-          @media screen and (min-width: 768px)
-            position: relative
-            z-index: 99999999
-          .dropdown-menu
-            left: 0
-            background: rgba(#fff, .7)
-            border: 0
-            width: 100%
-            overflow: initial
-            box-shadow: none
-            @media #{$mobile}
-              margin-top: 5px
-              // padding: 15px 5px
-          &:hover,
-          &.open
-            .dropdown-toggle
-              &::before
-                @media #{$mobile}
-                  content: '-'
-            .dropdown-menu
-              border: 0
-              width: 100%
-              @media screen and (min-width: 768px)
-                display: flex
-                flex-wrap: wrap
-              @media #{$mobile}
-                padding-left: 15px
-              li
-                padding-bottom: 0
-                @media screen and (min-width: 768px)
-                  width: 100%
-                a
-                  padding: 0
-                  padding: 7.5px 0
-                  font-size: 16px
-                  white-space: nowrap
-                  font-weight: normal
-                  transition: $trans
-                  color: #444243
-                  padding-left: 15px
-                  &:hover
-                    color: $color-blue
-
-  .lang.lang.lang.lang.lang.lang.lang
-    a
-      font-size: 13px!important
-      color: $color-b
-      font-weight: 500!important
-      &:last-child
-        &::before
-          content: '|'
-          font-size: 13px
-          display: inlinb-block
-          margin: 0 7.5px
-          font-weight: 500
   .social
-    float: left
-    display: inline-flex
-    flex-wrap: nowrap
-    align-items: flex-end
-    margin-bottom: 20px
-    @media #{$mobile}
-      display: flex
-      justify-content: center
-      text-align: center
-      width: 100%
-      flex-wrap: wrap
-      margin-bottom: 0
-  li+.social
-    @media #{$pad-vertical}
-      display: flex
-      justify-content: center
-      text-align: center
-      width: 100%
-      flex-wrap: wrap
-      margin-bottom: 0
-      margin-right: 0
-      margin-top: 0
-  .formBS
-    top: 35px
-    right: 30px
-    padding: 5px
-    padding-top: 0
-    padding-bottom: 0
-    border-radius: 6px
     @media screen and (min-width: 768px)
-      margin-right: 5vw
-      min-width: 204px
+      position: absolute
+      right: 60px
+      top: 20px
     @media #{$mobile}
-      position: static
-      margin-top: 15px
-      margin-bottom: 0px
-      width: 80%
-    @media #{$pad-horizantal}
-      margin-right: 0
-      max-width: 150px
-      min-width: initial
-    @media #{$pad-vertical}
-      position: static
-      margin-top: 15px
-      margin-bottom: 0px
-      width: 80%
-      margin-right: 0
-    .input-group
-      // border-bottom: 1.1px solid #727171
-      border: 0
-      @media screen and (min-width: 768px)
-        display: flex
-        flex-wrap: nowrap
-        align-items: center
-      @media #{$mobile}
-        width: 100%
-      @media #{$pad-horizantal}
-        width: 100%
-      input
-        width: 100%
-        border-top: 0
-        border-left: 0
-        border-right: 0
-        border-radius: 0
-        border: 0
-        border-radius: 0px
-        height: 30px
-        padding: 0
-        font-size: 12px
-        background: none
-        border: 0
-        border-bottom: 1px solid white
-        &::placeholder
-          color: white
-          font-weight: bold
-          font-size: 14px
-          text-transform: initial
-      .input-group-btn
-        position: relative
-        top: -2.5px
-        z-index: 9999
-        width: 20px
-        height: 20px
-        margin-right: 5px
-        margin-bottom: 0
-        button
-          font-size: 16px
-          color: $color-b
-          margin: 0
-          padding: 0
-          border: 0
-          $w: 20px
-          width: $w!important
-          height: $w!important
-          margin-bottom: 0px
-          margin-right: 5px
+      width: 100%
+      display: flex
+      justify-content: space-between
+
+  // #navbar
+  //   padding: 0
+  //   @media screen and (min-width: 768px)
+  //     margin: 0
+  //   @media #{$mobile}
+  //     width: 100%
+  //     margin: 0
+  //     padding-bottom: 15px
+  //     box-shadow: none
+  //     background: url(#{$url}nav-bg.png) center center no-repeat
+  //     background-size: cover
+  //   @media #{$pad-vertical}
+  //     height: 0
+  //     overflow: hidden
+  //   @media #{$pad-vertical}
+  //     width: 100%
+  //     margin: 0
+  //     padding-bottom: 15px
+  //     box-shadow: none
+  //     background: url(#{$url}nav-bg.png) center center no-repeat
+  //     background-size: cover
+  //   &.collapse
+  //     @media #{$pad-vertical}
+  //       display: none!important
+  //   &.collapse.in
+  //     @media #{$pad-vertical}
+  //       display: block!important
+  //   .navbar-nav
+  //     float: left
+  //     position: initial
+  //     // width: 100%
+  //     @media screen and (min-width: 768px)
+  //       display: flex
+  //       flex-wrap: nowrap
+  //       justify-content: flex-end
+  //       margin: 0
+  //     @media #{$mobile}
+  //       margin: 0
+  //       float: left
+  //       margin-top: 15px
+  //       width: 100%
+  //       padding: 0 5px
+  //       margin-top: 0
+  //     @media #{$pad-vertical}
+  //       flex-wrap: wrap
+  //     *
+  //       color: white
+  //       font-size: 16.15px
+  //       font-weight: 300
+  //       letter-spacing: 0.05rem
+  //       white-space: nowrap
+  //       text-transform: initial
+  //       letter-spacing: 0.1rem
+  //       @media #{$pad-horizantal}
+  //         font-size: 14px
+  //     >li
+  //       @media screen and (min-width: 768px)
+  //         margin-right: 3vw
+  //         padding-bottom: 0
+  //       @media #{$pad-vertical}
+  //         width: 100%
+  //       >a
+  //         position: relative
+  //         overflow: hidden
+  //         text-transform: uppercase
+  //         color: $color-b
+  //         padding-bottom: 0
+  //         font-weight: normal
+  //         font-size: 17px
+  //         font-weight: normal
+  //         @media screen and (min-width: 768px)
+  //           padding-top: 62px
+  //           padding-bottom: 20px
+  //           margin: 0
+  //           padding-left: 7.5px
+  //           padding-right: 7.5px
+  //         @media #{$mobile}
+  //           margin: 0
+  //           padding-bottom: 15px
+  //         @media #{$pad-horizantal}
+  //           padding-left: 1px
+  //           padding-right: 1px
+  //         @media #{$pad-vertical}
+  //           padding-top: 7.5px
+  //           padding-bottom: 7.5px
+  //         span
+  //           display: block
+  //           text-align: center
+  //           font-weight: 500
+  //           letter-spacing: 1px
+  //           font-size: 17px
+  //         &:hover
+  //           background: none
+  //           opacity: 0.3
+  //       &.facebook
+  //         @media screen and (min-width: 768px)
+  //           margin-left: 2vw
+  //         a
+  //           padding-left: 23px
+  //           display: inline-block
+  //           float: left
+  //           width: auto
+  //           img
+  //             width: 23px
+  //             height: 23px
+  //     li
+  //       position: initial
+  //       a
+  //         border: 0
+  //         transition: $trans
+  //         &.dropdown-toggle
+  //           @media #{$mobile}
+  //             display: block
+  //           &::before
+  //             @media #{$mobile}
+  //               content: '+'
+  //               color: white
+  //               float: right
+  //               font-size: 24px
+  //       &.dropdown
+  //         @media screen and (min-width: 768px)
+  //           position: relative
+  //           z-index: 99999999
+  //         .dropdown-menu
+  //           left: 0
+  //           background: rgba(#fff, .7)
+  //           border: 0
+  //           width: 100%
+  //           overflow: initial
+  //           box-shadow: none
+  //           @media #{$mobile}
+  //             margin-top: 5px
+  //             // padding: 15px 5px
+  //         &:hover,
+  //         &.open
+  //           .dropdown-toggle
+  //             &::before
+  //               @media #{$mobile}
+  //                 content: '-'
+  //           .dropdown-menu
+  //             border: 0
+  //             width: 100%
+  //             @media screen and (min-width: 768px)
+  //               display: flex
+  //               flex-wrap: wrap
+  //             @media #{$mobile}
+  //               padding-left: 15px
+  //             li
+  //               padding-bottom: 0
+  //               @media screen and (min-width: 768px)
+  //                 width: 100%
+  //               a
+  //                 padding: 0
+  //                 padding: 7.5px 0
+  //                 font-size: 16px
+  //                 white-space: nowrap
+  //                 font-weight: normal
+  //                 transition: $trans
+  //                 color: #444243
+  //                 padding-left: 15px
+  //                 &:hover
+  //                   color: $color-blue
+
+  // .lang.lang.lang.lang.lang.lang.lang
+  //   a
+  //     font-size: 13px!important
+  //     color: $color-b
+  //     font-weight: 500!important
+  //     &:last-child
+  //       &::before
+  //         content: '|'
+  //         font-size: 13px
+  //         display: inlinb-block
+  //         margin: 0 7.5px
+  //         font-weight: 500
+  // .social
+  //   float: left
+  //   display: inline-flex
+  //   flex-wrap: nowrap
+  //   align-items: flex-end
+  //   margin-bottom: 20px
+  //   @media #{$mobile}
+  //     display: flex
+  //     justify-content: center
+  //     text-align: center
+  //     width: 100%
+  //     flex-wrap: wrap
+  //     margin-bottom: 0
+  // li+.social
+  //   @media #{$pad-vertical}
+  //     display: flex
+  //     justify-content: center
+  //     text-align: center
+  //     width: 100%
+  //     flex-wrap: wrap
+  //     margin-bottom: 0
+  //     margin-right: 0
+  //     margin-top: 0
+  // .formBS
+  //   top: 35px
+  //   right: 30px
+  //   padding: 5px
+  //   padding-top: 0
+  //   padding-bottom: 0
+  //   border-radius: 6px
+  //   @media screen and (min-width: 768px)
+  //     margin-right: 5vw
+  //     min-width: 204px
+  //   @media #{$mobile}
+  //     position: static
+  //     margin-top: 15px
+  //     margin-bottom: 0px
+  //     width: 80%
+  //   @media #{$pad-horizantal}
+  //     margin-right: 0
+  //     max-width: 150px
+  //     min-width: initial
+  //   @media #{$pad-vertical}
+  //     position: static
+  //     margin-top: 15px
+  //     margin-bottom: 0px
+  //     width: 80%
+  //     margin-right: 0
+  //   .input-group
+  //     // border-bottom: 1.1px solid #727171
+  //     border: 0
+  //     @media screen and (min-width: 768px)
+  //       display: flex
+  //       flex-wrap: nowrap
+  //       align-items: center
+  //     @media #{$mobile}
+  //       width: 100%
+  //     @media #{$pad-horizantal}
+  //       width: 100%
+  //     input
+  //       width: 100%
+  //       border-top: 0
+  //       border-left: 0
+  //       border-right: 0
+  //       border-radius: 0
+  //       border: 0
+  //       border-radius: 0px
+  //       height: 30px
+  //       padding: 0
+  //       font-size: 12px
+  //       background: none
+  //       border: 0
+  //       border-bottom: 1px solid white
+  //       &::placeholder
+  //         color: white
+  //         font-weight: bold
+  //         font-size: 14px
+  //         text-transform: initial
+  //     .input-group-btn
+  //       position: relative
+  //       top: -2.5px
+  //       z-index: 9999
+  //       width: 20px
+  //       height: 20px
+  //       margin-right: 5px
+  //       margin-bottom: 0
+  //       button
+  //         font-size: 16px
+  //         color: $color-b
+  //         margin: 0
+  //         padding: 0
+  //         border: 0
+  //         $w: 20px
+  //         width: $w!important
+  //         height: $w!important
+  //         margin-bottom: 0px
+  //         margin-right: 5px
   
 
-  .tel
-    display: flex
-    position: absolute
-    text-align: right
-    align-items: center
-    top: 0
-    right: 0
-    z-index: 2
-    @media screen and (min-width: 768px)
-      // width: calc(100% - 243px - 120px - 20px)
-    @media #{$mobile}
-      width: 100%
-      flex-wrap: nowrap
-    .svg
-      position: relative
-      top: 5px
-      margin-right: 7.5px
-    *
-      font-size: 21.5px
-      color: #ef6343
-      font-weight: bold
-      letter-spacing: 0.1rem
-      @media screen and (min-width: 768px)
-        margin-right: 0x
-      @media #{$mobile}
-        font-size: 18px
-        margin-right: 0px
-        font-weight: bold
-    .content
-      padding: 12px 24px
-      display: inline-block 
-      margin-right: 0
-      padding-top: 6px
-      @media #{$mobile}
-        padding: 7.5px 0
-        display: block
-        text-align: center
-        margin: 0
-        width: 100%
-      @media #{$pad-vertical}
-        padding: 6px 12px
-    .social
-      margin-bottom: 0
-      height: 100%
-      align-items: center
-      @media #{$mobile}
-        width: 120px
-        flex-wrap: nowrap
-        margin: 0
-      .svg
-        width: 26px
-        height: 26px
-        margin-right: 25px
-        @media #{$mobile}
-          margin-right: 7.5px
-          margin-left: 7.5px
+  // .tel
+  //   display: flex
+  //   position: absolute
+  //   text-align: right
+  //   align-items: center
+  //   top: 0
+  //   right: 0
+  //   z-index: 2
+  //   @media screen and (min-width: 768px)
+  //     // width: calc(100% - 243px - 120px - 20px)
+  //   @media #{$mobile}
+  //     width: 100%
+  //     flex-wrap: nowrap
+  //   .svg
+  //     position: relative
+  //     top: 5px
+  //     margin-right: 7.5px
+  //   *
+  //     font-size: 21.5px
+  //     color: #ef6343
+  //     font-weight: bold
+  //     letter-spacing: 0.1rem
+  //     @media screen and (min-width: 768px)
+  //       margin-right: 0x
+  //     @media #{$mobile}
+  //       font-size: 18px
+  //       margin-right: 0px
+  //       font-weight: bold
+  //   .content
+  //     padding: 12px 24px
+  //     display: inline-block 
+  //     margin-right: 0
+  //     padding-top: 6px
+  //     @media #{$mobile}
+  //       padding: 7.5px 0
+  //       display: block
+  //       text-align: center
+  //       margin: 0
+  //       width: 100%
+  //     @media #{$pad-vertical}
+  //       padding: 6px 12px
+  //   .social
+  //     margin-bottom: 0
+  //     height: 100%
+  //     align-items: center
+  //     @media #{$mobile}
+  //       width: 120px
+  //       flex-wrap: nowrap
+  //       margin: 0
+  //     .svg
+  //       width: 26px
+  //       height: 26px
+  //       margin-right: 25px
+  //       @media #{$mobile}
+  //         margin-right: 7.5px
+  //         margin-left: 7.5px

@@ -1,4 +1,4 @@
-- var url = '/ezfiles/876/1876/img/1716/'
+- var url = './dist/images/'
 include ../custom_module/title.pug
 <!DOCTYPE html>
 html(lang="zh-hant")
@@ -6,6 +6,10 @@ html(lang="zh-hant")
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js")
+
 		// font-awesome
 		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
 		// owlCarousel
@@ -18,35 +22,39 @@ html(lang="zh-hant")
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
 		// swiper
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js" integrity="sha256-NiMdnMv0WBAps3M8mcB7WHzlanETt0rnwMCgg67DgCk=" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" integrity="sha256-kGupfJ4zZb4/m0GPPVY0ng7FwSjZm1E0wMWG1aRYbwk=" crossorigin="anonymous" />
+		//- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js" integrity="sha256-NiMdnMv0WBAps3M8mcB7WHzlanETt0rnwMCgg67DgCk=" crossorigin="anonymous"></script>
+		//- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" integrity="sha256-kGupfJ4zZb4/m0GPPVY0ng7FwSjZm1E0wMWG1aRYbwk=" crossorigin="anonymous" />
 
 		// gsap
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js" integrity="sha256-XDWrid8aGX+NZwSY7JzTu6oWArI71Sw+aUZ9Hd0P5mo=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/TextPlugin.min.js" integrity="sha256-ueVAnnZLQzTgupbVzZ98US77GlFMzWhqWJ+i8oqO4O8=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js" integrity="sha256-VOmGZIiFXM1EqfqanRqwQ/1JfzredGUMk/M6AAPMdRw=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollToPlugin.min.js" integrity="sha256-dIqkGRmOeTpe7Zxq1vdIDcQonrVWrzXHo1tRuo5fEr0=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/PixiPlugin.min.js" integrity="sha256-A9jCDXQhTsPDKUP8/HHoRBI9MKpRJmjKalOnqt3PBXY=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/MotionPathPlugin.min.js" integrity="sha256-3qQZGNeXc42t1E5iyn5XA92eBXFJevVtshE8aWBE0Xs=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/EaselPlugin.min.js" integrity="sha256-eQgQne4nbpnHXQAgqqkIz/bUmdYbUUyJxV9OXS1XCpo=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/EasePack.min.js" integrity="sha256-YYZMCUSiShKxzX6n63C7BBttMsgswc/NkXc4WdCK/ro=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/CSSRulePlugin.min.js" integrity="sha256-c73GnBat1qBHmg9/ttdWrVUwzwj5U8MVqacscUi1tGY=" crossorigin="anonymous"></script>
+		//- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js" integrity="sha256-XDWrid8aGX+NZwSY7JzTu6oWArI71Sw+aUZ9Hd0P5mo=" crossorigin="anonymous"></script>
+		//- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/TextPlugin.min.js" integrity="sha256-ueVAnnZLQzTgupbVzZ98US77GlFMzWhqWJ+i8oqO4O8=" crossorigin="anonymous"></script>
+		//- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js" integrity="sha256-VOmGZIiFXM1EqfqanRqwQ/1JfzredGUMk/M6AAPMdRw=" crossorigin="anonymous"></script>
+		//- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollToPlugin.min.js" integrity="sha256-dIqkGRmOeTpe7Zxq1vdIDcQonrVWrzXHo1tRuo5fEr0=" crossorigin="anonymous"></script>
+		//- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/PixiPlugin.min.js" integrity="sha256-A9jCDXQhTsPDKUP8/HHoRBI9MKpRJmjKalOnqt3PBXY=" crossorigin="anonymous"></script>
+		//- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/MotionPathPlugin.min.js" integrity="sha256-3qQZGNeXc42t1E5iyn5XA92eBXFJevVtshE8aWBE0Xs=" crossorigin="anonymous"></script>
+		//- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/EaselPlugin.min.js" integrity="sha256-eQgQne4nbpnHXQAgqqkIz/bUmdYbUUyJxV9OXS1XCpo=" crossorigin="anonymous"></script>
+		//- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/EasePack.min.js" integrity="sha256-YYZMCUSiShKxzX6n63C7BBttMsgswc/NkXc4WdCK/ro=" crossorigin="anonymous"></script>
+		//- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/CSSRulePlugin.min.js" integrity="sha256-c73GnBat1qBHmg9/ttdWrVUwzwj5U8MVqacscUi1tGY=" crossorigin="anonymous"></script>
 
 		// fancy-box
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" />
 
-		link(rel="stylesheet", href="/ezfiles/876/1876/img/1715/usercss.css")
-		script(src="/ezfiles/876/1876/img/1717/userjs.js")
+
+		link(rel="stylesheet", href="./dist/css/usercss.css")
+		script(src="./dist/js/userjs.js")
 		title Document
 	body
 		include ../custom_module/navbar3.pug
-		//- include ../custom_module/owlcarousel.pug
+		include ../custom_module/owlcarousel.pug
 
 		include ../index/section-1.pug
 		include ../index/section-2.pug
 		include ../index/section-3.pug
-		//- include ../index/section-4.pug
+		include ../index/section-4.pug
+		include ../index/section-5.pug
+		include ../index/section-6.pug
+		include ../index/section-7.pug
 		
 
 

@@ -12,9 +12,9 @@ var gulp = require('gulp'), //gulp主程式
 	browserify = require('gulp-browserify')
 	del = require('del')
 
-	gulp.task('clean', function() {
-		return del(['dist']);
-	})
+	// gulp.task('clean', function() {
+	// 	return del(['dist']);
+	// })
 	
 // 監看JS
 gulp.task('watch',function(){
@@ -26,12 +26,12 @@ gulp.task('connect',function(){
 	connect.server({
 		name: "dist server",
 		root: './',
-		port: 8003,
+		port: 80,
 		livereload: true
 	})
 })
 
-gulp.task('default',['clean', 'watch','connect']) //gulp 直接執行
+gulp.task('default',['watch','connect']) //gulp 直接執行
 
 
 // 執行轉換JS
@@ -58,7 +58,7 @@ gulp.task('styles',function(){
 			includeContent: false,
 			sourceRoot: 'gulp/sass'
 		})) //sourceMap寫入在一樣的地方  
-		.pipe(gulp.dest('dist/css/ec058.so-buy.com/ezfiles/876/1876/img/1715/')) //翻譯後的路徑
+		.pipe(gulp.dest('dist/css/localhost/dist/css/')) //翻譯後的路徑
 		.pipe(gulp.dest('dist/css/')) //翻譯後的路徑
 		.pipe(connect.reload())
 })
@@ -75,6 +75,6 @@ gulp.task('views',function(){
 	gulp.src('gulp/html/page/**.pug')
 		.pipe(pug({pretty: true}))
 		.pipe(gulp.dest('./'))
-		.pipe(connect.reload())
+		// .pipe(connect.reload())
 })
 

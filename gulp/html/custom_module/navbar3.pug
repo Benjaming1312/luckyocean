@@ -1,11 +1,6 @@
-- var url = '/ezfiles/876/1876/img/1716/'
+- var url = './dist/images/'
 nav.navbar
 	.container-fluid
-		.tel
-			.content
-				span.svg(style="background:url("+url+"phone-icon.svg); width: 24px; height: 24px;")
-				span 服務專線：
-				a(href="tel: 0800-35-36-37") 0800-35-36-37
 		//- ul
 		//- 	//- li
 		//- 	//- 	a(href="")
@@ -24,6 +19,11 @@ nav.navbar
 		//- 			<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
 		//- 		</div>
 		//- 	</form>
+		.social
+			a.svg(href="", target="_blank" style="background:url("+url+"nav-icon-1.svg); width: 37px; height: 37px;") 
+			a.svg(href="", target="_blank" style="background:url("+url+"nav-icon-2.svg); width: 37px; height: 37px;") 
+			a.svg(href="", target="_blank" style="background:url("+url+"nav-icon-3.svg); width: 37px; height: 37px;") 
+			a.svg(href="", target="_blank" style="background:url("+url+"nav-icon-4.svg); width: 37px; height: 37px;") 
 		.navbar-header
 			button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
 				span.sr-only Toggle navigation
@@ -31,33 +31,33 @@ nav.navbar
 				span.icon-bar
 				span.icon-bar
 			// LOGO放置處
-			a.navbar-brand.svg(href='/' style="background: url("+url+"logo.svg); width: 279px; height: 45px;")
-		#navbar.navbar-collapse.collapse
-			ul.nav.navbar-nav.navbar-right
-				li(data-aos="fade-in", data-aos-delay="100")
-					a(href="")
-						span.tw 首頁
-				li(data-aos="fade-in", data-aos-delay="200")
-					a(href="")
-						span.tw 關於我們
-				li(data-aos="fade-in", data-aos-delay="300")
-					a(href="")
-						span.tw 最新消息
-				li(data-aos="fade-in", data-aos-delay="400")
-					a(href="")
-						span.tw 產品介紹
-				li(data-aos="fade-in", data-aos-delay="500")
-					a(href="")
-						span.tw 聯絡我們				
-				.social
-					<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
-						<div class="input-group">
-							<span class="input-group-btn">
-								button.btn.svg(type="submit" style="background: url("+url+"search.svg); width: 20px; height: 20px;")
-							</span>
-							<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
-						</div>
-					</form>
+			a.navbar-brand.svg(href='/' style="background: url("+url+"logo.svg); width: 189px; height: 48px;")
+		//- #navbar.navbar-collapse.collapse
+		//- 	ul.nav.navbar-nav.navbar-right
+		//- 		li(data-aos="fade-in", data-aos-delay="100")
+		//- 			a(href="")
+		//- 				span.tw 首頁
+		//- 		li(data-aos="fade-in", data-aos-delay="200")
+		//- 			a(href="")
+		//- 				span.tw 關於我們
+		//- 		li(data-aos="fade-in", data-aos-delay="300")
+		//- 			a(href="")
+		//- 				span.tw 最新消息
+		//- 		li(data-aos="fade-in", data-aos-delay="400")
+		//- 			a(href="")
+		//- 				span.tw 產品介紹
+		//- 		li(data-aos="fade-in", data-aos-delay="500")
+		//- 			a(href="")
+		//- 				span.tw 聯絡我們				
+		//- 		.social
+		//- 			<form class="formBS" role="search" name="SearchMoForm" method="post" action="/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch/bin/index.php?Plugin=mec&amp;Action=mobile_mecsearch&amp;Lang=zh-tw">
+		//- 				<div class="input-group">
+		//- 					<span class="input-group-btn">
+		//- 						button.btn.svg(type="submit" style="background: url("+url+"search.svg); width: 20px; height: 20px;")
+		//- 					</span>
+		//- 					<input id="sch_key" name="SchKey" type="text" class="form-control" value="" placeholder="Search">
+		//- 				</div>
+		//- 			</form>
 				//- li.dropdown(data-aos="fade-in" data-aos-delay="300")
 				//- 	a.fz16a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false') 關於協會
 				//- 	ul.dropdown-menu(role='menu')
