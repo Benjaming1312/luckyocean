@@ -1,63 +1,33 @@
 footer.foot
-  background: url(#{$url}foot-bg.png) center center no-repeat
-  background-size: cover
-  background-position: center
-  background-repeat: no-repeat
-  padding-top: 45px
-  padding-bottom: 57px
+  background: #f5f5f5
+  padding-top: 60px
+  padding-bottom: 30px
+  border-top: 1px solid rgba(#d8d7d6, .75)
   @media #{$mobile}
-    padding-left: 15px
-    padding-right: 15px
-    padding-bottom: 15px
     padding-top: 30px
-  >.row
+    padding-bottom: 30px
+  .row
     +max-width
-    margin-left: auto
-    margin-right: auto
-  .module-title
-    margin-bottom: 30px
+  .logo
+    text-align: center
     @media #{$mobile}
       margin-bottom: 15px
-  .map-content
-    @media #{$mobile}
-      padding: 0
-    
-  .info-content
-    @media screen and (min-width: 768px)
-      padding-left: 60px
-    @media #{$mobile}
-      padding: 0
-    table
-      tbody
-        tr
-          td
-            color: #4a4747
-            font-size: 18px
-            padding: 7.5px
-            vertical-align: text-top
-            @media screen and (min-width: 768px)
-              white-space: nowrap
-            @media #{$mobile}
-              padding-left: 0
-              padding-right: 0
-            &:first-child
-              white-space: nowrap
-            &:last-child
-              span
-                font-size: 16px
-                margin-top: 15px
-            *
-              color: #4a4747
-              font-size: 18px
-            .svg
-              $w: 25px
-              max-width: $w
-              max-height: $w
-              position: relative
-              top: 5px
-              margin-right: 7.5px
-  iframe
-    height: 245px
+      .svg
+        max-width: 100%
+  .text
+    p
+      font-size: 19px
+      letter-spacing: 0.05rem
+      margin-bottom: 15px
+      color: #414042
+      @media #{$mobile}
+        font-size: 14px
+      a
+        font-size: 19px
+        letter-spacing: 0.05rem
+        color: #414042
+        @media #{$mobile}
+          font-size: 14px
 div.design
   background: #444444
   opacity: 1!important
