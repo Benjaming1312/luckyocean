@@ -29,7 +29,7 @@ footer.foot
         @media #{$mobile}
           font-size: 14px
 div.design
-  background: #444444
+  background: #b0c7d5
   opacity: 1!important
   p
     margin: 0
@@ -60,9 +60,16 @@ div.design
 
 .right
   position: fixed
-  bottom: 5%
+  bottom: 10%
   right: 15px
   z-index: 9
   +trans
+  max-width: 40px
+  max-height: 40px
+  @media #{$mobile}
+    right: 5px
   &:hover
     opacity: 0.6
+  .svg
+    max-width: 40px
+    max-height: 40px
