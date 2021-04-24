@@ -4,16 +4,25 @@
   padding-bottom: 25px
   @media #{$mobile}
     padding: 25px 0
+  .row
+    @media #{$mobile}
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
   .col-sm-3
     text-align: center
     margin-bottom: 54px
     @media #{$mobile}
       margin-bottom: 30px
+      width: 48%
     figcaption
       font-size: 21px
       color: #414042
-      font-weight: 500
+      font-weight: 600
       line-height: 25px
+      @media #{$mobile}
+        font-size: 16px
+        white-space: nowrap
     .svg
       background-size: 80px 80px!important
       background-position: center!important

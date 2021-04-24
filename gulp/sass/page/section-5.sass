@@ -25,7 +25,7 @@
           left: -15px
       .text
         @media screen and (min-width: 768px)
-          padding-right: 60px
+          padding-right: 50px
           padding-left: 15px
     img
       @extend .fit
@@ -50,12 +50,17 @@
         display: none
   .text
     @media screen and (min-width: 768px)
-      padding-left: 60px
+      padding-left: 50px
+
     p
-      font-size: 21px
+      font-size: 20px
       line-height: 46px
       color: #414042
       letter-spacing: 0.05rem
+      font-weight: 500
+      @media #{$mobile}
+        font-size: 18px
+        margin-bottom: 15px
     .more
       .btn
         border: 0

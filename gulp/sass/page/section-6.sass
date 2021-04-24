@@ -27,8 +27,11 @@
         width: 100%
         height: 100%
         position: relative
+        +trans
         @media #{$mobile}
           flex-wrap: wrap
+        &:hover
+          opacity: 0.3
 
     img
       max-width: 100%
@@ -43,6 +46,7 @@
       position: absolute
       top: 100%
       margin-top: 30px
+      font-weight: 600
       @media #{$mobile}
         position: static
         font-size: 12px
